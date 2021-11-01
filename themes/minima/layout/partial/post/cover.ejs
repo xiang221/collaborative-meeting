@@ -1,0 +1,16 @@
+<section id="cover">
+  <div class="container">
+    <h1><%- page.title %></h1>
+    <p><%- page.description %></p>
+    <% if(page.cover.type == "video") { %>
+    <div class="embed-iframe">
+      <iframe
+        src="<%- embed_link(page.cover.link, { autoplay: true }) %>"
+      ></iframe>
+    </div>
+    <% } else { %>
+    <img src="<%- page.cover.link %>" class="w-100" />
+    <% } %>
+  </div>
+  <div class="bg bg-<%- page.color %>"></div>
+</section>

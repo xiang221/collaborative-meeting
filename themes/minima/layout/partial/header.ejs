@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a href="/<%- page.lang != 'zh-tw' ? page.lang : '' %>" class="navbar-brand">
+        <img src="/images/logo.png" width="50" height="50" alt="Logo"></img>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <% __('navbar.items').forEach(function(value){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="<%- value.link %>"><%- value.name %></a>
+          </li>
+          <% }) %>
+
+          <% if (page.lang == "en") { %>
+          <li class="nav-item">
+            <a class="nav-link" href="<%- page_url(page.path.replace(/^\//, '').replace(/^en/, '')) %>">中文</a>
+          </li>
+          <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="<%- page_url('en/' + page.path) %>">EN</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

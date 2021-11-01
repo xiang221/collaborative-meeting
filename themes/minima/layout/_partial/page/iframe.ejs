@@ -1,0 +1,34 @@
+<% let obj = null; let title = null; let description = null; switch (type) {
+case 'agenda_book': obj = page.agenda_book; title = '議題手冊'; description =
+'議題手冊彙整訪談的多元觀點，提供所有人一個更全面的議題觀看角度'; break; case
+'mind_map': obj = page.mind_map; title = '心智圖'; description =
+'心智圖整理訪談及研究，用清晰的架構來統整議題的全貌'; break; case
+'ministry_slide': obj = page.ministry_slide; title = '部會簡報'; description =
+'針對議題，部會提出相對應的政府觀點'; break; case 'host_slide': obj =
+page.host_slide; title = '主持人簡報'; description =
+'用於協作會議中說明議程及會議主旨與討論'; break; case 'live': obj = page.live;
+title = '直播紀錄'; description = '直播提供民眾更多參與管道，並留下完整紀錄';
+break; case 'transcript': obj = page.transcript; title = '逐字稿'; description =
+'逐字稿紀錄會議中的所有發言，留下完整會議紀錄。下圖為節錄內容'; break; } if
+(typeof obj != "undefined") { %>
+<section>
+  <div class="row mb-3">
+    <div class="col-12">
+      <h2 class="fw-bold d-inline me-3 fs-4"><%= title %></h2>
+      <span><%= description %></span>
+    </div>
+  </div>
+  <% obj.links.forEach(function(value){ %>
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="position-relative" style="padding-bottom: 56.25%">
+        <iframe
+          class="position-absolute w-100 h-100"
+          src="<%- value %>"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</section>
+<% } %>

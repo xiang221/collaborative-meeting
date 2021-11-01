@@ -1,0 +1,15 @@
+<main>
+  <div class="container">
+    <% page.posts.forEach(function(value){ %>
+    <div class="row mb-5">
+      <div class="col-3">
+        <img class="w-100" src="/image/<%= value.thumbnail %>" />
+      </div>
+      <div class="col-9 align-text-bottom">
+        <h2 class="fs-3 fw-bold"><a class="text-decoration-none text-dark" href="/<%= value.slug %>"><%= value.title %></a></h2>
+        <span class="fs-5"><%= value.description %></span>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</main>

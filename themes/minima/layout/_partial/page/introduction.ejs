@@ -1,0 +1,27 @@
+<section id="introduction">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="fs-4 fw-bold mb-4">關於這次的協作會議…</h2>
+      <p><%= page.introduction.content %></p>
+      <%  page.tags.forEach(function(value){ %>
+      <a class="text-decoration-none me-2" href="/tags/<%= value.name %>">#<%= value.name %></a>
+      <% }) %>
+    </div>
+    <div class="col-md-6">
+      <img class="w-100 mb-5" src="<%= page.introduction.image %>" />
+      <div>
+        <div class="dept-item text-center float-end ms-4">
+          <img class="w-100 mb-2" src="/image/department/PDIS.png" />
+          <span>PDIS</span>
+        </div>
+        <% page.introduction.departments.forEach(function(value){ %>
+        <div class="dept-item text-center float-end ms-4">
+          <img class="w-100 mb-2" src="/image/department/<%= value %>.png" />
+          <span><%= value %></span>
+        </div>
+        <% }) %>
+        
+      </div>
+    </div>
+  </div>
+</section>
