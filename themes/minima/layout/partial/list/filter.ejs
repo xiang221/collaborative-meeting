@@ -1,0 +1,27 @@
+<section id="filter">
+  <div class="container">
+    <div class="title">
+      <h2><%- page.filter.title %></h2>
+      <span><%- page.filter.content %></span>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-2">
+        <h3><%- page.filter.dept_title %></h2>
+      </div>
+      <div class="col-10 depts">
+        <% site.pages.filter(p => p.id == "department").data[0].items.filter(p => p.id != "PDIS").forEach(dept => { %>
+        <div class="dept" title="<%- dept[page.lang]['fullname'] %>" data-id="<%- dept.id %>" onclick="click_dept(this)"><%-  dept[page.lang]["name"] %></div>
+        <% }) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h3><%- page.filter.tag_title %></h2>
+      </div>
+      <div class="col-10">
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>

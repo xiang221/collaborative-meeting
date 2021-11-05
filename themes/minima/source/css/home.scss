@@ -101,18 +101,37 @@ main[class="home"] {
       justify-content: center;
       align-items: center;
       .search-bar {
-        font-size: 2rem;
         width: 100%;
-        color: white;
         border-radius: 50rem;
-        padding: 1rem 4rem;
+        padding: 1rem 1rem 1rem 4rem;
         background-color: var(--bs-secondary);
-        border: unset;
-        &::placeholder {
+        display: flex;
+        justify-content: space-between;
+        input {
+          font-size: 2rem;
           color: white;
+          background-color: transparent;
+          border: unset;
+          cursor: default;
+          &::placeholder {
+            color: white;
+          }
+          &:focus {
+            outline: 0;
+          }
         }
-        &:focus {
-          outline: 0;
+        .search-btn {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          background-color: white;
+          display: flex;  
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          svg {
+            font-size: 1.7rem;
+          }
         }
       }
       .tags {

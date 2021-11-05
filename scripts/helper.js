@@ -87,5 +87,8 @@ hexo.extend.helper.register("dept", function (key, col) {
   });
   if (result == undefined) return "2222";
   
-  return result[lang][col];
+  if (col == "id")
+    return result["id"];
+  else
+    return result[lang][col];
 });

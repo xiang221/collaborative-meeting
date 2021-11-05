@@ -1,16 +1,24 @@
 <section id="search">
   <div class="container">
-    <h2 class="text-primary mb-5"><%- page.search.title %></h2>
-    <input
-      class="search-bar mb-5"
-      type="text"
-      placeholder="<%- page.search.placeholder %>"
-    />
-    <p class="fs-2 mb-5"><%- page.search.following_tag %></p>
+    <h2 class="text-primary mb-5">
+      <%- page.search.title %>
+    </h2>
+    <div class="search-bar mb-5">
+      <input id="search-text" type="text" placeholder="<%- page.search.placeholder %>" />
+      <div class="search-btn" onclick="location.href='/list/?search='+document.getElementById('search-text').value">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+
+    <p class="fs-2 mb-5">
+      <%- page.search.following_tag %>
+    </p>
     <div class="tags mb-5">
-      <% page.search.tags.forEach(tag => { %>
-      <button class="btn btn-tag rounded-pill"><%- tag %></button>
-      <% }) %>
+      <% page.search.tags.forEach(tag=> { %>
+        <button class="btn btn-tag rounded-pill">
+          <%- tag %>
+        </button>
+        <% }) %>
     </div>
     <div class="row w-100 gy-4">
       <div class="col-lg-4 col-md-6">
@@ -69,7 +77,9 @@
       </div>
     </div>
     <div class="more">
-      <a href="#"><%- page.search.more %></a>
+      <a href="#">
+        <%- page.search.more %>
+      </a>
     </div>
   </div>
 </section>

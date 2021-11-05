@@ -254,7 +254,7 @@ items:
   - id: NCC
     image:
     zh-tw:
-      name: 國發會
+      name: 通傳會
       fullname: 國家通訊傳播委員會
     en:
       name: NCC
@@ -272,7 +272,7 @@ items:
   - id: CBC
     image:
     zh-tw:
-      name: 央行
+      name: 中央銀行
       fullname: 中央銀行
     en:
       name: CBC
@@ -281,7 +281,7 @@ items:
   - id: NPM
     image:
     zh-tw:
-      name: 故宮
+      name: 故宮博物院
       fullname: 國立故宮博物院
     en:
       name: NPM

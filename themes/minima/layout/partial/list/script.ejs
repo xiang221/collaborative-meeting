@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  function click_dept(e) {
+    e.dataset.active = !(e.dataset.active === "true");
+    reload_list();
+  }
+
+  function reload_list() {
+    const dept_active = [
+      ...document.querySelectorAll('.dept[data-active="true"]'),
+    ];
+    if (dept_active.length == 0) {
+      [...document.getElementsByClassName("case")].forEach(
+        (el) => (el.dataset.visible = "true")
+      );
+    } else {
+      [...document.getElementsByClassName("case")].forEach(
+        (el) => (el.dataset.visible = "false")
+      );
+      dept_active
+        .map((e) => e.dataset.id)
+        .forEach((d) => {
+          [
+            ...document.querySelectorAll('.case[data-dept~="' + d + '"]'),
+          ].forEach((el) => (el.dataset.visible = "true"));
+        });
+    }
+  }
+</script>
