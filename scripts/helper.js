@@ -32,20 +32,39 @@ hexo.extend.helper.register("__", function (link) {
 
 const path = require("path");
 hexo.extend.filter.register("before_post_render", function (data) {
-  let source = data.source.replace(/\.[^/.]+$/, "").replace(/^_posts\//, ""); // md path 不包含副檔名
-  let filename = source.split("/").pop().split("."); // 檔名
-  let lang = "zh-tw";
-  let prefix = "";
-  if (filename.length > 1) {
-    prefix = filename.pop();
-    source = source.replace(/\.[^/.]+$/, ""); // 移除附檔名
-    lang = prefix;
+  
+
+  let html_path = data.path.split("/");
+
+  // Set lang
+  const lang = html_path[0];
+  if (lang == "en" || lang == "zh-tw") {
+    data.lang = lang;
   }
 
-  let link = path.join(prefix, source.replace(/index$/, ""), "/");
-  data.__permalink = link; // For post
-  data.path = link; // For page
-  data.lang = lang;
+  if (data.layout == "false") return data;
+
+  // Remove post folder
+  if (html_path[1] == "post") {
+    html_path.splice(1, 1);
+  }
+
+  // Remove zh-tw folder
+  if (html_path[0] == "zh-tw") {
+    html_path.shift();
+  }
+
+  // Update html file to folder. Ex: list.html => list/index.html
+  const filename = html_path[html_path.length - 1];
+  if (filename == "index.html") {
+    html_path.pop();
+  } else {
+    html_path[html_path.length - 1] = filename.replace(/.html$/, "");
+  }
+
+  data.path = html_path.join("/") + "/";
+  console.log(data.path);
+  
   return data;
 });
 
@@ -86,9 +105,7 @@ hexo.extend.helper.register("dept", function (key, col) {
     );
   });
   if (result == undefined) return "2222";
-  
-  if (col == "id")
-    return result["id"];
-  else
-    return result[lang][col];
+
+  if (col == "id") return result["id"];
+  else return result[lang][col];
 });

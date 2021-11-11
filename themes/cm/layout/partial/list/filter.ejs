@@ -7,6 +7,16 @@
     <hr>
     <div class="row">
       <div class="col-2">
+        <h3><%- page.filter.search_title %></h2>
+      </div>
+      <div class="col-10">
+        <div class="search-bar">
+          <input type="text" class="form-control form-control-lg w-100" id="search-text" onkeyup="reload_list()">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
         <h3><%- page.filter.dept_title %></h2>
       </div>
       <div class="col-10 depts">

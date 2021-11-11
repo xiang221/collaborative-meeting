@@ -1,0 +1,46 @@
+<script type="text/javascript">
+  init();
+
+  function getel(text) {
+    return [...document.querySelectorAll(text)];
+  }
+
+  function init() {
+    var params = new URLSearchParams(window.location.search);
+    document.getElementById("search-text").value = params.get("search");
+    var depts = params.get("dept").split(",");
+    depts.forEach((d) => {
+      getel('.dept[data-id="' + d + '"]').forEach(
+        (el) => (el.dataset.active = "true")
+      );
+    });
+  }
+
+  function click_dept(e) {
+    e.dataset.active = !(e.dataset.active === "true");
+    reload_list();
+  }
+
+  function reload_list() {
+    const dept_active = getel('.dept[data-active="true"]').map((e) => e.dataset.id);
+
+    if (dept_active.length == 0) {
+      getel(".case").forEach((el) => (el.dataset.visible = "true"));
+    } else {
+      getel(".case").forEach((el) => (el.dataset.visible = "false"));
+      dept_active
+        .forEach((d) => {
+          getel('.case[data-dept~="' + d + '"]').forEach(
+            (el) => (el.dataset.visible = "true")
+          );
+        });
+    }
+
+    // Update URL
+    var result = [];
+    var search = document.getElementById("search-text").value;
+    if (search != "") result.push("search=" + encodeURIComponent(search));
+    if (dept_active.length > 0) result.push("dept=" + dept_active.join(","));
+    history.replaceState({}, "", "?" + result.join("&"));
+  }
+</script>

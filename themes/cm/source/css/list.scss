@@ -40,18 +40,46 @@ main[class="list"] {
           font-weight: bold;
         }
 
-        &[data-active='true']{
-            color: var(--bs-blue);
-            font-weight: bold;
+        &[data-active="true"] {
+          color: var(--bs-blue);
+          font-weight: bold;
         }
       }
+    }
+
+    .search-bar {
+      margin: 1rem 0;
+      padding: 0 2rem;
     }
   }
 
   section[id="result"] {
     margin-top: 5rem;
-    div[data-visible="false"]{
+    div[data-visible="false"] {
       display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .row {
+      margin-bottom: 2rem;
+    }
+
+    .image {
+      width: 100%;
+      padding-bottom: 56.25%;
+      background-size: cover !important;
+      background-position: center !important;
+    }
+
+    h3 {
+      font-size: 2.25rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
     }
   }
 }

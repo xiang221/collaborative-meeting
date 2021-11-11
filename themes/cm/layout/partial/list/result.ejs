@@ -1,0 +1,33 @@
+<section id="result">
+  <div class="container">
+    <div class="title">
+      <h2><%- page.result.title %></h2>
+      <span><%- page.result.content %></span>
+    </div>
+
+    <% 
+    site.pages.filter(p => p.lang == page.lang && p.layout == "post").forEach(post => { 
+      var d = post.departments.map(i => dept(i, "id")).join(" ");
+    %>
+    <a href="<%- url_for(post.path) %>">
+      <div class="row case" data-dept="<%- d %>">
+
+        <div class="col-3">
+          <div class="image" style="background: url('/image/<%- post.thumbnail %>')">
+          </div>
+        </div>
+        <div class="col-9 d-flex align-self-end">
+          <div>
+            <% post.departments.forEach(d => { %> 
+              <span class="badge rounded-pill bg-secondary fs-6 fw-normal"><%- d %></span>
+            <% }) %>
+            <h3><%- post.title %></h3>
+            <h4><%- post.description %></h3>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    <% }) %>
+  </div>
+</section>

@@ -8,6 +8,7 @@ description: 開放政府 協作會議
 filter:
   title: 搜尋協作會議
   content: 透過以下的分類搜尋欲瀏覽的協作會議
+  search_title: 搜尋
   dept_title: 主辦部會
   tag_title: 議題類型
 
