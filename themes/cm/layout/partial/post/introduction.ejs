@@ -7,7 +7,7 @@
       </div>
       <div class="col-md-5">
         <img src="<%- page.introduction.image %>" class="w-100" />
-        <% page.departments.forEach(d => { %>
+        <% array(page.departments).forEach(d => { %>
           <%- dept(d, "fullname") %>
         <% }) %>
       </div>

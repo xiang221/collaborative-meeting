@@ -4,7 +4,7 @@
       <h2><%- __(`post.join.${page.join.type}.title`) %></h2>
       <span><%- __(`post.join.${page.join.type}.content`) %></span>
     </div>
-    <% page.join.images.forEach(link=> { %>
+    <% array(page.join.images).forEach(link=> { %>
     <img src="<%- link %>" class="w-100" />
     <% }) %>
   </div>
