@@ -75,16 +75,21 @@ hexo.extend.filter.register("before_post_render", function (data) {
   return data;
 });
 
-hexo.extend.helper.register("embed_link", function (link, options) {
+hexo.extend.helper.register("embed_link", function (link, options = {}) {
   const url = new URL(link);
-  if (url.hostname == "www.youtube.com" && url.pathname == "/watch") {
-    id = url.searchParams.get("v");
+  if (
+    (url.hostname == "www.youtube.com" && url.pathname == "/watch") ||
+    url.hostname == "youtu.be"
+  ) {
+    if (url.hostname == "www.youtube.com") {
+      id = url.searchParams.get("v");
+    } else {
+      id = url.pathname.split("/")[1];
+    }
     link = `https://www.youtube.com/embed/${id}`;
-    try {
-      if (options.autoplay) {
-        link += `?autoplay=1&loop=1&mute=1&&playlist=${id}`;
-      }
-    } catch (e) {}
+    if (options.autoplay) {
+      link += `?autoplay=1&loop=1&mute=1&&playlist=${id}`;
+    }
   } else if (url.hostname == "issuu.com") {
     id = url.pathname.split("/")[3];
     user = url.pathname.split("/")[1];

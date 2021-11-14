@@ -4,8 +4,6 @@
       <h2><%- __(`post.join.${page.join.type}.title`) %></h2>
       <span><%- __(`post.join.${page.join.type}.content`) %></span>
     </div>
-    <% array(page.join.images).forEach(link=> { %>
-    <img src="<%- link %>" class="w-100" />
-    <% }) %>
+    <img src="<%- url_for(page.join.image) %>" class="w-100" />
   </div>
 </section>

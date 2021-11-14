@@ -6,7 +6,7 @@
     </div>
 
     <% 
-    site.pages.filter(p => p.lang == page.lang && p.layout == "post").forEach(post => {
+    site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish != "false").sort("id","desc").each(post => {
       const depts = array(post.departments).map(i => dept(i, "id")).join(" ");
     %>
     <a href="<%- url_for(post.path) %>">

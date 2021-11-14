@@ -6,7 +6,7 @@
         <p><%- page.introduction.content %></p>
       </div>
       <div class="col-md-5">
-        <img src="<%- page.introduction.image %>" class="w-100" />
+        <img src="<%- url_for(page.introduction.image) %>" class="w-100" />
         <% array(page.departments).forEach(d => { %>
           <%- dept(d, "fullname") %>
         <% }) %>
