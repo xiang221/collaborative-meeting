@@ -15,6 +15,7 @@ main[class="home"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 300px;
     h1 {
       font-size: 4rem;
       font-weight: bold;
@@ -38,6 +39,73 @@ main[class="home"] {
       background-size: cover !important;
       background-position: center !important;
       filter: brightness(0.5);
+    }
+  }
+
+  section[id="introduction"] {
+    h2{
+      color:  var(--bs-primary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    br {
+      content: "";
+      margin: 1em;
+      display: block;
+    }
+
+    .part1 {
+      margin-bottom: 200px;
+      height: 700px;
+      .cover {
+        height: 100%;
+        position: relative;
+        img{
+          position: absolute;
+          height: 100%;
+          right: 0;
+        }
+      }
+    }
+
+    .part2{
+      margin-bottom: 200px;
+      height: 800px;
+      .cover {
+        height: 100%;
+        position: relative;
+        img{
+          position: absolute;
+          height: 100%;
+        }
+      }
+      .content-image {
+        width: 300px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .part3 {
+      margin-bottom: 200px;
+      height: 700px;
+      .cover {
+        height: 100%;
+        position: relative;
+        img{
+          position: absolute;
+          height: 100%;
+          right: 50px;
+        }
+      }
     }
   }
 

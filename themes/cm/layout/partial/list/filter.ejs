@@ -21,7 +21,7 @@
       </div>
       <div class="col-10 depts">
         <% site.pages.filter(p => p.id == "department").data[0].items.filter(p => p.id != "PDIS").forEach(dept => { %>
-        <div class="dept" title="<%- dept[page.lang]['fullname'] %>" data-id="<%- dept.id %>" onclick="click_dept(this)"><%-  dept[page.lang]["name"] %></div>
+        <div class="dept" title="<%- dept[page.lang]['fullname'] %>" data-id="<%- dept.id %>" onclick="click_dept(this)"><%-  page.lang == "en" ? dept[page.lang]["fullname"] : dept[page.lang]["name"] %></div>
         <% }) %>
       </div>
     </div>

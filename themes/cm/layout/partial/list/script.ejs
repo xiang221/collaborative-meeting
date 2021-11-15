@@ -6,6 +6,13 @@
   }
 
   function init() {
+    getel(".dept").forEach((el) => {
+      el.dataset.count = getel(
+        '.case[data-dept~="' + el.dataset.id + '"]'
+      ).length;
+      el.innerHTML += " (" + el.dataset.count + ")";
+    });
+
     var params = new URLSearchParams(window.location.search);
     document.getElementById("search-text").value = params.get("search");
     var depts = params.get("dept").split(",");
@@ -22,18 +29,19 @@
   }
 
   function reload_list() {
-    const dept_active = getel('.dept[data-active="true"]').map((e) => e.dataset.id);
+    const dept_active = getel('.dept[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
 
     if (dept_active.length == 0) {
       getel(".case").forEach((el) => (el.dataset.visible = "true"));
     } else {
       getel(".case").forEach((el) => (el.dataset.visible = "false"));
-      dept_active
-        .forEach((d) => {
-          getel('.case[data-dept~="' + d + '"]').forEach(
-            (el) => (el.dataset.visible = "true")
-          );
-        });
+      dept_active.forEach((d) => {
+        getel('.case[data-dept~="' + d + '"]').forEach(
+          (el) => (el.dataset.visible = "true")
+        );
+      });
     }
 
     // Update URL

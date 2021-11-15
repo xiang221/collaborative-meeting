@@ -272,7 +272,7 @@ items:
   - id: CBC
     image:
     zh-tw:
-      name: 中央銀行
+      name: 央行
       fullname: 中央銀行
     en:
       name: CBC
@@ -281,7 +281,7 @@ items:
   - id: NPM
     image:
     zh-tw:
-      name: 故宮博物院
+      name: 故宮
       fullname: 國立故宮博物院
     en:
       name: NPM
