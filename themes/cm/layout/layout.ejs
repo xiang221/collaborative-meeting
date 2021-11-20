@@ -13,7 +13,7 @@
   <meta name="keywords" content="<%= config.keywords %>">
   <meta name="author" content="<%- config.author %>">
 
-  <meta property="og:image" content="<%- config.url + '/image/' + page.thumbnail %>">
+  <meta property="og:image" content="<%- full_url_for(page.thumbnail) %>">
   <meta property="og:site_name" content="<%= config.title %>" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="<%= title %>" />
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= title %>">
   <meta name="twitter:description" content="<%= page.description %>">
-  <meta name="twitter:image" content="<%- config.url + '/image/' + page.thumbnail %>">
+  <meta name="twitter:image" content="<%- full_url_for(page.thumbnail) %>">
   <meta name="twitter:url" content="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>" />
 
   <!-- Mobile Specific Metas
