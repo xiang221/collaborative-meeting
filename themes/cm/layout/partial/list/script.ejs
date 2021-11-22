@@ -1,4 +1,5 @@
 <script type="text/javascript">
+  "use strict";
   init();
 
   function getel(text) {
@@ -6,49 +7,85 @@
   }
 
   function init() {
-    getel(".dept").forEach((el) => {
-      el.dataset.count = getel(
-        '.case[data-dept~="' + el.dataset.id + '"]'
-      ).length;
-      el.innerHTML += " (" + el.dataset.count + ")";
-    });
-
-    var params = new URLSearchParams(window.location.search);
-    document.getElementById("search-text").value = params.get("search");
-    var depts = params.get("dept").split(",");
-    depts.forEach((d) => {
-      getel('.dept[data-id="' + d + '"]').forEach(
-        (el) => (el.dataset.active = "true")
-      );
-    });
+    init_filter();
+    reload_list();
   }
 
-  function click_dept(e) {
+  function init_filter() {
+    var params = new URLSearchParams(window.location.search);
+    document.getElementById("search-text").value = params.get("search");
+    var depts = params.get("dept");
+    var tags = params.get("tag");
+    if (depts) {
+      depts.split(",").forEach((d) => {
+        getel('.dept[data-id="' + d + '"]').forEach(
+          (el) => (el.dataset.active = "true")
+        );
+      });
+    }
+    if (tags) {
+      tags.split(",").forEach((d) => {
+        getel('.tag[data-id="' + d + '"]').forEach(
+          (el) => (el.dataset.active = "true")
+        );
+      });
+    }
+  }
+
+  function click_filter(e) {
     e.dataset.active = !(e.dataset.active === "true");
     reload_list();
   }
 
   function reload_list() {
+    const search = document.getElementById("search-text").value;
+    let filter_metadata = metadata.filter(
+      (p) => (p.title + p.description + p.content).includes(search)
+    );
+
+    count("dept", filter_metadata);
     const dept_active = getel('.dept[data-active="true"]').map(
       (e) => e.dataset.id
     );
+    filter_metadata = filter_metadata.filter(
+      (p) => dept_active.length == 0 ? true : dept_active.some((i) => p.depts.includes(i))
+    );
 
-    if (dept_active.length == 0) {
-      getel(".case").forEach((el) => (el.dataset.visible = "true"));
-    } else {
-      getel(".case").forEach((el) => (el.dataset.visible = "false"));
-      dept_active.forEach((d) => {
-        getel('.case[data-dept~="' + d + '"]').forEach(
-          (el) => (el.dataset.visible = "true")
-        );
-      });
-    }
+    count("tag", filter_metadata);
+    const tag_active = getel('.tag[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
+    filter_metadata = filter_metadata.filter(
+      (p) => tag_active.length == 0 ? true : tag_active.some((i) => p.tags.includes(i))
+    );
 
-    // Update URL
+    getel(".case").forEach((el) => (el.dataset.visible = "false"));
+    filter_metadata.forEach((p) => {
+      getel(`.case[data-id="${p.id}"]`).find((el) => (el.dataset.visible = "true"));
+    });
+
+    // Rewrite URL
     var result = [];
-    var search = document.getElementById("search-text").value;
     if (search != "") result.push("search=" + encodeURIComponent(search));
     if (dept_active.length > 0) result.push("dept=" + dept_active.join(","));
+    if (tag_active.length > 0) result.push("tag=" + tag_active.join(","));
     history.replaceState({}, "", "?" + result.join("&"));
+  }
+
+  function count(name, filter_metadata) {
+    const count = {};
+    filter_metadata
+      .map((d) => d[`${name}s`])
+      .flat()
+      .forEach((x) => (count[x] = (count[x] || 0) + 1));
+    getel(`.${name}`).forEach((el) => {
+      const num =
+        count[el.dataset.id] == undefined ? 0 : count[el.dataset.id];
+      el.innerHTML = `${el.dataset.name} (${num})`;
+      el.dataset.count = num;
+    });
+    getel(`.${name}`)
+      .sort((a, b) => b.dataset.count.localeCompare(a.dataset.count))
+      .forEach((el) => el.parentNode.appendChild(el));
   }
 </script>

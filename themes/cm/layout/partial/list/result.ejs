@@ -1,3 +1,23 @@
+<% 
+let metadata = [];
+site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish != "false").sort("id").each(post => {
+  let tags = array(post.tags).map(i => String(tag(i, "id")));
+  let depts = array(post.departments).map(i => dept(i, "id"));
+  metadata.push({
+    id: post.id,
+    title: post.title,
+    description: post.description,
+    content: post.introduction.content,
+    path: post.path,
+    thumbnail: post.thumbnail,
+    tags: tags,
+    depts: depts,
+  });
+});
+%>
+<script type="text/javascript">
+  const metadata = JSON.parse('<%- JSON.stringify(metadata) %>');
+</script>
 <section id="result">
   <div class="container">
     <div class="title">
@@ -5,29 +25,25 @@
       <span><%- page.result.content %></span>
     </div>
 
-    <% 
-    site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish != "false").sort("id","desc").each(post => {
-      const depts = array(post.departments).map(i => dept(i, "id")).join(" ");
-    %>
-    <a href="<%- url_for(post.path) %>">
-      <div class="row case" data-dept="<%- depts %>">
-
-        <div class="col-3">
-          <div class="image" style="background: url('/image/<%- post.thumbnail %>')">
-          </div>
+    <% metadata.forEach(post => { %>
+    <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
+      <div class="col-3">
+        <div class="image" style="background: url('<%- post.thumbnail %>')">
         </div>
-        <div class="col-9 d-flex align-self-end">
-          <div>
-            <% array(post.departments).forEach(d => { %> 
-              <span class="badge rounded-pill bg-secondary fs-6 fw-normal"><%- d %></span>
-            <% }) %>
-            <h3><%- post.title %></h3>
-            <h4><%- post.description %></h3>
-          </div>
-        </div>
-
       </div>
-    </a>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          <% array(post.depts).forEach(d => { %>
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
+          <% }) %>
+          <% array(post.tags).forEach(d => { %>
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
+          <% }) %>
+          <h3><%- post.title %></h3>
+          <h4><%- post.description %></h3>
+        </div>
+      </div>
+    </div>
     <% }) %>
   </div>
 </section>

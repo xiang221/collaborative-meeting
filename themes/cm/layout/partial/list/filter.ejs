@@ -19,9 +19,9 @@
       <div class="col-2">
         <h3><%- page.filter.dept_title %></h2>
       </div>
-      <div class="col-10 depts">
+      <div class="col-10 filter-items">
         <% site.pages.filter(p => p.id == "department").data[0].items.filter(p => p.id != "PDIS").forEach(dept => { %>
-        <div class="dept" title="<%- dept[page.lang]['fullname'] %>" data-id="<%- dept.id %>" onclick="click_dept(this)"><%-  page.lang == "en" ? dept[page.lang]["fullname"] : dept[page.lang]["name"] %></div>
+        <div class="filter-item dept" data-id="<%- dept.id %>" data-name="<%-  page.lang == 'en' ? dept[page.lang]['fullname'] : dept[page.lang]['name'] %>" onclick="click_filter(this)"></div>
         <% }) %>
       </div>
     </div>
@@ -29,7 +29,10 @@
       <div class="col-2">
         <h3><%- page.filter.tag_title %></h2>
       </div>
-      <div class="col-10">
+      <div class="col-10 filter-items">
+        <% site.pages.filter(p => p.id == "tag").data[0].items.forEach(tag => { %>
+        <div class="filter-item tag" data-id="<%- tag.id %>" data-name="<%- tag.name[page.lang] %>" onclick="click_filter(this)"></div>
+        <% }) %>
       </div>
     </div>
     <hr>

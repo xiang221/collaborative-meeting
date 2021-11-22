@@ -116,8 +116,26 @@ hexo.extend.helper.register("dept", function (key, col) {
       p["en"]["fullname"] == key
     );
   });
-  if (result == undefined) return "2222";
+  if (result == undefined) return "NULL";
 
   if (col == "id") return result["id"];
   else return result[lang][col];
+});
+
+hexo.extend.helper.register("tag", function (key, col) {
+  var find = hexo.locals.get("pages").filter(function (p) {
+    return p.id == "tag";
+  }).data;
+
+  if (find.length == 0) return null;
+
+  var data = find[0];
+  var lang = this.page.lang;
+
+  var result = data.items.find(
+    (p) => p["id"] == key || p["name"]["zh-tw"] == key || p["name"]["en"] == key
+  );
+  if (result == undefined) return null;
+
+  return result[col][lang] == undefined ? result[col] : result[col][lang];
 });

@@ -2,7 +2,6 @@ header .navbar .nav-link {
   color: black !important;
 }
 
-
 main[class="list"] {
   .title {
     margin-bottom: 3rem;
@@ -29,12 +28,11 @@ main[class="list"] {
       color: var(--bs-primary);
     }
 
-    .depts {
+    .filter-items {
       display: flex;
       flex-wrap: wrap;
-      max-height: 340px;
       overflow: hidden;
-      .dept {
+      .filter-item {
         border-right: 1px solid;
         border-color: #c4c4c4;
         font-size: 1.5rem;
@@ -64,6 +62,10 @@ main[class="list"] {
     margin-top: 5rem;
     div[data-visible="false"] {
       display: none;
+    }
+
+    .case {
+      cursor: pointer;
     }
 
     a {
