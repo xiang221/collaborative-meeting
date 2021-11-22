@@ -3,10 +3,10 @@ layout: false
 id: navbar
 
 items:
-  - name: 開放政府協作會議
-    link: /#
-  - name: 協作成果
-    link: /#
-  - name: 大家怎麼說
-    link: /#
+  - name: Open Government, Collaborative Meeting
+    link: /#introduction
+  - name: Result
+    link: /#achievement
+  - name: Search Collaborative Meeting
+    link: /en/list
 ---

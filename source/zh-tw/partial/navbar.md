@@ -4,9 +4,9 @@ id: navbar
 
 items:
   - name: 開放政府協作會議
-    link: /#
+    link: /#introduction
   - name: 協作成果
-    link: /#
-  - name: 大家怎麼說
-    link: /#
+    link: /#achievement
+  - name: 搜尋協作會議
+    link: /list
 ---
