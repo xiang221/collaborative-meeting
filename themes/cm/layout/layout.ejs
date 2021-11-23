@@ -45,7 +45,7 @@
   <link rel="icon" type="image/png" href="<%- theme.favicon %>">
 </head>
 
-<body class="primary-<%= page.color %>">
+<body class="primary-<%= (page.color || '').toLowerCase() %>">
   <%- partial('partial/header') %>
   <%- body %>
   <%- partial('partial/footer') %>
