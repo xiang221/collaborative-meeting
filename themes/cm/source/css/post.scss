@@ -27,6 +27,18 @@ main[class="post"] {
     }
   }
 
+  .depts {
+    display: inline-flex;
+    gap: 1rem;
+    grid-gap: 1rem;
+    .dept-image {
+      max-width:100px;
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
   section[id="cover"] {
     color: white;
     h1 {

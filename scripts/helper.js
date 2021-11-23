@@ -119,6 +119,7 @@ hexo.extend.helper.register("dept", function (key, col) {
   if (result == undefined) return "NULL";
 
   if (col == "id") return result["id"];
+  else if (col == "image") return result["image"];
   else return result[lang][col];
 });
 

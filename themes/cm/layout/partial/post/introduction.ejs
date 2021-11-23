@@ -6,10 +6,17 @@
         <p><%- page.introduction.content %></p>
       </div>
       <div class="col-md-5">
+        <% if(page.introduction.image != "") { %>
         <img src="<%- url_for(page.introduction.image) %>" class="w-100" />
+        <% } %>
+        <div class="depts">
         <% array(page.departments).forEach(d => { %>
-          <%- dept(d, "fullname") %>
+          <div class="dept-image text-center">
+            <img src="<%- url_for(dept(d, 'image')) %>" class="w-100" />
+            <span title="<%- dept(d, 'fullname') %>"><%- dept(d, "name") %></span>
+          </div>
         <% }) %>
+        </div>
       </div>
     </div>
   </div>
