@@ -11,7 +11,7 @@
         <% } %>
         <div class="depts">
         <% array(page.departments).forEach(d => { %>
-          <div class="dept-image text-center">
+          <div class="dept-image text-center" onclick="location.href='/list/?dept=<%- dept(d, "id") %>'">
             <img src="<%- url_for(dept(d, 'image')) %>" class="w-100" />
             <span title="<%- dept(d, 'fullname') %>"><%- dept(d, "name") %></span>
           </div>
