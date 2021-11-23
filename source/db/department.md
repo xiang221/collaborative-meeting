@@ -25,7 +25,7 @@ items:
   - id: MOHW
     image: images/department/MOHW.png
     zh-tw:
-      name: 衛服部
+      name: 衛福部
       fullname: 衛生福利部
     en:
       name: MOHW
