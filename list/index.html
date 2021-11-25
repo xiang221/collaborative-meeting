@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>協作會議列表 - 快來看協作會議</title>
+  <link rel="canonical" href="https://cm.pdis.tw/list/">
+  <meta name="description" content="開放政府 協作會議">
+  <meta name="keywords" content="">
+  <meta name="author" content="PDIS">
+
+  <meta property="og:image" content="https://cm.pdis.tw/butter.png">
+  <meta property="og:site_name" content="快來看協作會議" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="協作會議列表 - 快來看協作會議" />
+  <meta property="og:description" content="開放政府 協作會議">
+  <meta property="og:url" content="https://cm.pdis.tw/list/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="協作會議列表 - 快來看協作會議">
+  <meta name="twitter:description" content="開放政府 協作會議">
+  <meta name="twitter:image" content="https://cm.pdis.tw/butter.png">
+  <meta name="twitter:url" content="https://cm.pdis.tw/list/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/theme.css?v=1637812708511">
+  <link rel="stylesheet" href="/css/color.css?v=1637812708511">
+  
+  
+  <link rel="stylesheet" href="/css/list.css?v=1637812708511">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="primary-">
+  <header>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand">
+        <img src="/images/logo.png" width="50" height="50" alt="Logo"></img>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/#introduction">開放政府協作會議</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/#achievement">協作成果</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/list">搜尋協作會議</a>
+          </li>
+          
+
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/en/list/">EN</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <main class="list">
+  <section id="filter">
+  <div class="container">
+    <div class="title">
+      <h2>搜尋協作會議</h2>
+      <span>透過以下的分類搜尋欲瀏覽的協作會議</span>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-2">
+        <h3>搜尋</h2>
+      </div>
+      <div class="col-10">
+        <div class="search-bar">
+          <input type="text" class="form-control form-control-lg w-100" id="search-text" onkeyup="reload_list()">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h3>主辦部會</h2>
+      </div>
+      <div class="col-10 filter-items">
+        
+        <div class="filter-item dept" data-id="MOTC" data-name="交通部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOHW" data-name="衛福部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOST" data-name="科技部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MND" data-name="國防部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOI" data-name="內政部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOFA" data-name="外交部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOF" data-name="財政部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOJ" data-name="法務部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOE" data-name="教育部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOEA" data-name="經濟部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOC" data-name="文化部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOL" data-name="勞動部" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="NDC" data-name="國發會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="FSC" data-name="金管會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="OCAC" data-name="僑委會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="VAC" data-name="退輔會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="CIP" data-name="原民會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="HAC" data-name="客委會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="OAC" data-name="海委會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MAC" data-name="陸委會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="COA" data-name="農委會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="AEC" data-name="原能會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="PCC" data-name="工程會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="EPA" data-name="環保署" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="CEC" data-name="中選會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="FTC" data-name="公平會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="NCC" data-name="通傳會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="TJC" data-name="促轉會" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="CBC" data-name="央行" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="NPM" data-name="故宮" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="DGBAS" data-name="主計總處" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="DGPA" data-name="人事行政總處" onclick="click_filter(this)"></div>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h3>議題類型</h2>
+      </div>
+      <div class="col-10 filter-items">
+        
+        <div class="filter-item tag" data-id="1" data-name="動物保護" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="2" data-name="消費議題" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="3" data-name="教育" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="4" data-name="兒童" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="5" data-name="青少年" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="6" data-name="性別平等" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="7" data-name="休閒" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="8" data-name="文化" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="9" data-name="財政" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="10" data-name="法規" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="11" data-name="數位服務" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="12" data-name="共創" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="13" data-name="環保" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="14" data-name="醫療" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="15" data-name="科技" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="16" data-name="漁業" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="17" data-name="健保" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="18" data-name="農業" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="19" data-name="交通" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="20" data-name="社會福利" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="21" data-name="健康" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="22" data-name="勞工權益" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="23" data-name="婦女權益" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="24" data-name="公務體制" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="25" data-name="商業" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="26" data-name="公共政策" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="27" data-name="原住民議題" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="28" data-name="公共服務" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="29" data-name="科學" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="30" data-name="公私協力" onclick="click_filter(this)"></div>
+        
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+  
+<script type="text/javascript">
+  const metadata = JSON.parse('[{"id":1,"title":"公務人員協會足夠嗎？公務人員勞動權的發聲與對話","description":"開放政府第1次協作會議 「支持公務人員可合法組織工會,以保障相關權益」","content":"","path":"1/","thumbnail":"/images/post/1/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg","tags":["null","10"],"depts":["MOL"]},{"id":7,"title":"報稅系統難用到爆炸？設計師捲起袖子拒當酸民","description":"開放政府第7次協作會議 「報稅軟體難用到爆炸」","content":"報稅系統長久以來問題眾多，不能在Mac 上報稅，桌機介面雖已上架多年，有報稅經驗的公民還能透過民間部落格教學漸漸熟悉報稅介面與流程，但對於每年眾多的首報族，仍是一大挑戰。每當到了報稅季節，報稅菜鳥們總是得花好多時間去重新適應學習。在這個數位科技發達的年代，大眾對於軟體介面的美感、舒適感已經無法再容忍。設計師卓致遠在一次午餐時，一邊滑著手機一遍看著勇路上酸民的怨聲載道，想著，我們可不可以不只是當酸民？於是他捲起袖子，主動到國發會公共政策參與平台提案，提案名稱為驚悚的「報稅系統難用到爆炸」，雖未達五千人連署門檻，財政部開放政府聯絡人楊金亨專員主動將此案上提到功放政府每月月會，在月會中此案經過楊專員的努力，高票當選，接續舉辦一連串的協作會議，邀集各方利害關係人一同盤點問題，集思廣益，設計更友善的報稅介面。","path":"7/","thumbnail":"/images/post/7/1ihCJaDoRi91kt1RUoVXURzLxKgkEuCJ-.jpg","tags":["null","9","30"],"depts":["MOI","FSC","MOF"]},{"id":8,"title":"禁止魚翅買賣，保護海洋生態","description":"開放政府第8次協作會議 「禁止魚翅買賣！重罰『割鰭棄身』！禁止買賣停止殺害！ 」","content":"為什麼許多人都反對買賣魚翅呢？ 主要有兩個原因。其一是健康因素，成年鯊魚體內往往累積了不少鉛丶砷丶汞等有毒重金屬，吃魚翅就會把這些重金屬吃下肚，對身體造成傷害。其二則是此種行為會危害海洋生態，被割下魚鰭的鯊魚失去了生存能力，若只留下高市價的魚翅冷凍，將鯊魚身丟回海中任其死亡，會破壞整個海洋食物鏈，亦造成多種鯊魚瀕臨絕種危機。 這次的民眾提案，協作會議上邀請了各政府單位與相關人士一起來討論，會議結束後也達成了一些共識，除了要確實執行鯊魚相關法規，在相關消費上標示所含鯊魚物種外，也將禁捕的鯊魚物種比照大西洋的統一標準。針對捕鯊漁民，政府會輔導其轉型潛水觀光產業，並全面禁止使用鯊魚繩，期望能透過相關制度的落實與改善來保護海洋。 ","path":"8/","thumbnail":"/images/post/8/1ihCJaDoRi91kt1RUoVXURzLxKgkEuCJ-.jpg","tags":[],"depts":["COA"]},{"id":9,"title":"你曾聽過《調度司法警察條例》嗎？","description":"開放政府第9次協作會議 「 廢除《調度司法警察條例》，尊重警察工作之專業，共同營造我國精緻司法的願景」","content":"《調度司法警察條例》於1945年3月15日制定，沿用至今，實務上發生部分檢察官濫用此條例，交辦無涉刑事偵查之事項，很可能違反權力分立的原則。本次民眾提案，我們透過協作會議的討論先釐清，雖根據《刑事訴訟法》，檢察官為偵查主體、司法警察為偵查輔助機關，檢察官僅在偵辦司法案件時有權指揮調度司法警察，但執行上確有違反的情形。藉此，我們將問題回歸到司法警察對於檢警關係的互動模式的期待，討論此條例是否該被廢除，或者能夠跟《刑事訴訟法》或《法院組織法》做配套修正，而根據多方的激盪分享，法務部也會將討論成果納入修法參考，進行完整研議後一併提案函請立法院審議。 ","path":"9/","thumbnail":"/images/post/9/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg","tags":[],"depts":["MOJ"]},{"id":10,"title":"藉由相關法規，建立更完善的線上遊戲環境","description":"開放政府第10次協作會議「國內線上遊戲相關法規建置 」","content":"你平常會玩線上遊戲嗎？近年來，遊戲產業在台灣可說是蓬勃發展，卻也因此產生了一些相關問題，導致玩家的權益受損。因此，網友提案希望能建制國內線上遊戲的相關法規。 此次協作會議提供了玩家與業者對話的平台，針對提案相關訴求，部分已於「消費者保護法」及「線上遊戲定型化契約應記載及不得記載事項」中有所規範，例如玩家帳號安全保障及遊戲商遊戲環境維護義務。另外，如防止遊戲商惡性關閉遊戲以及轉蛋爭議，將在日後納入研議，期望能為線上遊戲立定更完善的規範，打造讓玩家安心且公平的體驗。 ","path":"10/","thumbnail":"/images/post/10/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg","tags":[],"depts":["MOEA"]},{"id":11,"title":"海外網購免稅額為何調降？來討論電子商務貨物通關及課稅議題","description":"開放政府第11次協作會議「反對 海外網購免稅額 縮至2千元 」","content":"過去根據《關稅法》第49條，進口3,000元以內的貨物便免徵關稅和營業稅，後因低價免稅的貨物進口量非常大，因此產生了租稅不公平的情況，甚至有漏稅的問題。因此，財政部希望能將金額調降到2,000元。然而，有網友提案反對，進口商品的課稅標準被調降，該提案獲得5,225人連署通過，並召開協作會議。 最終協作會議討論結果，財政部承諾將會持續注意國際組織就電子商務貨物通關及課稅之實踐情形，研議採行新稽徵技術可行性，並在推動「電子商務貨物通關制度」同時，辦理說明會與業者及民眾溝通，盼望能核實徵稅並落實邊境管理。","path":"11/","thumbnail":"/images/post/11/1dibnXk7UtJYPUWKCU057cUNhoX-Q9avg.jpg","tags":[],"depts":["MOF"]},{"id":13,"title":"愛護地球，漸進式停用免洗餐具","description":"開放政府第13次協作會議 「全國漸進式禁止使用免洗餐具」","content":"本案的提案人建議漸進式停用免洗餐具，推廣民眾養成隨身攜帶環保餐具的習慣，或從店家方面著手，提供消費者可重複使用的餐具。附議的民眾也多認為，大多數的免洗餐具為塑膠製成，若因回收不當成為海洋廢棄物，再讓海洋生物吞食塑膠微粒，最後被影響的仍是人類。 這次提案與環保署自民國91年起推動之限塑政策方向相符，環保署也再次說明將會以分階段、分對象之方式，抑制購物用塑膠袋及免洗餐具的使用量，未來亦會逐步擴大免洗餐具禁用管制對象，希望能視民眾環保觀念與生活習慣之改變，滾動檢討相關措施，由宣導與管制雙管齊下，引導廢棄物源頭減量與促進資源循環再利用。 ","path":"13/","thumbnail":"/images/post/13/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg","tags":[],"depts":["EPA"]},{"id":14,"title":"金紙與香的文化傳承","description":"開放政府第14次協作會議 「請行政院文化部將「金紙及香」列為重要無形文化資產及重要文化資產保存技術登錄」","content":"金紙及香是台灣的傳統技藝，在文化傳承方面有一定的重要性，因此這次的協作會議邀請眾多相關人士一起來討論，如何維護此傳統技藝。經過廣泛地討論後，發想了許多提案，例如建立職人制度，藉由產品履歷來提高產品價值及製作者社會地位，除此之外，也可以藉由推廣金紙及香的文化體驗及旅遊，讓更多國人接近此文化，同時運用政府資源發展品牌價值，與經濟部創意生活產業發展計畫結合，為金紙及香注入創新元素，結合各面向進行跨界合作。","path":"14/","thumbnail":"/images/post/14/1dibnXk7UtJYPUWKCU057cUNhoX-Q9avg.jpg","tags":[],"depts":["MOC"]},{"id":15,"title":"一起來討論，讓幼兒園相關制度更完善","description":"開放政府第15次協作會議 「公共化幼兒園應在4年內達到1000班之政策目標」","content":"依教育部送交行政院核定的106-109年度「擴大幼兒教保公共化計畫」，未來幾年共會開設1000班的公共化幼兒園，以解決許多家長在工作場所及居家附近找不到平價優質幼兒園的問題。此次的協作會議便要討論此政策的具體運作方式，而除原提案訴求外，會議上還廣泛討論了相關制度與措施。 於會議結束後，教育部承諾將持續鼓勵各地方政府增設公立幼兒園，開設2歲以上至未滿3歲幼兒專班，並依法督導辦理非營利幼兒園及學校財團法人之財務公告及查核機制。針對4年開設1000班幼兒園之計畫，則會透過公共化教保服務列管會議及相關支持輔導機制，協助各地方政府推動，以達成分年政策目標。 ","path":"15/","thumbnail":"/images/post/15/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.jpg","tags":[],"depts":["MOE"]},{"id":16,"title":"如何維護貨到付款之消費者權益？","description":"開放政府第16次協作會議 「建請主管機關重視FACEBOOK(臉書)購物詐騙一案，研議如何防制與作為，望請各界連署支持」","content":"某些於FACEBOOK上出現之一頁式購物廣告與粉絲專頁，會假冒台灣各大公司利誘購買，但消費者在收貨付款之後即使發現商品與廣告不符，卻求助無門。因宅配業者與報關行在配送單上標註不得拆封驗貨，導致消費者在還沒看到實品狀況時就得先付款，而根據宅配規章，寄件者必須清楚填寫資料才能配送，但這類購物詐騙的配送單往往只填寫了報關行名稱，消費者最後只能自行成立自救會，收集資料向報關行或消保團體申請退貨退款。 在此次的會議中便希望能藉由各部會討論來解決這樣的困境，針對提案訴求，交通部已於會議後要求各貨運業者確實依據《汽車運輸業管理規則》第118條之規定，於貨物配送單填寫託運人公司等資料，並另與行政院消費者保護處研議建立貨到付款退款機制，或暫時保留爭議條款之緩衝機制之可行性部分，以維護消費者權益。 ","path":"16/","thumbnail":"/images/post/16/18zzHrzG6YqJ_iGgqaoyji5gayrBTWblv.jpg","tags":[],"depts":["MOF","MOEA","MOTC","FTC"]},{"id":30,"title":"未婚女子能否使用人工生殖？正反雙方無共識","description":"開放政府第30次協作會議 「開放單身女可以合法施行『人工受孕』及『試管嬰兒』 」","content":"2018年4月13日，PDIS小組於空總社創中心召開第30次協作會議，討論單身女子是否可透過人工生殖擁有小孩。此案是由網友Shu Kai Wu於2018年1月4日於公共網路政策參與平台提出「開放單身女可以合法施行『人工受孕』及『試管嬰兒』」，經過網友連署，與開放政府聯絡人月會投票選出後，成為協作會議的主題。 提案者報告認為，聯合國人權公約有保障人民的生殖權，此一權益除了應不分性傾向均平等以外，無論結婚與否，也應該受到一樣的保障。目前台灣的人工生殖僅確診為不孕症之夫妻可以使用，等同於歧視單身的女子。但反對者認為，在一夫一妻忠貞婚姻之下，以自然性行為方式所生出的小孩，才能有幸福的家庭環境。 經過激烈的討論後，會議結果沒有結論，但透過面對面的溝通與討論，展開議題的多元面向與面臨的挑戰。所有整理的資料公開透明，為接下來要延伸討論的人奠下議題的基礎。 ","path":"30/","thumbnail":"/images/post/30/1bG7mdHtPm6Iq8qW07aYJwcmkVHLa_yWH.jpg","tags":["14","null","10"],"depts":["MOHW"]},{"id":31,"title":"超徵退稅議題，提案社群與部會的爭點整理","description":"開放政府第31次協作會議 「超額徵收之稅款-歸還於民 」","content":"本次提案，網友建議財政部應該修法，將超額徵收的總稅收平均分配給納稅人，或是抵扣下一年度的應繳稅款，以利刺激消費、促進經濟發展。 財政部則認為有實行上的困難，並針對「歲出、歲入、短徵、超徵」等財政名詞進行釐清，來說明目前機制下，政府所累積的債務還未清償完畢前，特定年度的盈餘並不容易規劃「還利於民」的措施。 各方對法條及稅收的價值立場不同，協作會議現場，透過擴大參與的機制，以及面對面的互動，初步釐清訴求及爭點，同時會議全程進行直播，務求公開透明，部會的簡報及逐字稿也呈現在網路上。希望未來相關議題的討論，將能在這次會議的資訊基礎上，向前邁進。","path":"31/","thumbnail":"/images/post/31/11g_CdiqL6w5S6HqNBlCPerV6A8azZpCU.jpg","tags":["9","10"],"depts":["MOF"]},{"id":32,"title":"蘇花改會是機車安全回家的路嗎？協作會議現場觀察","description":"開放政府第32次協作會議 「開放蘇花改多車種通行」","content":"2018年4月27日，PDIS小組假空總社會創新中心，召開第32次協作會議，討論多車種通行蘇花改的議題。此案經網友Xiu Ming在2月5日於公共政策參與平台上提案「開放蘇花改多車種通行」，2月9日成案後，於3月15日就跨越5000人連署的門檻。經過開放政府聯絡人月會的討論，成為協作會議的討論主題。 由於蘇花改並未開放機車或重型機車通行，因此一開放就有不少機車族抗議，認為蘇花改禁止機車通行是歧視機車族，引發爭議。此次會議討論後，公路總局承諾將會發包進行機車通行長隧道之相關研究，供後續政策參考。未來，這類道路在規劃之前，也希望能有機車相關的學者、團體一起加入評估，讓規劃能更完善。","path":"32/","thumbnail":"/images/post/32/1UPo1cjQQnfphHvCfBwAGC5_4G-kZRU2Z.jpg","tags":["19","13","null","10"],"depts":["MOTC"]},{"id":34,"title":"電子發票比較環保！協作會議建議澄清資訊 ","description":"開放政府第34次協作會議 「在[電子發票實施作業要點] 加入規範，禁止它用或可選擇的印出商品優惠」","content":"2018 年 5 月 25 日，PDIS 小組在財政部資訊中心召開第三十四次協作會議，討論能否立法禁止在開立發票時禁止商家額外印出優惠券。網友 Shuntsung Chang 在 Join 平台上提案「在『電子發票實施作業要點』加入規範，禁止它用或可選擇的印出商品優惠」，希望能在「電子發票實施作業要點中」加入禁止或可選擇列印出商品有惠券，以避免部分不肖業者將商品優惠隨同發票一起印出，使電子發票在本來預期有的環保效果上大打折扣。 經過協作會議討論及釐清現況後，與會者發現電子發票的推行結果已經比過往傳統發票的方式更環保，也不會出現熱碳帶的問題，而這個結果也應該由環保署、紙廠與業者持續澄清，讓大家有更明確的認知與共識。 這些意見經過彙整之後，由政委唐鳳帶到政務會議上，向院長以及相關部會首長報告，供後續政策規劃參考；會議的心智圖與逐字記錄也都將在網路上釋出。讓後續討論這個議題的人奠下更完整的基礎。","path":"34/","thumbnail":"/images/post/34/1vGHl3dzeJJFhICEf16plQrgVtmTmRG7o.jpg","tags":["null","null"],"depts":["MOF"]},{"id":50,"title":"「使用者經驗」顛覆傳統故宮的票務流程設計","description":"國立故宮博物院自提 開放政府第50次協作會議 「故宮博物院電子票券流程改造」 ","content":"故宮院長吳密察希望以「使用者經驗」來改善故宮博物院的服務流程。因此，故宮的開放政府聯絡人於聯繫會議上自提，希望與PDIS小組合作，共同來改善故宮的票務體驗。 故宮的票券仍以實體購買為主要方式，現有線上購票管道僅能選擇一般票券 350元，本國遊客或特殊票種無法於網路購票。為了提升各國遊客參觀意願，進而拓展國際觀光管道，故宮將以使用者體驗為核心，規畫介面友善的原先電子票券系統，以期增加購票方式多元性，未來也能整合其他觀光服務。  因此，我們於6月10日召開協作會議，會議中不同的利害關係人各方集思廣益，腦力激盪。共同打造更好的電子票券系統。 而故宮也在會後進行成果的盤點及實作，將會中搜集到的意見統合。在不久的將來，我們可以期待更友善，便利的故宮電子票券服務！","path":"50/","thumbnail":"https://img.youtube.com/vi/puJAHqh7l4M/maxresdefault.jpg","tags":["null","30","8"],"depts":["NPM"]},{"id":52,"title":"跨國婚姻媒合相關規範，你了解多少？","description":"開放政府第52次協作會議「跨國境婚姻媒合法規說明」","content":"近年來，藉由跨國境婚姻媒合，台灣有了許多來自不同國家的新住民，因此這次會議希望能夠藉由修正相關管理辦法，加強婚媒協會管理效能，讓協會能夠善盡義務受媒合雙方當事人資料的義務，並落實資訊對等，保障受媒合當事人權益。","path":"52/","thumbnail":"/images/post/52/18zzHrzG6YqJ_iGgqaoyji5gayrBTWblv.jpg","tags":[],"depts":["MOI"]},{"id":53,"title":"如何將寵物用藥制度化，同時保障供給充足？","description":"開放政府第53次協作會議「獸醫使用人藥」","content":"獸醫在醫治寵物時，是否可以使用人藥呢？由於目前許多動物之必要藥品缺乏專為動物開發之用藥，因此將人藥用於動物醫療，屬於動物福祉的一部份，而這在台灣尚未有完整的法規保障，在經過會議多方討論後，政府將與相關團體繼續溝通協調，先行盤點獸醫師常用之人用藥品品項後，由衛福部協助農委會依程序將該類藥品登記取得動物用藥品許可證，期許能藉此機會健全動物用藥相關法條。","path":"53/","thumbnail":"/images/post/53/1jIXcBDeUsGhKq762NsbnVx1vtia-rPRq.jpg","tags":["14","null","10","null"],"depts":["COA","MOHW"]},{"id":54,"title":" 持續滾動修正與開放資料，加值政府數位服務","description":"內政部營建署自提 開放政府第54次協作會議 「登山申請線上系統流程改造」 ","content":"本次協作會議透過前期的多元利害關係人訪談與協作會議的深入討論，讓網站系統更貼近使用者的需求。 協作會議過後，PDIS小組與營建署同仁將討論結果在11/1 Beta測試上線後持續精進。而「登山申請整合資訊網」符合國家發展委員會的「共通性應用程式介面規範」。換言之，這個專案結束，並不代表登山申請服務系統的改造劃下句點，而是向前及向外延伸的開始：開放資料可讓民間或其他公部門將這個服務繼續延伸，發展出更多意想不到的應用。","path":"54/","thumbnail":"https://img.youtube.com/vi/QFA4Mzs-6ao/maxresdefault.jpg","tags":["null","7","30"],"depts":["MOI"]},{"id":55,"title":"集思廣益，解決教育系統專業治療師之問題","description":"開放政府第55次協作會議「調增教育專業人員鐘點費」","content":"教育系統的相關專業人員一直都是在校園中默默付出的一群人，他們巡迴於各校，有著不穩定的工作時數，多年來服務鐘點費也未獲得調增，低於其他醫事人員，因此，基於工作的不穩定性及逐年降低的學校服務時數，多數治療師紛紛選擇離開教育系統的工作，使得教育部及學校相關承辦人員面臨尋找專業治療師的困難。這次便希望能透過協作會議來討論解決的方法，是否可以依實際的服務內容去調整鐘點費，綜合考量前置準備、學校跟老師家長溝通協調的成本，以及後續的行政成本，多給偏鄉一些資源，進而降低流動率，以更好地保障身心障礙學生，讓他們能穩定地接受學校治療師的協助。","path":"55/","thumbnail":"/images/post/55/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg","tags":["3","null","10"],"depts":["MOE"]},{"id":57,"title":"打造「寵物友善」乘坐環境","description":"開放政府第57次協作會議「台鐵增設寵物車廂案」","content":"對於許多養寵物的飼主來說，帶著毛小孩四處遊玩是創造美好回憶的方法，但若要進行跨縣市的旅行，寵物的交通方式將會是一個很大的問題，因此如何兼顧旅客權益及台鐵營運的前提下，打造「寵物友善」乘坐環境便成了這次協作會議要討論的焦點。  實際上，推動寵物友善環境的關鍵有賴於飼主良好的自主管理，協作會議結束後滿一個月，臺鐵局便採納會議共識，進行三個月的試辦，比照高鐵將寵物箱籠的尺寸限制放寬，在不影響其餘旅客的前提下，讓更多中大型寵物的飼主多一個運輸工具的選擇，也期望能在未來陸續開放一系列與寵物相關的措施，並納入相關乘車規定，與飼主共同營造寵物友善乘車環境。 ","path":"57/","thumbnail":"/images/post/57/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg","tags":["19","null","10","30"],"depts":["MOTC"]},{"id":58,"title":"在尊重傳統和保護動物之間，取得一個平衡","description":"開放政府第58次協作會議「終止神豬重量比賽祭祀」","content":"你有聽過「神豬重量比賽」嗎？部分地方在農曆七月義民祭所舉辦的神豬祭祀，被視為凝聚地方的信仰核心，但也有許多人指出該種比賽的舉辦方式，可能有虐待動物的疑慮。這次協作會議，廣邀各個不同領域的關係人參與，希望能在尊重宗教信仰與民俗文化的前提上，同時關照動物的處境，想出共善的方法。會議上，養豬戶表達對豬隻的呵護，廟方提出對文化傳承的苦心，動保團體和提案人、附議人則呼籲動物福利。長達160分鐘的小組討論，與會者相互激盪，開展出「自然飼養」、「敬神的替代儀式」等創意發想，讓廟方在地區人際網路的凝聚性儀式中，可以有更多元的管道來延續。","path":"58/","thumbnail":"/images/post/58/1zIYUsLnPr_-NHSknZT4fGsHYjzG-0k4D.jpg","tags":["null","8","18","10"],"depts":["COA","HAC"]},{"id":59,"title":"終結恐懼，給兒童一個安全的生長環境","description":"開放政府第59案協作會議「兒童性侵害案」 ","content":"發生在學校及機構之兒童性侵害事件實則上是一個結構性的問題，往往因為場域封閉性及權力失衡等因素，導致其被隱蔽，受害者也難以求助。面對這個沉重的議題，本次協作會議邀請政府各個部會與專業人士一同探討，是否能由國家以守護兒童及性侵害受害者之名進行全國性調查，透過制度提供受害人、家屬及證人被保護之管道及後續支援系統，並且宣導預防和辨識兒童性犯罪的方法，讓不同類型的兒童機構可以更有效處理及舉報兒童性侵害。","path":"59/","thumbnail":"/images/post/59/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.jpg","tags":["null","3","null","10"],"depts":["NULL","MOE"]},{"id":60,"title":"","description":"","content":"","path":"60/","thumbnail":"","tags":["3","10"],"depts":[]},{"id":61,"title":"衛生福利部公告：預告「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」草案","description":"開放政府第61次協作會議衛福部預告「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」草案","content":"","path":"61/","thumbnail":"","tags":["29","null","21","10"],"depts":["MOHW"]},{"id":65,"title":"區間測速，是個好辦法嗎？科技執法的共同激盪","description":"開放政府第65次協作會議「廢除區間測速」","content":"網友說要「廢除區間測速」，因為這讓車速變慢，行車駕駛變得很不順暢。但是，國外研究指出，行車速度的增加，對於事故發生率與嚴重性具有正相關。區間測速跟交通安全、行車流暢度之間的關係為何？如何精進執法？又或者有沒有其他更好的方案呢？我們和交通部、警政署在會議前盤點事實資訊，邀請各方意見的網友，一起就這項新興的「科技執法」進行交流。","path":"65/","thumbnail":"/images/post/65/1KkTecro27zsaJUEncYIheSozd_UBgfJ9.jpg","tags":["19","10","15"],"depts":["MOTC","MOI"]},{"id":66,"title":"「漸進地學習，因理解而開啟更多的對話與可能」","description":"國立故宮博物院自提 開放政府第66次協作會議 故宮有精神工作坊","content":"故宮長期致力於博物館文化平權。從108年起與慈芳關懷中心合作，將文物帶入關懷中心與精神障礙會員共賞共創，109年更進一步策劃「有精神」展覽，展覽中涵括故宮文物，藝術家，精神障礙者相關於精神障礙議題的創作與詮釋。故宮「開放政府聯絡人」逸文於109年3月將本議題自提至開放政府聯絡人月會。與行政院公共數位創新空間（PDIS）合作召開協作會議。希望籌備過程涵融多方意見，讓大眾能對「有精神展」及相關議題有更清晰的了解。透過開放透明的會議機制與互動式的工作坊，讓更多關心這個議題的人，也能用另一種方式參與討論，表達看法。 我們也期待透過這樣的過程，能夠帶給每個議題一個更清楚的輪廓。也希望透過共創討論，開啟人與人之間的對話，即便他們曾經被污名，或是曾經使你懼怕。如同每個會議我們都會提到：「協作會議只是一個開始。」漸進地學習，因理解而開啟更多的對話與可能。","path":"66/","thumbnail":"/images/post/66/11EF27ihD6hONkIa0dFbp_hJsTf58TBuV.jpg","tags":["8","12","null"],"depts":["NPM"]},{"id":67,"title":"「說到故宮，你一定不會想到說明卡」","description":"開放政府第67次協作會議「故宮說明卡」","content":"「人們如何認識一幅畫？」故宮，一個看似古老而傳統的博物館，把這個問題打造成一個獨特的「話畫展」。前年，我們就找故宮的吳密察院長合作，以「使用者中心」概念來重新打造電子售票流程；去年，故宮則再次找上我們，探詢多元觀眾的需求，讓畫作旁的「說明卡」更貼近大家的期待。","path":"67/","thumbnail":"/images/post/67/1PMrfc4UFMAFcCc4Ovv37EDquRAh1T_wc.jpg","tags":["8","12","null"],"depts":["NPM"]},{"id":70,"title":"回應外界質疑，並新增參採「脫硫無機性污泥」再利用用途","description":"「經濟部廢棄物再利用管理辦法案」附表修正草案","content":"部會已經有既定的線上會議，PDIS在確保爭點明確、利害關係人都有被邀請的狀況下，並未另開協作會議，而是加入了他們的線上會議，並協助製作會議逐字稿，以增進公開透明。","path":"70/","thumbnail":"/images/post/70/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg","tags":["null"],"depts":["MOEA"]},{"id":71,"title":" 從「使用者需求」出發，重新設計政府資訊服務平臺","description":"海洋委員會自提 開放政府第71次協作會議 海域遊憩活動一站式資訊平臺「使用者需求」探詢","content":"繼去年行政院「向山致敬」的政策討論後，今年行政院持續推動「向海致敬」的政策。 本次協作會議聚焦在探詢「資訊」的使用者需求，透過11場深度訪談、協作會議的議題盤點，以及邀請各方利害關係人進行面對面的討論，來聚焦海域遊憩活動一站式資訊平臺的「使用者需求」，提供以「使用者為中心」的政府數位服務。  協作會議中，除了在上半場藉由部會簡報和心智圖盤點與海相關的遊憩使用者經驗及需求外，下半場的小組討論著重下列核心問題：「如何以不同海洋使用情境來細探使用者資訊需求並討論實行方法？」會議中各方利害關係人，透過進一步的經驗交流與腦力激盪，共同討論出具體方案，並在會中分享彼此的成果。海洋委員會針對協作會議所討論出的方案研擬短中長期執行計畫。後續將持續進行海域遊憩活動一站式資訊平臺的優化。 ","path":"71/","thumbnail":"/images/post/71/10WrxhAWDosHxlOz_aexwLVl2VkCOprzh.jpg","tags":["null","7","30"],"depts":["OAC"]},{"id":72,"title":"政府、患者與業者的合作，加速了環境改善的步伐","description":"開放政府第72次協作會議「禁用合成樟腦丸案」","content":"多數人不知道「萘丸」對於G6PD缺乏症的患者，可能產生溶血風險。民眾在JOIN平台提案...","path":"72/","thumbnail":"","tags":["14","null","10","30"],"depts":["EPA"]},{"id":73,"title":"一起想出既能保障農民權益又不傷害動物的方法","description":"開放政府第73次協作會議「請政府徹底落實捕獸夾販賣與持有皆懲罰，並提高現有刑事責任與罰金」案","content":"這次討論的議題由動物保護人士提案，希望政府全面禁用捕獸鋏。主管機關農委會表示現行法規已有規定，在經過多次工作會議的討論後，我們發現利害關係人其實很多元，例如農民也有許多苦水、原住民也擔心被誤解。因此，協作會議邀請這些多元的角色來到現場，說出各自的擔憂和期待。農友擔心作物被動物損害，也分享各自因應動物侵入的防範方式。獸鋏是大家過去由來以久或者是比較容易使用的預防方法，但農民朋友也同意，如果有比獸鋏更精確、對動物傷害性較低，更符合動保人士的需求的方法，都願意試試。會議中，政府單位、學者以及所有與會者一起想辦法，找出農民權益與動物權益共存的平衡方法。","path":"73/","thumbnail":"/images/post/73/1HnL4v7XxVZx97a_zOcMjYLis49PvjKxP.jpg","tags":["null","18","10","30"],"depts":["COA"]},{"id":78,"title":"開放政府更多時候需要從公部門彼此間的開放與合作作為起點","description":"核電廠除役資訊公開案","content":"開放政府並不僅指涉由公部門單向地對民眾開放，本次的原能會自提案，就促成了跨部會之間的資料開放與合作。而核電相關資料的互通有無及串接，目的是要讓民眾能更便利地取得資料。在資料可近性提高的前提下，就可以持續滾動式地檢討或修正資料呈現的方式，供民眾運用和理解。","path":"78/","thumbnail":"/images/post/78/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.jpg","tags":["null","null"],"depts":["AEC"]},{"id":79,"title":"「原來，單純、簡單的方法最符合多數人的需要」","description":"開放政府第79次協作會議「機車排氣定檢精進方案」","content":"你知道機車定檢的日期嗎？有沒有忘記定檢的經驗？行政院環保署接獲許多民眾常反應忘記自己的機車定檢日期，為了提供更便民的服務，了解使用者的真正需求是什麼？環保署自行提案，希望藉由多元觀點的集思廣益，找出讓民眾能如期定檢的方法。會議中，遵守規則的民眾認為，定期檢驗是民眾義務，不需要為了少數人修正方法。現場的地方政府環保單位也提供許多實務見解，認為政府願意、提供簡單便利的服務，同時民眾也有責任要自負。這場協作會議盤點出可行的各種方案，同時也促進公私協力，在撙節行政成本的前提下，實需透過各方努力方能推進政策目標。","path":"79/","thumbnail":"https://img.youtube.com/vi/6i7a4BBJ0zg/maxresdefault.jpg","tags":["19","9","30"],"depts":["EPA"]},{"id":80,"title":"跨境複雜的買賣爭議，需要跨部會及民間業者的智慧面對","description":"開放政府第80次協作會議  「宅配貨到付款（超商取貨付款）境外詐騙包裹氾濫，受害者求助無門！」","content":"海外網購遇到問題，消費者該怎麼辦？貨物從境外，經過報關，進到國內，最後到消費者手中，其實是一個比想像中更複雜的過程。政府能夠做多少？先從盤點現實、釐清爭點開始，面對新興的消費爭議，需要民間業者、團體與個人的力量一起面對，合作朝向解法的道路。這次，跨部會一起開了多場的籌備會議。前期的「對齊認知」工作，終於合併出一個完整對外的「流程圖」：簡化、轉譯並且聆聽，讓多元角色的知情（informed）討論成為可能。 協作會議結束後，海關的實名認證App強化「委任查核」功能，各部會加強既有作為；國內兩大超商也決定善盡企業社會道德責任，協助民眾居中協調超商貨到付款領取的跨境包裹進行退款事宜。消費者與公私部門的多元角色對話、共思解法，讓複雜的議題得以推進、落實。","path":"80/","thumbnail":"https://img.youtube.com/vi/0UNUqgFtaK0/maxresdefault.jpg","tags":["null","null","10","30"],"depts":["MOTC","MOF","MOI","MOEA"]},{"id":81,"title":"用合作而非對立的方式，政府與民眾一起填補制度缺漏","description":"開放政府第81次協作會議「防止公務員獎懲濫用」","content":"有關公務機關內部獎懲制度，有網友意見認為基層公務員被懲處時，內部申訴的機制不夠周全，有可能導致當事人權益受損；議題深入至對於現行法條的探討，衍伸至警方重獎重懲制度文化的探討。本案由於利害關係人受訪及出席的意願較低，故以較小型的座談會的形式舉辦，讓與會者與行政機關彼此之間充分答問，嘗試找出制度改善的空間。","path":"81/","thumbnail":"/images/post/81/1HbVlL-buMyF8p8MMq68LKFonMakLgfzY.jpg","tags":["10","null"],"depts":["MOI"]},{"id":82,"title":"多元角色的需求探詢讓政策制定更完善","description":"科技部自提 開放政府第82次協作會議「B型肝炎疫苗40週年紀念活動」","content":"科技部為籌辦2021年B肝疫苗40週年主題科學日紀念活動，於開放政府聯絡人月會提出合作召開協作會議，希望透過更開放透明的方式來廣邀各界對內容及辦理形式提出看法及建議。 科技部於前期訪談11位多元利害關係人，PDIS將訪談彙整成心智圖提供與會者更多元的觀點。協作會議中，科技部也邀請長期關注B型肝炎的醫師，病友，NGO，與關心科普資訊的媒體及民眾一同來集思廣益，腦力激盪。會後科技部將彙整所有成果，為主題科學日做更貼近民眾需求的設計。","path":"82/","thumbnail":"/images/post/82/1P1VO2ha4y5uDEqWFuHtg_9lWK7udrtl7.jpg","tags":["15","14"],"depts":["MOST"]},{"id":83,"title":"「形式輕量，內涵濃縮」的協作","description":"開放政府第83次協作會議 癌症免疫新藥案","content":"「致為病拼搏的年輕時代！」這是《我們都有病》一書的副標。以「年輕病友」作為自我認同的社群，沒有登記立案的組織身份，粉專卻有超過兩萬追蹤。 他們是開放政府第83次協作會議的提案社群。因為他們是「網友」，而非傳統規範意義上的「病友團體」。透過Join平台作為一把鑰匙，健保署開啟了與這個活力十足的社群的溝通之門。","path":"83/","thumbnail":"/images/post/83/1NeOwLpUjJnLVAv0wZPNudFa9lXvEJC4M.png","tags":["14"],"depts":["MOHW"]},{"id":85,"title":"以面對面的經驗分享，為法規說明會注入人情溫度","description":"開放政府第85次協作會議「廢除道路交通管理處罰條例第七條之一」","content":"隨著民眾協助檢舉交通違規案件越來越多，社會輿論對於民眾檢舉的正反面討論也日益高漲， 提案人郭先生於2020年11月3日在國發會的公共政策網路參與平台提案「廢除道路交通管理處罰條例第7條之1規定(民眾得敘明違規事實或檢具違規證據資料檢舉)」，他認為人民不是執法者，不應充當執法者來檢舉開單。當然，也有另一方的聲音認為，只要不違規便無需擔心。行政機關方面，則因檢舉工具的普及所導致的案量激增，排擠既有業務。立法機關同時也收到了許多正反方民眾陳情。因此，PDIS、交通部和警政署藉由會前盤點和訪談，釐清和彙整各方意見的過程，並以《處罰條例》修正草案為討論基礎，進行「修法草案說明會暨協作會議」，討論：「如何在減輕員警行政負擔的前提下，有效運用行政資源及民眾協作精神，改善交通檢舉制度？」  ，再透過小組討論面對面地經驗交流，讓修法更貼近多元利害關係人的需求。 ","path":"85/","thumbnail":"/images/post/85/1q7mrZ_jijap1SVzJBQSDfD2NBsgpSCg-.png","tags":["19","10"],"depts":["MOTC"]},{"id":86,"title":"台灣茶的特色走向國際，從風味系統的建構與精進做起","description":"開放政府第86次協作會議「台灣茶風味系統精進」","content":"農委會茶葉改良場為建立台灣茶葉的風味系統，藉此推廣品茶文化並將台灣茶推向國際，設計了風味輪1.0版先行推廣。為了讓風味系統更貼近品茶專業者、茶葉愛好者及一般消費者的使用情境，茶改場在開放政府聯絡人月會提出「自提案」，透過協作會議的方式蒐集更多元的意見，會議當天透過各方專業的對話與創作，啟發了更豐富的內容與形式，也為風味系統2.0和未來的資料數位化立下厚實的基礎。","path":"86/","thumbnail":"https://img.youtube.com/vi/jPY_E7WU_RE/maxresdefault.jpg","tags":["8","12"],"depts":["COA"]},{"id":90,"title":"大家一起共思，如何讓未來的國道電子收費系統更好","description":"開放政府第90次協作會議「國道ETC收歸國有，由民眾自主選擇付款方式」","content":"提案「國道ETC收歸國有，由民眾自主選擇付款方式」，經由110年2月份行政院開放政府聯絡人月會票選為「協作議題」。透過一連串的訪談和資料蒐集，我們彙整了公開的會議資料，讓大家可以事前閱讀，並採直播的方式讓更多關心的民眾可以線上參與討論。會中，除了針對原提案和其他網友在意的是像有清楚的相互問答外，參與者也為「未來的」國道電子收費系統應該包含哪些更好的服務，給出了非常具體的建議。這一次的討論，可說是真切體現了「政策前期」就讓民眾一起進廚房「炒糖吃」的開放政府精神。","path":"90/","thumbnail":"https://img.youtube.com/vi/KJsOO2E-wiM/maxresdefault.jpg","tags":["19","30"],"depts":["MOTC"]},{"id":93,"title":"如何為消費者提供更完善的汽車瑕疵認定機制？","description":"開放政府第93次協作會議「廢除車安中心 成立國家級公正鑑定單位 並加速TNCAP車輛撞擊測試」","content":"根據提案人和網友意見以及相關資料的梳理，可以發現，提高對車主的權益保障和瑕疵認定機制的完善，可能是民眾最在意面向。而第三方的仲裁調解是否具有公信力，也是提案的關鍵叩問。因此，協作會議當天，除了由提案人和部會，請處說明訴求與回應外，亦針對「如何為消費者提供更完善的汽車瑕疵認定機制？」進行分組討論，多元利害關係人之間相互聆聽、交換資訊。會議的初步共識，是設計一套可供車主回報車輛瑕疵的公開平台，促進資訊透明，以提升消費者保障。 ","path":"93/","thumbnail":"/images/post/93/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.png","tags":["19","30","null"],"depts":["MOEA","MOTC"]},{"id":105,"title":"欸，所以你都玩什麼遊戲？","description":"開放政府第105次協作會議「台灣線上遊戲轉蛋法推動」連署案","content":"根據市場調查公司 Newzoo 2017 年的調查，國人於該年度在網路連線遊戲的消費已經突破 10 億美元，是該年度世界排名第十五名的網路連線遊戲消費大國，但網路使用人口卻是該排名前 20 名中最少的，可見國人對於網路遊戲消費之驚人。 2017 年網友 YAMI 在公共政策網路參與平台提議「線上遊戲相關法規建置」催生「網路連線遊戲服務定型化契約應記載及不得記載事項」。 隨著遊戲發展經營模式的演變，現今主流的網路遊戲經營模式以免費遊玩搭配商城機制為大宗，在逐漸成為主流市場的在手機遊戲更是如此，經濟部也在 2018 年修正時加入應載明機會中獎商品活動等相關警語；但在遊戲模式多樣化且快速發展的現在，玩家們在樂於課金享受、支持遊戲的同時，也同時希望能夠在課金時能夠預期大約需要花費多少金錢便能夠從虛擬轉蛋獲得虛擬寶物。 今年 6 月網友 paul 提案「台灣線上遊戲轉蛋法推動」，這一次的討論，遊戲廠商與玩家對於標示機率一是多數都採支持立場，因此最終聚焦在討論如何針對虛擬轉蛋的商品資訊標示，試著找出遊戲廠商與玩家雙贏的方式。","path":"105/","thumbnail":"https://img.youtube.com/vi/p0h5a7V1IqA/maxresdefault.jpg","tags":["null","null","10"],"depts":["MOEA"]}]');
+</script>
+<section id="result">
+  <div class="container">
+    <div class="title">
+      <h2>協作會議列表</h2>
+      <span>透過以下的分類排序欲瀏覽的協作會議</span>
+    </div>
+
+    
+    <div class="row case" data-id="1" onclick="location.href='/1/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/1/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOL">勞動部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>公務人員協會足夠嗎？公務人員勞動權的發聲與對話</h3>
+          <h4>開放政府第1次協作會議 「支持公務人員可合法組織工會,以保障相關權益」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="7" onclick="location.href='/7/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/7/1ihCJaDoRi91kt1RUoVXURzLxKgkEuCJ-.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOI">內政部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=FSC">金管會</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOF">財政部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=9">財政</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>報稅系統難用到爆炸？設計師捲起袖子拒當酸民</h3>
+          <h4>開放政府第7次協作會議 「報稅軟體難用到爆炸」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="8" onclick="location.href='/8/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/8/1ihCJaDoRi91kt1RUoVXURzLxKgkEuCJ-.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=COA">農委會</a>
+          
+          
+          <h3>禁止魚翅買賣，保護海洋生態</h3>
+          <h4>開放政府第8次協作會議 「禁止魚翅買賣！重罰『割鰭棄身』！禁止買賣停止殺害！ 」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="9" onclick="location.href='/9/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/9/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOJ">法務部</a>
+          
+          
+          <h3>你曾聽過《調度司法警察條例》嗎？</h3>
+          <h4>開放政府第9次協作會議 「 廢除《調度司法警察條例》，尊重警察工作之專業，共同營造我國精緻司法的願景」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="10" onclick="location.href='/10/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/10/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOEA">經濟部</a>
+          
+          
+          <h3>藉由相關法規，建立更完善的線上遊戲環境</h3>
+          <h4>開放政府第10次協作會議「國內線上遊戲相關法規建置 」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="11" onclick="location.href='/11/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/11/1dibnXk7UtJYPUWKCU057cUNhoX-Q9avg.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOF">財政部</a>
+          
+          
+          <h3>海外網購免稅額為何調降？來討論電子商務貨物通關及課稅議題</h3>
+          <h4>開放政府第11次協作會議「反對 海外網購免稅額 縮至2千元 」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="13" onclick="location.href='/13/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/13/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=EPA">環保署</a>
+          
+          
+          <h3>愛護地球，漸進式停用免洗餐具</h3>
+          <h4>開放政府第13次協作會議 「全國漸進式禁止使用免洗餐具」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="14" onclick="location.href='/14/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/14/1dibnXk7UtJYPUWKCU057cUNhoX-Q9avg.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOC">文化部</a>
+          
+          
+          <h3>金紙與香的文化傳承</h3>
+          <h4>開放政府第14次協作會議 「請行政院文化部將「金紙及香」列為重要無形文化資產及重要文化資產保存技術登錄」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="15" onclick="location.href='/15/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/15/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOE">教育部</a>
+          
+          
+          <h3>一起來討論，讓幼兒園相關制度更完善</h3>
+          <h4>開放政府第15次協作會議 「公共化幼兒園應在4年內達到1000班之政策目標」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="16" onclick="location.href='/16/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/16/18zzHrzG6YqJ_iGgqaoyji5gayrBTWblv.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOF">財政部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOEA">經濟部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=FTC">公平會</a>
+          
+          
+          <h3>如何維護貨到付款之消費者權益？</h3>
+          <h4>開放政府第16次協作會議 「建請主管機關重視FACEBOOK(臉書)購物詐騙一案，研議如何防制與作為，望請各界連署支持」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="30" onclick="location.href='/30/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/30/1bG7mdHtPm6Iq8qW07aYJwcmkVHLa_yWH.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOHW">衛福部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=14">醫療</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>未婚女子能否使用人工生殖？正反雙方無共識</h3>
+          <h4>開放政府第30次協作會議 「開放單身女可以合法施行『人工受孕』及『試管嬰兒』 」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="31" onclick="location.href='/31/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/31/11g_CdiqL6w5S6HqNBlCPerV6A8azZpCU.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOF">財政部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=9">財政</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>超徵退稅議題，提案社群與部會的爭點整理</h3>
+          <h4>開放政府第31次協作會議 「超額徵收之稅款-歸還於民 」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="32" onclick="location.href='/32/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/32/1UPo1cjQQnfphHvCfBwAGC5_4G-kZRU2Z.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=13">環保</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>蘇花改會是機車安全回家的路嗎？協作會議現場觀察</h3>
+          <h4>開放政府第32次協作會議 「開放蘇花改多車種通行」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="34" onclick="location.href='/34/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/34/1vGHl3dzeJJFhICEf16plQrgVtmTmRG7o.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOF">財政部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>電子發票比較環保！協作會議建議澄清資訊 </h3>
+          <h4>開放政府第34次協作會議 「在[電子發票實施作業要點] 加入規範，禁止它用或可選擇的印出商品優惠」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="50" onclick="location.href='/50/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/puJAHqh7l4M/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=NPM">故宮</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=8">文化</a>
+          
+          <h3>「使用者經驗」顛覆傳統故宮的票務流程設計</h3>
+          <h4>國立故宮博物院自提 開放政府第50次協作會議 「故宮博物院電子票券流程改造」 </h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="52" onclick="location.href='/52/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/52/18zzHrzG6YqJ_iGgqaoyji5gayrBTWblv.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOI">內政部</a>
+          
+          
+          <h3>跨國婚姻媒合相關規範，你了解多少？</h3>
+          <h4>開放政府第52次協作會議「跨國境婚姻媒合法規說明」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="53" onclick="location.href='/53/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/53/1jIXcBDeUsGhKq762NsbnVx1vtia-rPRq.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=COA">農委會</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOHW">衛福部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=14">醫療</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>如何將寵物用藥制度化，同時保障供給充足？</h3>
+          <h4>開放政府第53次協作會議「獸醫使用人藥」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="54" onclick="location.href='/54/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/QFA4Mzs-6ao/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOI">內政部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=7">休閒</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3> 持續滾動修正與開放資料，加值政府數位服務</h3>
+          <h4>內政部營建署自提 開放政府第54次協作會議 「登山申請線上系統流程改造」 </h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="55" onclick="location.href='/55/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/55/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOE">教育部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=3">教育</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>集思廣益，解決教育系統專業治療師之問題</h3>
+          <h4>開放政府第55次協作會議「調增教育專業人員鐘點費」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="57" onclick="location.href='/57/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/57/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>打造「寵物友善」乘坐環境</h3>
+          <h4>開放政府第57次協作會議「台鐵增設寵物車廂案」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="58" onclick="location.href='/58/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/58/1zIYUsLnPr_-NHSknZT4fGsHYjzG-0k4D.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=COA">農委會</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=HAC">客委會</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=8">文化</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=18">農業</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>在尊重傳統和保護動物之間，取得一個平衡</h3>
+          <h4>開放政府第58次協作會議「終止神豬重量比賽祭祀」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="59" onclick="location.href='/59/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/59/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=NULL">NULL</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOE">教育部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=3">教育</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>終結恐懼，給兒童一個安全的生長環境</h3>
+          <h4>開放政府第59案協作會議「兒童性侵害案」 </h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="60" onclick="location.href='/60/'">
+      <div class="col-3">
+        <div class="image" style="background: url('')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=3">教育</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3></h3>
+          <h4></h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="61" onclick="location.href='/61/'">
+      <div class="col-3">
+        <div class="image" style="background: url('')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOHW">衛福部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=29">科學</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=21">健康</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>衛生福利部公告：預告「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」草案</h3>
+          <h4>開放政府第61次協作會議衛福部預告「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」草案</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="65" onclick="location.href='/65/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/65/1KkTecro27zsaJUEncYIheSozd_UBgfJ9.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOI">內政部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=15">科技</a>
+          
+          <h3>區間測速，是個好辦法嗎？科技執法的共同激盪</h3>
+          <h4>開放政府第65次協作會議「廢除區間測速」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="66" onclick="location.href='/66/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/66/11EF27ihD6hONkIa0dFbp_hJsTf58TBuV.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=NPM">故宮</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=8">文化</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=12">共創</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>「漸進地學習，因理解而開啟更多的對話與可能」</h3>
+          <h4>國立故宮博物院自提 開放政府第66次協作會議 故宮有精神工作坊</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="67" onclick="location.href='/67/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/67/1PMrfc4UFMAFcCc4Ovv37EDquRAh1T_wc.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=NPM">故宮</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=8">文化</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=12">共創</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>「說到故宮，你一定不會想到說明卡」</h3>
+          <h4>開放政府第67次協作會議「故宮說明卡」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="70" onclick="location.href='/70/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/70/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOEA">經濟部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>回應外界質疑，並新增參採「脫硫無機性污泥」再利用用途</h3>
+          <h4>「經濟部廢棄物再利用管理辦法案」附表修正草案</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="71" onclick="location.href='/71/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/71/10WrxhAWDosHxlOz_aexwLVl2VkCOprzh.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=OAC">海委會</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=7">休閒</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3> 從「使用者需求」出發，重新設計政府資訊服務平臺</h3>
+          <h4>海洋委員會自提 開放政府第71次協作會議 海域遊憩活動一站式資訊平臺「使用者需求」探詢</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="72" onclick="location.href='/72/'">
+      <div class="col-3">
+        <div class="image" style="background: url('')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=EPA">環保署</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=14">醫療</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>政府、患者與業者的合作，加速了環境改善的步伐</h3>
+          <h4>開放政府第72次協作會議「禁用合成樟腦丸案」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="73" onclick="location.href='/73/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/73/1HnL4v7XxVZx97a_zOcMjYLis49PvjKxP.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=COA">農委會</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=18">農業</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>一起想出既能保障農民權益又不傷害動物的方法</h3>
+          <h4>開放政府第73次協作會議「請政府徹底落實捕獸夾販賣與持有皆懲罰，並提高現有刑事責任與罰金」案</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="78" onclick="location.href='/78/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/78/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=AEC">原能會</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>開放政府更多時候需要從公部門彼此間的開放與合作作為起點</h3>
+          <h4>核電廠除役資訊公開案</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="79" onclick="location.href='/79/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/6i7a4BBJ0zg/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=EPA">環保署</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=9">財政</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>「原來，單純、簡單的方法最符合多數人的需要」</h3>
+          <h4>開放政府第79次協作會議「機車排氣定檢精進方案」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="80" onclick="location.href='/80/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/0UNUqgFtaK0/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOF">財政部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOI">內政部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOEA">經濟部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>跨境複雜的買賣爭議，需要跨部會及民間業者的智慧面對</h3>
+          <h4>開放政府第80次協作會議  「宅配貨到付款（超商取貨付款）境外詐騙包裹氾濫，受害者求助無門！」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="81" onclick="location.href='/81/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/81/1HbVlL-buMyF8p8MMq68LKFonMakLgfzY.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOI">內政部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>用合作而非對立的方式，政府與民眾一起填補制度缺漏</h3>
+          <h4>開放政府第81次協作會議「防止公務員獎懲濫用」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="82" onclick="location.href='/82/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/82/1P1VO2ha4y5uDEqWFuHtg_9lWK7udrtl7.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOST">科技部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=15">科技</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=14">醫療</a>
+          
+          <h3>多元角色的需求探詢讓政策制定更完善</h3>
+          <h4>科技部自提 開放政府第82次協作會議「B型肝炎疫苗40週年紀念活動」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="83" onclick="location.href='/83/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/83/1NeOwLpUjJnLVAv0wZPNudFa9lXvEJC4M.png')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOHW">衛福部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=14">醫療</a>
+          
+          <h3>「形式輕量，內涵濃縮」的協作</h3>
+          <h4>開放政府第83次協作會議 癌症免疫新藥案</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="85" onclick="location.href='/85/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/85/1q7mrZ_jijap1SVzJBQSDfD2NBsgpSCg-.png')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>以面對面的經驗分享，為法規說明會注入人情溫度</h3>
+          <h4>開放政府第85次協作會議「廢除道路交通管理處罰條例第七條之一」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="86" onclick="location.href='/86/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/jPY_E7WU_RE/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=COA">農委會</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=8">文化</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=12">共創</a>
+          
+          <h3>台灣茶的特色走向國際，從風味系統的建構與精進做起</h3>
+          <h4>開放政府第86次協作會議「台灣茶風味系統精進」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="90" onclick="location.href='/90/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/KJsOO2E-wiM/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <h3>大家一起共思，如何讓未來的國道電子收費系統更好</h3>
+          <h4>開放政府第90次協作會議「國道ETC收歸國有，由民眾自主選擇付款方式」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="93" onclick="location.href='/93/'">
+      <div class="col-3">
+        <div class="image" style="background: url('/images/post/93/1ucWWIgbXxB4n-6VZXdrsMenPzjfHpakl.png')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOEA">經濟部</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">交通部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">交通</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=30">公私協力</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <h3>如何為消費者提供更完善的汽車瑕疵認定機制？</h3>
+          <h4>開放政府第93次協作會議「廢除車安中心 成立國家級公正鑑定單位 並加速TNCAP車輛撞擊測試」</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row case" data-id="105" onclick="location.href='/105/'">
+      <div class="col-3">
+        <div class="image" style="background: url('https://img.youtube.com/vi/p0h5a7V1IqA/maxresdefault.jpg')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOEA">經濟部</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=null"></a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">法規</a>
+          
+          <h3>欸，所以你都玩什麼遊戲？</h3>
+          <h4>開放政府第105次協作會議「台灣線上遊戲轉蛋法推動」連署案</h3>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  <script type="text/javascript">
+  "use strict";
+  init();
+
+  function getel(text) {
+    return [...document.querySelectorAll(text)];
+  }
+
+  function init() {
+    init_filter();
+    reload_list();
+  }
+
+  function init_filter() {
+    var params = new URLSearchParams(window.location.search);
+    document.getElementById("search-text").value = params.get("search");
+    var depts = params.get("dept");
+    var tags = params.get("tag");
+    if (depts) {
+      depts.split(",").forEach((d) => {
+        getel('.dept[data-id="' + d + '"]').forEach(
+          (el) => (el.dataset.active = "true")
+        );
+      });
+    }
+    if (tags) {
+      tags.split(",").forEach((d) => {
+        getel('.tag[data-id="' + d + '"]').forEach(
+          (el) => (el.dataset.active = "true")
+        );
+      });
+    }
+  }
+
+  function click_filter(e) {
+    e.dataset.active = !(e.dataset.active === "true");
+    reload_list();
+  }
+
+  function reload_list() {
+    const search = document.getElementById("search-text").value;
+    let filter_metadata = metadata.filter(
+      (p) => (p.title + p.description + p.content).includes(search)
+    );
+
+    count("dept", filter_metadata);
+    const dept_active = getel('.dept[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
+    filter_metadata = filter_metadata.filter(
+      (p) => dept_active.length == 0 ? true : dept_active.some((i) => p.depts.includes(i))
+    );
+
+    count("tag", filter_metadata);
+    const tag_active = getel('.tag[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
+    filter_metadata = filter_metadata.filter(
+      (p) => tag_active.length == 0 ? true : tag_active.some((i) => p.tags.includes(i))
+    );
+
+    getel(".case").forEach((el) => (el.dataset.visible = "false"));
+    filter_metadata.forEach((p) => {
+      getel(`.case[data-id="${p.id}"]`).find((el) => (el.dataset.visible = "true"));
+    });
+
+    // Rewrite URL
+    var result = [];
+    if (search != "") result.push("search=" + encodeURIComponent(search));
+    if (dept_active.length > 0) result.push("dept=" + dept_active.join(","));
+    if (tag_active.length > 0) result.push("tag=" + tag_active.join(","));
+    history.replaceState({}, "", "?" + result.join("&"));
+  }
+
+  function count(name, filter_metadata) {
+    const count = {};
+    filter_metadata
+      .map((d) => d[`${name}s`])
+      .flat()
+      .forEach((x) => (count[x] = (count[x] || 0) + 1));
+    getel(`.${name}`).forEach((el) => {
+      const num =
+        count[el.dataset.id] == undefined ? 0 : count[el.dataset.id];
+      el.innerHTML = `${el.dataset.name} (${num})`;
+      el.dataset.count = num;
+    });
+    getel(`.${name}`)
+      .sort((a, b) => b.dataset.count.localeCompare(a.dataset.count))
+      .forEach((el) => el.parentNode.appendChild(el));
+  }
+</script>
+</main>
+
+  <footer>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

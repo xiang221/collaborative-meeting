@@ -1,0 +1,80 @@
+header .navbar .nav-link {
+  color: black !important;
+}
+
+main[class=list] .title {
+  margin-bottom: 3rem;
+}
+main[class=list] .title h2 {
+  font-size: 2rem;
+  display: inline;
+  font-weight: bold;
+  color: var(--bs-primary);
+  margin-right: 1rem;
+}
+main[class=list] section[id=filter] {
+  margin-top: 10rem;
+}
+main[class=list] section[id=filter] hr {
+  margin: 2rem 0;
+}
+main[class=list] section[id=filter] h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--bs-primary);
+}
+main[class=list] section[id=filter] .filter-items {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+main[class=list] section[id=filter] .filter-items .filter-item {
+  border-right: 1px solid;
+  border-color: #c4c4c4;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  margin: 1rem 0;
+  color: gray;
+  cursor: pointer;
+}
+main[class=list] section[id=filter] .filter-items .filter-item:hover {
+  color: DimGray;
+  font-weight: bold;
+}
+main[class=list] section[id=filter] .filter-items .filter-item[data-active=true] {
+  color: var(--bs-primary);
+  font-weight: bold;
+}
+main[class=list] section[id=filter] .search-bar {
+  margin: 1rem 0;
+  padding: 0 2rem;
+}
+main[class=list] section[id=result] {
+  margin-top: 5rem;
+}
+main[class=list] section[id=result] div[data-visible=false] {
+  display: none;
+}
+main[class=list] section[id=result] .case {
+  cursor: pointer;
+}
+main[class=list] section[id=result] a {
+  text-decoration: none;
+  color: black;
+}
+main[class=list] section[id=result] .row {
+  margin-bottom: 2rem;
+}
+main[class=list] section[id=result] .image {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background-size: cover !important;
+  background-position: center !important;
+}
+main[class=list] section[id=result] h3 {
+  font-size: 2.25rem;
+}
+main[class=list] section[id=result] h4 {
+  font-size: 1.5rem;
+}

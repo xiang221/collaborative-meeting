@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>協作會議列表 - 快來看協作會議</title>
+  <link rel="canonical" href="https://cm.pdis.tw/en/list/">
+  <meta name="description" content="開放政府 協作會議">
+  <meta name="keywords" content="">
+  <meta name="author" content="PDIS">
+
+  <meta property="og:image" content="https://cm.pdis.tw/butter.png">
+  <meta property="og:site_name" content="快來看協作會議" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="協作會議列表 - 快來看協作會議" />
+  <meta property="og:description" content="開放政府 協作會議">
+  <meta property="og:url" content="https://cm.pdis.tw/en/list/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="協作會議列表 - 快來看協作會議">
+  <meta name="twitter:description" content="開放政府 協作會議">
+  <meta name="twitter:image" content="https://cm.pdis.tw/butter.png">
+  <meta name="twitter:url" content="https://cm.pdis.tw/en/list/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/theme.css?v=1637812708511">
+  <link rel="stylesheet" href="/css/color.css?v=1637812708511">
+  
+  
+  <link rel="stylesheet" href="/css/list.css?v=1637812708511">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="primary-">
+  <header>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a href="/en" class="navbar-brand">
+        <img src="/images/logo.png" width="50" height="50" alt="Logo"></img>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/#introduction">Open Government, Collaborative Meeting</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/#achievement">Result</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/en/list">Search Collaborative Meeting</a>
+          </li>
+          
+
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/list/">中文</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <main class="list">
+  <section id="filter">
+  <div class="container">
+    <div class="title">
+      <h2>搜尋協作會議</h2>
+      <span>透過以下的分類搜尋欲瀏覽的協作會議</span>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-2">
+        <h3>Search</h2>
+      </div>
+      <div class="col-10">
+        <div class="search-bar">
+          <input type="text" class="form-control form-control-lg w-100" id="search-text" onkeyup="reload_list()">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h3>Ministry</h2>
+      </div>
+      <div class="col-10 filter-items">
+        
+        <div class="filter-item dept" data-id="MOTC" data-name="Ministry of Transportation and Communications" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOHW" data-name="Ministry of Health and Welfare" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOST" data-name="Ministry of Science and Technology" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MND" data-name="Ministry of National Defense" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOI" data-name="Ministry of the Interior" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOFA" data-name="Ministry of Foreign Affairs" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOF" data-name="Ministry of Finance" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOJ" data-name="Ministry of Justice" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOE" data-name="Ministry of Education" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOEA" data-name="Ministry of Economic Affairs" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOC" data-name="Ministry of Culture" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MOL" data-name="Ministry of Labor" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="NDC" data-name="National Development Council" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="FSC" data-name="Financial Supervisory Commission" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="OCAC" data-name="Overseas Community Affairs Council" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="VAC" data-name="Veterans Affairs Council" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="CIP" data-name="Council of Indigenous Peoples" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="HAC" data-name="Hakka Affairs Council" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="OAC" data-name="Ocean Affairs Council" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="MAC" data-name="Mainland Affairs Council" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="COA" data-name="Council of Agriculture, Executive Yuan" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="AEC" data-name="Atomic Energy Council, Executive Yuan" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="PCC" data-name="Public Construction Commission, Executive Yuan" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="EPA" data-name="Environmental Protection Administration, Executive Yuan" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="CEC" data-name="Central Election Commission" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="FTC" data-name="Fair Trade Commission" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="NCC" data-name="National Communications Commission" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="TJC" data-name="Transitional Justice Commission" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="CBC" data-name="Central Bank of the Republic of China (Taiwan)" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="NPM" data-name="National Palace Museum" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="DGBAS" data-name="Directorate General of Budget, Accounting and Statistics, Executive Yuan" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item dept" data-id="DGPA" data-name="Directorate-General of Personnel Administration, Executive Yuan" onclick="click_filter(this)"></div>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h3>Tag</h2>
+      </div>
+      <div class="col-10 filter-items">
+        
+        <div class="filter-item tag" data-id="1" data-name="Animal protection" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="2" data-name="consumer" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="3" data-name="education" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="4" data-name="child" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="5" data-name="teenager" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="6" data-name="gender equality" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="7" data-name="leisure" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="8" data-name="culture" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="9" data-name="finance" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="10" data-name="legislation" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="11" data-name="digital service" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="12" data-name="co-creation" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="13" data-name="enviromental protection" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="14" data-name="medical care" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="15" data-name="technology" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="16" data-name="fishery" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="17" data-name="health insurance" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="18" data-name="agriculture" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="19" data-name="transportation" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="20" data-name="social welfare" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="21" data-name="health" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="22" data-name="labor rights" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="23" data-name="women's rights" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="24" data-name="civil service" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="25" data-name="commerce" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="26" data-name="public policy" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="27" data-name="indigenous culture" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="28" data-name="public service" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="29" data-name="science" onclick="click_filter(this)"></div>
+        
+        <div class="filter-item tag" data-id="30" data-name="public-people partnership" onclick="click_filter(this)"></div>
+        
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+  
+<script type="text/javascript">
+  const metadata = JSON.parse('[{"id":85,"title":"以面對面的經驗分享，為法規說明會注入人情溫度","description":"開放政府第85次協作會議「廢除道路交通管理處罰條例第七條之一」","content":"隨著民眾協助檢舉交通違規案件越來越多，社會輿論對於民眾檢舉的正反面討論也日益高漲， 提案人郭先生於2020年11月3日在國發會的公共政策網路參與平台提案「廢除道路交通管理處罰條例第7條之1規定(民眾得敘明違規事實或檢具違規證據資料檢舉)」，他認為人民不是執法者，不應充當執法者來檢舉開單。當然，也有另一方的聲音認為，只要不違規便無需擔心。行政機關方面，則因檢舉工具的普及所導致的案量激增，排擠既有業務。立法機關同時也收到了許多正反方民眾陳情。因此，PDIS、交通部和警政署藉由會前盤點和訪談，釐清和彙整各方意見的過程，並以《處罰條例》修正草案為討論基礎，進行「修法草案說明會暨協作會議」，討論：「如何在減輕員警行政負擔的前提下，有效運用行政資源及民眾協作精神，改善交通檢舉制度？」  ，再透過小組討論面對面地經驗交流，讓修法更貼近多元利害關係人的需求。","path":"en/85/","thumbnail":"test.png","tags":["19","10"],"depts":["MOTC"]}]');
+</script>
+<section id="result">
+  <div class="container">
+    <div class="title">
+      <h2>協作會議列表</h2>
+      <span>透過以下的分類排序欲瀏覽的協作會議</span>
+    </div>
+
+    
+    <div class="row case" data-id="85" onclick="location.href='/en/85/'">
+      <div class="col-3">
+        <div class="image" style="background: url('test.png')">
+        </div>
+      </div>
+      <div class="col-9 d-flex align-self-end">
+        <div>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=MOTC">MOTC</a>
+          
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=19">transportation</a>
+          
+          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=10">legislation</a>
+          
+          <h3>以面對面的經驗分享，為法規說明會注入人情溫度</h3>
+          <h4>開放政府第85次協作會議「廢除道路交通管理處罰條例第七條之一」</h3>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  <script type="text/javascript">
+  "use strict";
+  init();
+
+  function getel(text) {
+    return [...document.querySelectorAll(text)];
+  }
+
+  function init() {
+    init_filter();
+    reload_list();
+  }
+
+  function init_filter() {
+    var params = new URLSearchParams(window.location.search);
+    document.getElementById("search-text").value = params.get("search");
+    var depts = params.get("dept");
+    var tags = params.get("tag");
+    if (depts) {
+      depts.split(",").forEach((d) => {
+        getel('.dept[data-id="' + d + '"]').forEach(
+          (el) => (el.dataset.active = "true")
+        );
+      });
+    }
+    if (tags) {
+      tags.split(",").forEach((d) => {
+        getel('.tag[data-id="' + d + '"]').forEach(
+          (el) => (el.dataset.active = "true")
+        );
+      });
+    }
+  }
+
+  function click_filter(e) {
+    e.dataset.active = !(e.dataset.active === "true");
+    reload_list();
+  }
+
+  function reload_list() {
+    const search = document.getElementById("search-text").value;
+    let filter_metadata = metadata.filter(
+      (p) => (p.title + p.description + p.content).includes(search)
+    );
+
+    count("dept", filter_metadata);
+    const dept_active = getel('.dept[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
+    filter_metadata = filter_metadata.filter(
+      (p) => dept_active.length == 0 ? true : dept_active.some((i) => p.depts.includes(i))
+    );
+
+    count("tag", filter_metadata);
+    const tag_active = getel('.tag[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
+    filter_metadata = filter_metadata.filter(
+      (p) => tag_active.length == 0 ? true : tag_active.some((i) => p.tags.includes(i))
+    );
+
+    getel(".case").forEach((el) => (el.dataset.visible = "false"));
+    filter_metadata.forEach((p) => {
+      getel(`.case[data-id="${p.id}"]`).find((el) => (el.dataset.visible = "true"));
+    });
+
+    // Rewrite URL
+    var result = [];
+    if (search != "") result.push("search=" + encodeURIComponent(search));
+    if (dept_active.length > 0) result.push("dept=" + dept_active.join(","));
+    if (tag_active.length > 0) result.push("tag=" + tag_active.join(","));
+    history.replaceState({}, "", "?" + result.join("&"));
+  }
+
+  function count(name, filter_metadata) {
+    const count = {};
+    filter_metadata
+      .map((d) => d[`${name}s`])
+      .flat()
+      .forEach((x) => (count[x] = (count[x] || 0) + 1));
+    getel(`.${name}`).forEach((el) => {
+      const num =
+        count[el.dataset.id] == undefined ? 0 : count[el.dataset.id];
+      el.innerHTML = `${el.dataset.name} (${num})`;
+      el.dataset.count = num;
+    });
+    getel(`.${name}`)
+      .sort((a, b) => b.dataset.count.localeCompare(a.dataset.count))
+      .forEach((el) => el.parentNode.appendChild(el));
+  }
+</script>
+</main>
+
+  <footer>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
