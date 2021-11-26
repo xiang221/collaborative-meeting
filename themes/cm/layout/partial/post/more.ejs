@@ -1,0 +1,48 @@
+
+
+<%if(page.more != null ){ %>
+
+    const request = require("request");
+    const cheerio = require("cheerio");
+    const Crawler = () => {
+    request({
+        url: "<%- page.more.link %>",
+        method: "GET"
+    }, (error, res, body) => {
+        if (error || !body) {
+            return;
+        }
+            const data = [];
+            const $ = cheerio.load(body);
+            const list = $(".post-header");
+            
+            const image = $('.post-image').attr('src');
+            const title = list.find('.post-title').text();
+            const subtitle = list.find('p').text();
+            const date = list.find('time').text().replace(/\s/g, "");
+            const authors = list.find('.authors').text().replace(/\s/g, "");
+    
+            data.push({ image, title, subtitle, date, authors });
+        });
+    };
+
+    <section id="picture">
+        <div class="container">
+        <% array(page.more).forEach(data=> { %>
+            Crawler();
+            <div class="row">
+                <div class="col-5">
+                <img src="<%- data[0] %>" class="" />
+                </div>
+                <div class="col-7">
+                    <h2><%- data[1] %></h2>
+                    <p><%- data[2] %></p>
+                    <p><%- data[3] %></p>
+                    |
+                    <p><%- data[4] %></p>
+                </div>
+            </div>
+        <% })%>
+        </div>
+    </section>
+} %>  
