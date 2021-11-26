@@ -32,35 +32,10 @@ main[class="post"] {
     padding-bottom: 56.25%;
     background-size: cover !important;
     background-position: center !important;
-    //margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
-  @media screen and (min-width: 769px) {
-    .img-169 {
-      width: 100%;
-      padding-bottom: 56.25%;
-      background-size: cover !important;
-      background-position: center !important;
-    }
-  }
-  @media screen and (min-width: 321px) and (max-width: 768px) {
-    .img-169 {
-      width: 100%;
-      padding-bottom: 56.25%;
-      background-size: cover !important;
-      background-position: center !important;
-    }
-  }
-  @media screen and (min-width: 0px) and (max-width: 320px){
-    .img-169 {
-      width: 100%;
-      padding-bottom: 56.25%;
-      background-size: cover !important;
-      background-position: center !important;
-    }
-}
-
-
+  
 
   section[id="cover"] {
     color: white;
