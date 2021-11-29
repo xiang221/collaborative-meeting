@@ -41,6 +41,14 @@
     const search = document.getElementById("search-text").value;
     let filter_metadata = metadata.filter(
       (p) => (p.title + p.description + p.content).includes(search)
+    ); 
+
+    count("tag", filter_metadata);
+    const tag_active = getel('.tag[data-active="true"]').map(
+      (e) => e.dataset.id
+    );
+    filter_metadata = filter_metadata.filter(
+      (p) => tag_active.length == 0 ? true : tag_active.some((i) => p.tags.includes(i))
     );
 
     count("dept", filter_metadata);
@@ -51,15 +59,14 @@
       (p) => dept_active.length == 0 ? true : dept_active.some((i) => p.depts.includes(i))
     );
 
-    count("tag", filter_metadata);
-    const tag_active = getel('.tag[data-active="true"]').map(
-      (e) => e.dataset.id
-    );
-    filter_metadata = filter_metadata.filter(
-      (p) => tag_active.length == 0 ? true : tag_active.some((i) => p.tags.includes(i))
-    );
+    document.getElementById("result-count").innerHTML = filter_metadata.length;
 
-    getel(".case").forEach((el) => (el.dataset.visible = "false"));
+    getel(".case")
+      .sort((a, b) => document.getElementById("select-sort").value == "asc" ? a.dataset.id - b.dataset.id : b.dataset.id - a.dataset.id)
+      .forEach((el) => {
+        el.dataset.visible = "false";
+        el.parentNode.appendChild(el);
+      });
     filter_metadata.forEach((p) => {
       getel(`.case[data-id="${p.id}"]`).find((el) => (el.dataset.visible = "true"));
     });

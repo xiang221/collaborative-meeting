@@ -22,7 +22,14 @@ site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish !=
   <div class="container">
     <div class="title">
       <h2><%- page.result.title %></h2>
-      <span><%- page.result.content %></span>
+      <span><%- page.result.content %>，篩選出 <span id="result-count">0</span> 案相關協作會議</span>
+    </div>
+
+    <div class="sort">
+      <select id="select-sort" class="form-select" onchange="reload_list()">
+        <option selected value="asc">由舊到新</option>
+        <option value="desc">由新到舊</option>
+      </select>
     </div>
 
     <% metadata.forEach(post => { %>
@@ -33,17 +40,16 @@ site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish !=
       </div>
       <div class="col-9 d-flex flex-column justify-content-between">
         <div>
-         
           <h3><%- post.title %></h3>
           <p><%- post.description %></p>
-          </div>
-          <div>
-            <% array(post.depts).forEach(d => { %>
-              <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
-              <% }) %>
-              <% array(post.tags).forEach(d => { %>
-              <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
-              <% }) %>
+        </div>
+        <div>
+          <% array(post.tags).forEach(d => { %>
+          <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
+          <% }) %>
+          <% array(post.depts).forEach(d => { %>
+          <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
+          <% }) %>
         </div>
       </div>
     </div>

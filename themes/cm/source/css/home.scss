@@ -168,40 +168,7 @@ main[class="home"] {
       text-align: center;
       justify-content: center;
       align-items: center;
-      .search-bar {
-        width: 100%;
-        border-radius: 50rem;
-        padding: 1rem 1rem 1rem 4rem;
-        background-color: var(--bs-secondary);
-        display: flex;
-        justify-content: space-between;
-        input {
-          font-size: 2rem;
-          color: white;
-          background-color: transparent;
-          border: unset;
-          cursor: default;
-          &::placeholder {
-            color: white;
-          }
-          &:focus {
-            outline: 0;
-          }
-        }
-        .search-btn {
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          background-color: white;
-          display: flex;  
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          svg {
-            font-size: 1.7rem;
-          }
-        }
-      }
+      
       .tags {
         max-width: 45rem;
         .btn-tag {

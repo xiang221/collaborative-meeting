@@ -6,31 +6,16 @@
     </div>
    
     <div class="row">
-      <div class="col-2">
-        <h3><%- page.filter.search_title %></h2>
-      </div>
-      <div class="col-10">
+      <div class="col-12">
         <div class="search-bar">
-          <input type="text" class="form-control form-control-lg w-100" id="search-text" onkeyup="reload_list()">
+          <input id="search-text" type="text" placeholder="<%- page.filter.search %>" autocomplete="off" onkeyup="reload_list()"/>
+          <div class="search-btn">
+            <i class="fas fa-search"></i>
+          </div>
         </div>
       </div>
     </div>
     <hr>
-    <div class="row filter-dept">
-      <div class="col-2">
-        <h3><%- page.filter.dept_title %></h2>
-      </div>
-      <div class="col-10">
-        <div class="collapse" id="collapseDept">
-          <div class="filter-items">
-            <% site.pages.filter(p => p.id == "department").data[0].items.filter(p => p.id != "PDIS").forEach(dept => { %>
-            <div class="filter-item dept" data-id="<%- dept.id %>" data-name="<%-  page.lang == 'en' ? dept[page.lang]['fullname'] : dept[page.lang]['name'] %>" data-active="false" onclick="click_filter(this)"></div>
-            <% }) %>
-          </div>
-        </div>
-        <a class="more" data-bs-toggle="collapse" href="#collapseDept">展開更多部會</a>
-      </div>
-    </div>
     <div class="row filter-tag">
       <div class="col-2">
         <h3><%- page.filter.tag_title %></h2>
@@ -46,6 +31,21 @@
         <a class="more" data-bs-toggle="collapse" href="#collapseTag">展開更多類型</a>
       </div>
     </div>
+    <div class="row filter-dept">
+      <div class="col-2">
+        <h3><%- page.filter.dept_title %></h2>
+      </div>
+      <div class="col-10">
+        <div class="collapse" id="collapseDept">
+          <div class="filter-items">
+            <% site.pages.filter(p => p.id == "department").data[0].items.filter(p => p.id != "PDIS").forEach(dept => { %>
+            <div class="filter-item dept" data-id="<%- dept.id %>" data-name="<%-  page.lang == 'en' ? dept[page.lang]['fullname'] : dept[page.lang]['name'] %>" data-active="false" onclick="click_filter(this)"></div>
+            <% }) %>
+          </div>
+        </div>
+        <a class="more" data-bs-toggle="collapse" href="#collapseDept">展開更多部會</a>
+      </div>
+    </div>  
     <hr>
   </div>
 </section>

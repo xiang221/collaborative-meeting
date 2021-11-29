@@ -82,15 +82,9 @@ main[class="list"] {
         cursor: pointer;
 
         &:hover {
-          filter: contrast(2);
           font-weight: bold;
         }
       }
-    }
-
-    .search-bar {
-      margin: 1rem 0;
-      padding: 0 1.2rem;
     }
 
     .more {
@@ -104,6 +98,17 @@ main[class="list"] {
 
     h3 {
       font-weight: bold;
+    }
+
+    .sort {
+      margin-bottom: 2rem;
+      select {
+        width: auto;
+        border: 0;
+        outline: 0;
+        font-size: 1.2rem;
+        padding-left: 0;
+      }
     }
 
     .case {
