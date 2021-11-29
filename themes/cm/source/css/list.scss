@@ -82,7 +82,7 @@ main[class="list"] {
         cursor: pointer;
 
         &:hover {
-          color: DimGray;
+          filter: contrast(2);
           font-weight: bold;
         }
       }
@@ -121,7 +121,9 @@ main[class="list"] {
         margin-right: 0.3rem;
 
         &:hover {
-          filter: contrast(1.5);
+          filter: contrast(2);
+          transform: scale(1.1);
+          font-weight: bold;
         }
 
         &.badge-dept {
