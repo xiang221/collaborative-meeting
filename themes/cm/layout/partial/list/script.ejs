@@ -85,7 +85,8 @@
       el.dataset.count = num;
     });
     getel(`.${name}`)
-      .sort((a, b) => b.dataset.count.localeCompare(a.dataset.count))
+      .sort((a, b) => b.dataset.count.localeCompare(a.dataset.count, 'en', {numeric: true}))
+      .sort((a, b) => b.dataset.active.localeCompare(a.dataset.active))
       .forEach((el) => el.parentNode.appendChild(el));
   }
 </script>

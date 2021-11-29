@@ -31,16 +31,19 @@ site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish !=
         <div class="image" style="background: url('<%- post.thumbnail %>')">
         </div>
       </div>
-      <div class="col-9 d-flex align-self-end">
+      <div class="col-9 d-flex flex-column justify-content-between">
         <div>
-          <% array(post.depts).forEach(d => { %>
-          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
-          <% }) %>
-          <% array(post.tags).forEach(d => { %>
-          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
-          <% }) %>
+         
           <h3><%- post.title %></h3>
-          <h4><%- post.description %></h3>
+          <p><%- post.description %></p>
+          </div>
+          <div>
+            <% array(post.depts).forEach(d => { %>
+              <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
+              <% }) %>
+              <% array(post.tags).forEach(d => { %>
+              <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
+              <% }) %>
         </div>
       </div>
     </div>

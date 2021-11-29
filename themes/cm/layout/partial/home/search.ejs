@@ -4,7 +4,7 @@
       <%- page.search.title %>
     </h2>
     <div class="search-bar mb-5">
-      <input id="search-text" type="text" placeholder="<%- page.search.placeholder %>" />
+      <input id="search-text" type="text" placeholder="<%- page.search.placeholder %>" autocomplete="off"/>
       <div class="search-btn" onclick="location.href='/list/?search='+document.getElementById('search-text').value">
         <i class="fas fa-search"></i>
       </div>
