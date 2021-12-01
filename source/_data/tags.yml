@@ -2,7 +2,7 @@
   name:
     zh-tw: 動物保護
     en: animal protection
-  home: true
+  home: "TRUE"
 - id: "2"
   name:
     zh-tw: 消費議題
