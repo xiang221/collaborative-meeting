@@ -7,42 +7,52 @@ items:
     name:
       zh-tw: 動物保護
       en: Animal protection
+    home: true
   - id: 2 
     name:
       zh-tw: 消費議題
       en: consumer
+    home: true
   - id: 3
     name:
       zh-tw: 教育
       en: education
+    home: true
   - id: 4
     name:
       zh-tw: 兒童
       en: child
+    home: true
   - id: 5
     name:
       zh-tw: 青少年
       en: teenager
+    home: true
   - id: 6
     name:
       zh-tw: 性別平等
       en: gender equality
+    home: true
   - id: 7
     name:
       zh-tw: 休閒
       en: leisure
+    home: true
   - id: 8
     name:
       zh-tw: 文化
       en: culture
+    home: true
   - id: 9
     name:
       zh-tw: 財政
       en: finance
+    home: true
   - id: 10
     name:
       zh-tw: 法規
       en: legislation
+    home: true
   - id: 11
     name:
       zh-tw: 數位服務

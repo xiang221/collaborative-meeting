@@ -110,57 +110,5 @@ main[class="list"] {
         padding-left: 0;
       }
     }
-
-    .case {
-      cursor: pointer;
-      margin-bottom: 1rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-
-      &:hover{
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-        transform: scale(1.05);
-      }
-
-      &[data-visible="false"] {
-        display: none;
-      }
-
-      .badge {
-        font-size: 0.875rem;
-        color: white;
-        padding: 0.3rem 1rem;
-        margin-right: 0.3rem;
-
-        &:hover {
-          filter: contrast(2);
-          transform: scale(1.1);
-          font-weight: bold;
-        }
-
-        &.badge-dept {
-          background-color: var(--bs-primary);
-        }
-
-        &.badge-tag {
-          background-color: var(--bs-green);
-        }
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .image {
-      width: 100%;
-      padding-bottom: 56.25%;
-      background-size: cover !important;
-      background-position: center !important;
-      border: var(--bs-secondary) 1px solid;
-    }
-
-
   }
 }

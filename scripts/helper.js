@@ -68,10 +68,6 @@ hexo.extend.filter.register("before_post_render", function (data) {
   } else {
     html_path[html_path.length - 1] = filename.replace(/.html$/, "");
   }
-
-  data.path = html_path.join("/") + "/";
-  console.log(data.path);
-
   return data;
 });
 
@@ -140,3 +136,22 @@ hexo.extend.helper.register("tag", function (key, col) {
 
   return result[col][lang] == undefined ? result[col] : result[col][lang];
 });
+
+
+hexo.extend.helper.register("find_case", function (tags) {
+  tags.forEach(t => t.post = []);
+  const tag_name = tags.map(i => i.name[this.page.lang]);
+  console.log(tag_name);
+  hexo.locals
+  .get("pages")
+  .filter((page) => page.layout == "post" && page.lang == this.page.lang && page.publish == "true")
+  .forEach((page) => {
+    if (page.tags != null)
+      page.tags.forEach(t => {
+        if (tag_name.includes(t)){
+          tags[tag_name.indexOf(t)].post.push(page);
+        }
+      });
+  });
+  return tags;
+ });
