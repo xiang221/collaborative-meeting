@@ -96,63 +96,47 @@ hexo.extend.helper.register("embed_link", function (link, options = {}) {
   return link;
 });
 
+const flat = require("flat");
 hexo.extend.helper.register("dept", function (key, col) {
-  var find = hexo.locals.get("pages").filter(function (p) {
-    return p.id == "department";
-  }).data;
-
-  if (find.length == 0) return null;
-
-  var data = find[0];
-  var lang = this.page.lang;
-
-  var result = data.items.find(function (p) {
-    return (
-      p["zh-tw"]["name"] == key ||
-      p["zh-tw"]["fullname"] == key ||
-      p["en"]["name"] == key ||
-      p["en"]["fullname"] == key
-    );
-  });
-  if (result == undefined) return "NULL";
-
-  if (col == "id") return result["id"];
-  else if (col == "image") return result["image"];
-  else return result[lang][col];
+  const lang = this.page.lang;
+  const result = hexo.locals
+    .get("data")
+    .departments.find((p) => Object.values(flat(p)).includes(key));
+  if (result == undefined || result[col] == undefined) return null;
+  else if (result[col][lang] == undefined) return result[col];
+  else return result[col][lang];
 });
-
 hexo.extend.helper.register("tag", function (key, col) {
-  var find = hexo.locals.get("pages").filter(function (p) {
-    return p.id == "tag";
-  }).data;
+  const lang = this.page.lang;
+  const result = hexo.locals.get("data").tags.find((p) => {
+    const i = Object.assign({}, p);
+    delete i.post;
+    return Object.values(flat(i)).includes(key);
+  });
 
-  if (find.length == 0) return null;
-
-  var data = find[0];
-  var lang = this.page.lang;
-
-  var result = data.items.find(
-    (p) => p["id"] == key || p["name"]["zh-tw"] == key || p["name"]["en"] == key
-  );
-  if (result == undefined) return null;
-
-  return result[col][lang] == undefined ? result[col] : result[col][lang];
+  if (result == undefined || result[col] == undefined) return null;
+  else if (result[col][lang] == undefined) return result[col];
+  else return result[col][lang];
 });
-
 
 hexo.extend.helper.register("find_case", function (tags) {
-  tags.forEach(t => t.post = []);
-  const tag_name = tags.map(i => i.name[this.page.lang]);
+  tags.forEach((t) => (t.post = []));
+  const tag_name = tags.map((i) => i.name[this.page.lang]);
   hexo.locals
-  .get("pages")
-  .filter((page) => page.layout == "post" && page.lang == this.page.lang && page.publish == "true")
-  .forEach((page) => {
-    if (page.tags != null)
-      page.tags.forEach(t => {
-        if (tag_name.includes(t)){
-          tags[tag_name.indexOf(t)].post.push(page);
-        }
-      });
-  });
+    .get("pages")
+    .filter(
+      (page) =>
+        page.layout == "post" &&
+        page.lang == this.page.lang &&
+        page.publish == "true"
+    )
+    .forEach((page) => {
+      if (page.tags != null)
+        page.tags.forEach((t) => {
+          if (tag_name.includes(t)) {
+            tags[tag_name.indexOf(t)].post.push(page);
+          }
+        });
+    });
   return tags;
- });
+});
