@@ -68,6 +68,9 @@ hexo.extend.filter.register("before_post_render", function (data) {
   } else {
     html_path[html_path.length - 1] = filename.replace(/.html$/, "");
   }
+  data.path = html_path.join("/") + "/";
+  console.log(data.path);
+
   return data;
 });
 
