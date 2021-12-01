@@ -34,11 +34,11 @@ site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish !=
 
     <% metadata.forEach(post => { %>
     <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
-      <div class="col-3">
+      <div class="col-4">
         <div class="image" style="background: url('<%- post.thumbnail %>')">
         </div>
       </div>
-      <div class="col-9 d-flex flex-column justify-content-between">
+      <div class="col-8 d-flex flex-column justify-content-between">
         <div>
           <h3><%- post.title %></h3>
           <p><%- post.description %></p>

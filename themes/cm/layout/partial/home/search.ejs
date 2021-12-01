@@ -13,7 +13,7 @@
     
     <ul class="tags nav mb-5 justify-content-center" role="tablist">
       <% 
-        site.data.tag.filter(tag => tag.home == true).forEach((tag, index) => { 
+        site.data.tags.filter(tag => tag.home.toString().toLowerCase() == "true").forEach((tag, index) => { 
         const active = index == 0 ? "active" : "";
       %>
       <li>
@@ -25,17 +25,17 @@
     </ul>
     <div class="tab-content w-100">
       <%
-        find_case(site.data.tag.filter(tag => tag.home == true)).forEach((t, index)=> { 
+        find_case(site.data.tags.filter(tag => tag.home.toString().toLowerCase() == "true")).forEach((t, index)=> { 
         const active = index == 0 ? "show active" : "";
       %>
       <div class="tab-pane fade <%- active %>" id="tab-<%- t.id %>">
         <% t.post.every((post,index) => { %>
         <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
-          <div class="col-3">
+          <div class="col-4">
             <div class="image" style="background: url('<%- post.thumbnail %>')">
             </div>
           </div>
-          <div class="col-9 d-flex flex-column justify-content-between">
+          <div class="col-8 d-flex flex-column justify-content-between">
             <div>
               <h3><%- post.title %></h3>
               <p><%- post.description %></p>
@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-        <% if (index == 1 ) return false;
+        <% if (index == 2 ) return false;
            else return true; }) %>
         <div class="more">
           <a href="/list/?tag=<%- t.id %>"> <%- page.search.more %> </a>

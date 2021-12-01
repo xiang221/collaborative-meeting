@@ -1,0 +1,302 @@
+- id: PDIS
+  image: images/department/PDIS.png
+  name:
+    zh-tw: PDIS
+    en: 公共數位創新空間小組
+  fullname:
+    zh-tw: PDIS
+    en: Public Digital Innovation Space
+
+# 12部
+- id: MOTC
+  image: images/department/MOTC.png
+  name:
+    zh-tw: 交通部
+    en: MOTC
+  fullname:
+    zh-tw: 交通部
+    en: Ministry of Transportation and Communications
+
+- id: MOHW
+  image: images/department/MOHW.png
+  name:
+    zh-tw: 衛福部
+    en: MOHW
+  fullname:
+    zh-tw: 衛生福利部
+    en: Ministry of Health and Welfare
+
+- id: MOST
+  image: images/department/MOST.png
+  name:
+    zh-tw: 科技部
+    en: MOST
+  fullname:
+    zh-tw: 科技部
+    en: Ministry of Science and Technology
+
+- id: MND
+  image: images/department/MND.png
+  name:
+    zh-tw: 國防部
+    en: MND
+  fullname:
+    zh-tw: 國防部
+    en: Ministry of National Defense
+
+- id: MOI
+  image: images/department/MOI.png
+  name:
+    zh-tw: 內政部
+    en: MOI
+  fullname:
+    zh-tw: 內政部
+    en: Ministry of the Interior
+
+- id: MOFA
+  image: images/department/MOFA.png
+  name:
+    zh-tw: 外交部
+    en: MOFA
+  fullname:
+    zh-tw: 外交部
+    en: Ministry of Foreign Affairs
+
+- id: MOF
+  image: images/department/MOF.png
+  name:
+    zh-tw: 財政部
+    en: MOF
+  fullname:
+    zh-tw: 財政部
+    en: Ministry of Finance
+
+- id: MOJ
+  image: images/department/MOJ.png
+  name:
+    zh-tw: 法務部
+    en: MOJ
+  fullname:
+    zh-tw: 法務部
+    en: Ministry of Justice
+
+- id: MOE
+  image: images/department/MOE.png
+  name:
+    zh-tw: 教育部
+    en: MOE
+  fullname:
+    zh-tw: 教育部
+    en: Ministry of Education
+
+- id: MOEA
+  image: images/department/MOEA.png
+  name:
+    zh-tw: 經濟部
+    en: MOEA
+  fullname:
+    zh-tw: 經濟部
+    en: Ministry of Economic Affairs
+
+- id: MOC
+  image: images/department/MOC.png
+  name:
+    zh-tw: 文化部
+    en: MOC
+  fullname:
+    zh-tw: 文化部
+    en: Ministry of Culture
+
+- id: MOL
+  image: images/department/MOL.png
+  name:
+    zh-tw: 勞動部
+    en: MOL
+  fullname:
+    zh-tw: 勞動部
+    en: Ministry of Labor
+
+# 8會
+- id: NDC
+  image: images/department/NDC.png
+  name:
+    zh-tw: 國發會
+    en: NDC
+  fullname:
+    zh-tw: 國家發展委員會
+    en: National Development Council
+
+- id: FSC
+  image: images/department/FSC.png
+  name:
+    zh-tw: 金管會
+    en: FSC
+  fullname:
+    zh-tw: 金融監督管理委員會
+    en: Financial Supervisory Commission
+
+- id: OCAC
+  image: images/department/OCAC.png
+  name:
+    zh-tw: 僑委會
+    en: OCAC
+  fullname:
+    zh-tw: 僑務委員會
+    en: Overseas Community Affairs Council
+
+- id: VAC
+  image: images/department/VAC.png
+  name:
+    zh-tw: 退輔會
+    en: VAC
+  fullname:
+    zh-tw: 國軍退除役官兵輔導委員會
+    en: Veterans Affairs Council
+
+- id: CIP
+  image: images/department/CIP.png
+  name:
+    zh-tw: 原民會
+    en: CIP
+  fullname:
+    zh-tw: 原住民族委員會
+    en: Council of Indigenous Peoples
+
+- id: HAC
+  image: images/department/HAC.png
+  name:
+    zh-tw: 客委會
+    en: HAC
+  fullname:
+    zh-tw: 客家委員會
+    en: Hakka Affairs Council
+
+- id: OAC
+  image: images/department/OAC.png
+  name:
+    zh-tw: 海委會
+    en: OAC
+  fullname:
+    zh-tw: 海洋委員會
+    en: Ocean Affairs Council
+  
+- id: MAC
+  image: images/department/MAC.png
+  name:
+    zh-tw: 陸委會
+    en: MAC
+  fullname:
+    zh-tw: 大陸委員會
+    en: Mainland Affairs Council
+
+# 3委員會
+- id: COA
+  image: images/department/COA.png
+  name:
+    zh-tw: 農委會
+    en: COA
+  fullname:
+    zh-tw: 行政院農業委員會
+    en: Council of Agriculture, Executive Yuan
+
+- id: AEC
+  image: images/department/AEC.png
+  name:
+    zh-tw: 原能會
+    en: COA
+  fullname:
+    zh-tw: 行政院原子能委員會
+    en: Atomic Energy Council, Executive Yuan
+
+- id: PCC
+  image: images/department/PCC.png
+  name:
+    zh-tw: 工程會
+    en: PCC
+  fullname:
+    zh-tw: 行政院公共工程委員會
+    en: Public Construction Commission, Executive Yuan
+
+# 1署
+- id: EPA
+  image: images/department/EPA.png
+  name:
+    zh-tw: 環保署
+    en: EPA
+  fullname:
+    zh-tw: 行政院環境保護署
+    en: Environmental Protection Administration, Executive Yuan
+
+# 6獨立機關
+- id: CEC
+  image: images/department/CEC.png
+  name:
+    zh-tw: 中選會
+    en: CEC
+  fullname:
+    zh-tw: 中央選舉委員會
+    en: Central Election Commission
+
+- id: FTC
+  image: images/department/FTC.png
+  name:
+    zh-tw: 公平會
+    en: FTC
+  fullname:
+    zh-tw: 公平交易委員會
+    en: Fair Trade Commission
+
+- id: NCC
+  image: images/department/NCC.png
+  name:
+    zh-tw: 通傳會
+    en: NCC
+  fullname:
+    zh-tw: 國家通訊傳播委員會
+    en: National Communications Commission
+
+- id: TJC
+  image: images/department/TJC.png
+  name:
+    zh-tw: 促轉會
+    en: TJC
+  fullname:
+    zh-tw: 促進轉型正義委員會
+    en: Transitional Justice Commission
+
+- id: CBC
+  image: images/department/CBC.png
+  name:
+    zh-tw: 央行
+    en: CBC
+  fullname:
+    zh-tw: 中央銀行
+    en: Central Bank of the Republic of China (Taiwan)
+
+- id: NPM
+  image: images/department/NPM.png
+  name:
+    zh-tw: 故宮
+    en: NPM
+  fullname:
+    zh-tw: 國立故宮博物院
+    en: National Palace Museum
+
+# 2總處
+- id: DGBAS
+  image: images/department/DGBAS.png
+  name:
+    zh-tw: 主計總處
+    en: DGBAS
+  fullname:
+    zh-tw: 行政院主計總處
+    en: Directorate General of Budget, Accounting and Statistics, Executive Yuan
+
+- id: DGPA
+  image: images/department/DGPA.png
+  name:
+    zh-tw: 人事行政總處
+    en: DGPA
+  fullname:
+    zh-tw: 行政院人事行政總處
+    en: Directorate-General of Personnel Administration, Executive Yuan

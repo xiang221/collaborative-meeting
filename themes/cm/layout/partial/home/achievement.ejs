@@ -10,10 +10,10 @@
           site.pages.filter(a => a.id == p && a.lang == page.lang).data[0]; %>
           <div class="carousel-item <%- index == 0 ? 'active' : '' %>">
             <div class="big-card row">
-              <div class="col-lg-6">
+              <div class="col-lg-7">
                 <div class="image" style="background: url('<%- post.thumbnail %>')"></div>
               </div>
-              <div class="col-lg-6 content">
+              <div class="col-lg-5 content">
                 <h3><%- post.title %></h3>
                 <p class="mt-4"><%- post.description %></p>
                 <p class="ellipsis"><%- post.introduction.content %></p>

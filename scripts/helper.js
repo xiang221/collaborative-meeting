@@ -69,7 +69,6 @@ hexo.extend.filter.register("before_post_render", function (data) {
     html_path[html_path.length - 1] = filename.replace(/.html$/, "");
   }
   data.path = html_path.join("/") + "/";
-  console.log(data.path);
 
   return data;
 });
@@ -144,7 +143,6 @@ hexo.extend.helper.register("tag", function (key, col) {
 hexo.extend.helper.register("find_case", function (tags) {
   tags.forEach(t => t.post = []);
   const tag_name = tags.map(i => i.name[this.page.lang]);
-  console.log(tag_name);
   hexo.locals
   .get("pages")
   .filter((page) => page.layout == "post" && page.lang == this.page.lang && page.publish == "true")
