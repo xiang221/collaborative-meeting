@@ -1,0 +1,37 @@
+id: "10"
+lang: zh-tw
+publish: "TRUE"
+selected: "FALSE"
+selected_blog: "FALSE"
+thumbnail: /images/post/10/1iJPX66Yr0ZzPU-y5_VYpYEVgkGu4V4tv.jpg
+title: 藉由相關法規，建立更完善的線上遊戲環境
+description: 「國內線上遊戲相關法規建置 」連署案
+color: Yellow
+introduction:
+  content: >
+    你平常會玩線上遊戲嗎？近年來，遊戲產業在台灣可說是蓬勃發展，卻也因此產生了一些相關問題，導致玩家的權益受損。因此，網友提案希望能建制國內線上遊戲的相關法規。
+
+    此次協作會議提供了玩家與業者對話的平台，針對提案相關訴求，部分已於「消費者保護法」及「線上遊戲定型化契約應記載及不得記載事項」中有所規範，例如玩家帳號安全保障及遊戲商遊戲環境維護義務。另外，如防止遊戲商惡性關閉遊戲以及轉蛋爭議，將在日後納入研議，期望能為線上遊戲立定更完善的規範，打造讓玩家安心且公平的體驗。
+join:
+  type: 提
+  title: 國內線上遊戲相關法規建置
+  link: https://join.gov.tw/idea/detail/41642d74-7866-45e9-81a6-4984ffd276c0
+  image: /images/post/10/1SVA2bMUwW9KR6GFxjY2D6uCagnpjS-47.jpg
+departments:
+  - 經濟部
+embed:
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_k0GpU50=/?moveToViewport=-6596,-1377,5445,4814&embedAutoplay=true
+  ministry_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/_.pptx_f81798bbf3f7fb
+  host_slide:
+    links:
+      - "-"
+  live:
+    links:
+      - "-"
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2017-06-16-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E5%8D%81%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0

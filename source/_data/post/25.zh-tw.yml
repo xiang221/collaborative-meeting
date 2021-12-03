@@ -1,0 +1,11 @@
+id: "25"
+lang: zh-tw
+publish: "FALSE"
+selected: "FALSE"
+selected_blog: "FALSE"
+join:
+  image: https://drive.google.com/file/d/15S0MR5FX-1dYqRxQdUZwUvYNPP_5Ns8L/view?usp=drivesdk
+embed:
+  live:
+    links:
+      - https://www.youtube.com/watch?v=5XGZ3Qcg0Vc

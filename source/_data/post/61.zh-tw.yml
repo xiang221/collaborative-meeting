@@ -1,0 +1,31 @@
+id: "61"
+lang: zh-tw
+publish: "TRUE"
+selected: "FALSE"
+selected_blog: "FALSE"
+title: 衛生福利部公告：預告「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」草案
+description: 「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」部會自提案
+color: grey
+join:
+  type: 眾
+  title: 衛生福利部公告：預告「市售包裝食用鹽品添加之食品添加物含天然放射性物質鉀-40之標示規定」草案
+  link: https://join.gov.tw/policies/detail/9542998c-23db-4c38-983c-f9cfc47b3340
+  image: /images/post/61/1Wodi9ltBFTwnPN2iydH-cJDyEnMF8f8P.jpg
+departments:
+  - 衛福部
+tags:
+  - 科學
+  - 消費
+  - 健康
+  - 法規
+embed:
+  agenda_book:
+    links:
+      - https://issuu.com/pdis.tw/docs/_____________________________________-40__________
+  mind_map:
+    links:
+      - "-"
+  ministry_slide:
+    links:
+      - ""
+      - https://issuu.com/pdis.tw/docs/1090327________________________-40________________

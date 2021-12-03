@@ -1,0 +1,20 @@
+id: "17"
+lang: zh-tw
+publish: "FALSE"
+selected: "FALSE"
+selected_blog: "FALSE"
+description: 「房價改實坪制計價，公設坪數可登記但不計價」連署案
+join:
+  type: 提
+  title: 房價改實坪制計價，公設坪數可登記但不計價
+  link: https://join.gov.tw/idea/detail/5b2e4171-6d80-4562-8213-0a72991060e4
+  image: https://drive.google.com/file/d/1-WJNDNzdAXCmz7di_pW0lJ-g-wHx-GIW/view?usp=drivesdk
+departments:
+  - 內政部
+embed:
+  ministry_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/2017_09_01________________.pptx
+  host_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/2017_09_01___________________

@@ -1,0 +1,51 @@
+id: "50"
+lang: zh-tw
+publish: "TRUE"
+selected: "FALSE"
+selected_blog: "FALSE"
+thumbnail: https://img.youtube.com/vi/puJAHqh7l4M/maxresdefault.jpg
+cover: https://www.youtube.com/embed/puJAHqh7l4M
+title: 「使用者經驗」顛覆傳統故宮的票務流程設計
+description: |
+  「故宮博物院電子票券流程改造」部會自提案
+color: yellow
+introduction:
+  content: >-
+    故宮院長吳密察希望以「使用者經驗」來改善故宮博物院的服務流程。因此，故宮的開放政府聯絡人於聯繫會議上自提，希望與PDIS小組合作，共同來改善故宮的票務體驗。
+
+
+    故宮的票券仍以實體購買為主要方式，現有線上購票管道僅能選擇一般票券 350元，本國遊客或特殊票種無法於網路購票。為了提升各國遊客參觀意願，進而拓展國際觀光管道，故宮將以使用者體驗為核心，規畫介面友善的原先電子票券系統，以期增加購票方式多元性，未來也能整合其他觀光服務。 
+
+
+    因此，我們於6月10日召開協作會議，會議中不同的利害關係人各方集思廣益，腦力激盪。共同打造更好的電子票券系統。 而故宮也在會後進行成果的盤點及實作，將會中搜集到的意見統合。在不久的將來，我們可以期待更友善，便利的故宮電子票券服務！
+  image: /images/post/50/1kdWpLG9qoKNBp8HyvVymU28gK_DOcUWK.jpg
+join:
+  type: 部
+  title: "-"
+  link: "-"
+  image: "-"
+departments:
+  - 故宮
+tags:
+  - 資訊系統
+  - 公私協力
+  - 文化
+embed:
+  agenda_book:
+    links:
+      - https://issuu.com/pdis.tw/docs/________________________3641276d4bf9c5
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_kxDcKUg=/?moveToViewport=-2644,7275,9893,3006&embedAutoplay=true
+  ministry_slide:
+    links:
+      - "-"
+  host_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/_____________1_
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2019-06-10-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC50%E6%AC%A1%E8%AD%B0%E9%A1%8C%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+pictures:
+  - /images/post/50/1_PXW0p5vi8RoMARxkctNb8Vkh5GwXJiT.jpg
+  - /images/post/50/1HcO0OiZfDIGWuFufAkaoND9244uP8NJ4.jpg

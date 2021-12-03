@@ -1,0 +1,16 @@
+id: "37"
+lang: zh-tw
+publish: "FALSE"
+selected: "FALSE"
+selected_blog: "FALSE"
+description: 「新一代國家健保憑證規劃」連署案
+color: green
+join:
+  image: https://drive.google.com/file/d/1sNOX0Q-Q0DNvIfe6BMYBBnJIin80wWCm/view?usp=drivesdk
+departments:
+  - 衛福部
+tags:
+  - 健保
+  - 資訊系統
+  - 權益
+  - 公私協力

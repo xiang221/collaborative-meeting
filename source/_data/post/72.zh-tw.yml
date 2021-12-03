@@ -1,0 +1,44 @@
+id: "72"
+lang: zh-tw
+publish: "TRUE"
+selected: "FALSE"
+selected_blog: "FALSE"
+cover: https://drive.google.com/file/d/1ApG-nYMeFabicxfF3RfUu9GqRBWIO7TM/view
+title: 政府、患者與業者的合作，加速了環境改善的步伐
+description: 「禁用可誘發蠶豆症患者溶血、可能致癌的合成樟腦丸」連署案
+color: red
+introduction:
+  content: 多數人不知道「萘丸」對於G6PD缺乏症的患者，可能產生溶血風險。民眾在JOIN平台提案...
+  image: /images/post/72/1PLqJa0C_pdYIMyYNZqb-XXS5XHLXAxno.jpg
+join:
+  type: 提
+  title: 禁用可誘發蠶豆症患者溶血、可能致癌的合成樟腦丸
+  link: https://join.gov.tw/idea/detail/64047d56-1a42-4743-9270-6a77617f5616
+  image: /images/post/72/1Pme8JysKLCczwJWAg5yDCRrkyngYTLEj.jpg
+departments:
+  - 環保署
+tags:
+  - 醫療
+  - 權益
+  - 法規
+  - 公私協力
+embed:
+  agenda_book:
+    links:
+      - https://issuu.com/pdis.tw/docs/______________________________________72_____
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_kqfDMCg=/?moveToViewport=-402,-896,5699,2283&embedAutoplay=true
+  ministry_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/________-__.pptx
+      - https://issuu.com/pdis.tw/docs/___-______109.7.10.pptx
+  host_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/___________8a3a24a31ef7a6
+  live:
+    links:
+      - https://youtu.be/4F1n2sTErRQ
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2020-07-17-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC72%E6%AC%A1%E8%AD%B0%E9%A1%8C%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
