@@ -5,7 +5,7 @@ selected: "FALSE"
 selected_blog: "FALSE"
 thumbnail: https://img.youtube.com/vi/p0h5a7V1IqA/maxresdefault.jpg
 cover: https://youtu.be/p0h5a7V1IqA
-title: 欸，所以你都玩什麼遊戲？
+heading: 欸，所以你都玩什麼遊戲？
 description: 「台灣線上遊戲轉蛋法推動」連署案
 color: red
 introduction:
@@ -21,31 +21,9 @@ introduction:
 
 
     今年 6 月網友 paul 提案「台灣線上遊戲轉蛋法推動」，這一次的討論，遊戲廠商與玩家對於標示機率一是多數都採支持立場，因此最終聚焦在討論如何針對虛擬轉蛋的商品資訊標示，試著找出遊戲廠商與玩家雙贏的方式。
-  image: /images/post/105/17VfynsB9gnU3qcWO23vbW5nLLZRQNkNW.png
+  image: https://cm.pdis.tw/images/post/105/17VfynsB9gnU3qcWO23vbW5nLLZRQNkNW.png
 join:
   type: 提
   title: 台灣線上遊戲轉蛋法推動
   link: https://join.gov.tw/idea/detail/ee5dd8b8-bdeb-4d5e-8315-bb0601169d68
-  image: /images/post/105/1LgkJiSSR4r2gUXL4geHdwE1-RsqNxVor.png
-departments:
-  - 經濟部
-tags:
-  - 資訊系統
-  - 網路
-  - 法規
-embed:
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_lxvdxws=/?moveToViewport=6197,1441,13926,7079
-  proposer_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/1005_
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/1005_5b376501598318
-  host_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/105_-_
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2021-10-05-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC-105-%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+  image: https://cm.pdis.tw/images/post/105/1LgkJiSSR4r2gUXL4geHdwE1-RsqNxVor.png

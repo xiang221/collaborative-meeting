@@ -3,8 +3,8 @@ lang: zh-tw
 publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: /images/post/58/1zIYUsLnPr_-NHSknZT4fGsHYjzG-0k4D.jpg
-title: 在尊重傳統和保護動物之間，取得一個平衡
+thumbnail: https://cm.pdis.tw/images/post/58/1zIYUsLnPr_-NHSknZT4fGsHYjzG-0k4D.jpg
+heading: 在尊重傳統和保護動物之間，取得一個平衡
 description: 「終止神豬重量比賽祭祀」連署案
 color: blue
 introduction:
@@ -14,37 +14,4 @@ join:
   type: 提
   title: 終止神豬重量比賽祭祀
   link: https://join.gov.tw/idea/detail/09ae5b7b-b8d9-4c92-bc51-46416f4b2df4
-  image: /images/post/58/1cj0GxEE5eajiebN6UMWrso2TDdjCXw0r.jpg
-departments:
-  - 農委會
-  - 客委會
-tags:
-  - 動物保護
-  - 文化
-  - 農業
-  - 法規
-embed:
-  agenda_book:
-    links:
-      - https://issuu.com/pdis.tw/docs/__________________________58_____
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_kwMnL7M=/?moveToViewport=-6811,-3209,4869,2332
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/___-__________-final__1_.pptx
-      - https://issuu.com/pdis.tw/docs/___-1081114____________v2.pptx
-      - https://issuu.com/pdis.tw/docs/______________-_____1081114.pptx
-      - https://issuu.com/pdis.tw/docs/________-_______v3.pptx
-  host_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/__________________final
-  live:
-    links:
-      - https://www.youtube.com/watch?v=ag82IzoSxh4&t=7794s
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2019-11-15-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC58%E6%AC%A1%E8%AD%B0%E9%A1%8C%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
-blogs:
-  - https://pdis.nat.gov.tw/zh-TW/blog/%E5%BE%9E-%E7%A5%9E%E8%B1%AC%E6%A1%88-%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0-%E7%9C%8B%E5%90%8C%E7%90%86%E8%88%87%E5%B0%8D%E8%A9%B1%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%BB%BA%E6%A7%8B/
-  - https://pdis.nat.gov.tw/zh-TW/blog/%E8%A8%8E%E8%AB%96%E7%A5%9E%E8%B1%AC-%E5%BE%9E%E4%BA%BA%E7%9A%84-%E5%90%8C%E7%90%86-%E9%96%8B%E5%A7%8B/
+  image: https://cm.pdis.tw/images/post/58/1cj0GxEE5eajiebN6UMWrso2TDdjCXw0r.jpg

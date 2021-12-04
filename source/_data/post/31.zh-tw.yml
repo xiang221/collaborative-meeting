@@ -3,8 +3,8 @@ lang: zh-tw
 publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: /images/post/31/11g_CdiqL6w5S6HqNBlCPerV6A8azZpCU.jpg
-title: 超徵退稅議題，提案社群與部會的爭點整理
+thumbnail: https://cm.pdis.tw/images/post/31/11g_CdiqL6w5S6HqNBlCPerV6A8azZpCU.jpg
+heading: 超徵退稅議題，提案社群與部會的爭點整理
 description: 「超額徵收之稅款-歸還於民 」連署案
 color: yellow
 introduction:
@@ -21,29 +21,4 @@ join:
   type: 提
   title: 超額徵收之稅款-歸還於民
   link: https://join.gov.tw/idea/detail/78356a42-c8bb-45f2-a13f-5418fcf79cef
-  image: /images/post/31/1eACO0ngcKaVHdYpI3bdz4fAjxA7vhxgC.jpg
-departments:
-  - 財政部
-tags:
-  - 財政
-  - 法規
-embed:
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_kz3AqVk=/?moveToViewport=-2233,-1105,7611,5054&embedAutoplay=true
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/20180420______.pptx_5cfe1af98e2a82
-  host_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/20180420_______8c0c4cc9989730
-  live:
-    links:
-      - https://www.youtube.com/watch?v=277xxY5_t70
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2018-04-20-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
-pictures:
-  - /images/post/31/1LVxCB-_bARFSRTdgLIRs1LG_FHnM7hBD.jpg
-blogs:
-  - https://pdis.nat.gov.tw/zh-TW/blog/%E8%B6%85%E5%BE%B5%E9%80%80%E7%A8%85%E6%9C%89%E8%AD%9C-%E8%88%87%E6%9C%83%E8%80%85%E8%88%87%E8%B2%A1%E6%94%BF%E9%83%A8%E8%AA%8D%E7%9F%A5%E5%B7%AE%E8%B7%9D%E5%A4%A7/
+  image: https://cm.pdis.tw/images/post/31/1eACO0ngcKaVHdYpI3bdz4fAjxA7vhxgC.jpg

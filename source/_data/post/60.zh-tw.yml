@@ -4,7 +4,4 @@ publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
 join:
-  image: /images/post/60/1RfBDbTBevSfGSchpRUrRDcl7O1c3awhy.jpg
-tags:
-  - 教育
-  - 法規
+  image: https://cm.pdis.tw/images/post/60/1RfBDbTBevSfGSchpRUrRDcl7O1c3awhy.jpg

@@ -3,8 +3,8 @@ lang: zh-tw
 publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: /images/post/16/18zzHrzG6YqJ_iGgqaoyji5gayrBTWblv.jpg
-title: 如何維護貨到付款之消費者權益？
+thumbnail: https://cm.pdis.tw/images/post/16/18zzHrzG6YqJ_iGgqaoyji5gayrBTWblv.jpg
+heading: 如何維護貨到付款之消費者權益？
 description: 「建請主管機關重視FACEBOOK(臉書)購物詐騙一案，研議如何防制與作為，望請各界連署支持」連署案
 color: Blue
 introduction:
@@ -16,22 +16,4 @@ join:
   type: 提
   title: 建請主管機關重視FACEBOOK(臉書)購物詐騙一案，研議如何防制與作為，望請各界連署支持
   link: https://join.gov.tw/idea/detail/352b4277-dc75-498b-90ae-01e0e648aeff
-  image: /images/post/16/18TrzStq9STmairmq51AASHW8ZEIhbDnD.jpg
-departments:
-  - 財政部
-  - 經濟部
-  - 交通部
-  - 公平會
-embed:
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_k0INj2U=/?moveToViewport=35,-2025,4931,2321
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/2017-08-25______________________.pp
-      - https://issuu.com/pdis.tw/docs/2017-08-25________________.pptx_7bb488221bd7c7
-      - https://issuu.com/pdis.tw/docs/2017-08-25________________.pptx
-      - https://issuu.com/pdis.tw/docs/2017-08-25________________.pptx_9ae47e2a35004a
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2017-08-25-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E5%8D%81%E5%85%AD%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+  image: https://cm.pdis.tw/images/post/16/18TrzStq9STmairmq51AASHW8ZEIhbDnD.jpg

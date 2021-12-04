@@ -3,8 +3,8 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: /images/post/49/1jIXcBDeUsGhKq762NsbnVx1vtia-rPRq.jpg
-title: 與既有公務流程結合的協作會議，體現更透明的開放政府
+thumbnail: https://cm.pdis.tw/images/post/49/1jIXcBDeUsGhKq762NsbnVx1vtia-rPRq.jpg
+heading: 與既有公務流程結合的協作會議，體現更透明的開放政府
 description: 「醫療院所『病房營養照護』及『診間營養諮詢』 應有全民健康保險給付制度」連署案
 color: yellow
 introduction:
@@ -18,17 +18,4 @@ join:
   type: 提
   title: 「醫療院所『病房營養照護』及『診間營養諮詢』 應有全民健康保險給付制度」
   link: https://join.gov.tw/idea/detail/56cadfa3-50a6-41db-aa5d-b7c2aff36282
-  image: /images/post/49/1uUUzDolOMwgQMUa09XE6OE1k8145VAwy.jpg
-departments:
-  - 衛福部
-tags:
-  - 醫療
-  - 健保
-  - 平等
-  - 法規
-embed:
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2019-06-12-%E5%BB%BA%E8%AD%B0%E7%87%9F%E9%A4%8A%E7%85%A7%E8%AD%B7%E7%B4%8D%E5%85%A5%E5%81%A5%E4%BF%9D%E7%B5%A6%E4%BB%98%E6%A1%88
-blogs:
-  - http://br3cwr5i336zfgs5ohek.lh.pdis.nat.gov.tw/
+  image: https://cm.pdis.tw/images/post/49/1uUUzDolOMwgQMUa09XE6OE1k8145VAwy.jpg

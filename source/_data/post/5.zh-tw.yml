@@ -3,18 +3,12 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: https://drive.google.com/file/d/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV/view?usp=sharing
-title: 第八堂課可以教新進度嗎？從「家長同意書」尋求解法
+thumbnail: https://cm.pdis.tw/images/post/5/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg
+heading: 第八堂課可以教新進度嗎？從「家長同意書」尋求解法
 description: 「強制取消國中、高中的第八節課後輔導及寒暑假輔導」連署案
 color: Blue
 join:
   type: 提
   title: 強制取消國中、高中的第八節課後輔導及寒暑假輔導
   link: https://join.gov.tw/idea/detail/f57c0195-ed01-4e87-b7eb-638c15eecc4a
-  image: https://drive.google.com/file/d/1UCAOvYwgcE1PUEILABHSRHeixzNVMsHj/view?usp=drivesdk
-departments:
-  - 教育部
-embed:
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2017-04-28-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+  image: https://cm.pdis.tw/images/post/5/1UCAOvYwgcE1PUEILABHSRHeixzNVMsHj.jpg

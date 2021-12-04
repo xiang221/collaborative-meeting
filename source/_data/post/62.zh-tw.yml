@@ -3,36 +3,11 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-title: 家長協同學校陪伴孩子 需要有怎樣的規範？
+heading: 家長協同學校陪伴孩子 需要有怎樣的規範？
 description: 「校外人士進入校園相關規定」連署案
 color: yellow
 join:
   type: 提
   title: 教育部應制訂中小學校園志工規則，明確規範志工資格、訓練、工作範圍、權利義務、罰則等項目。
   link: https://join.gov.tw/idea/detail/085b17a1-caf2-46d1-9673-f8b5e6b6eb3d
-  image: /images/post/62/1Cxr11fzl2T32zDv6Hyl-VuvboW_t7z7f.jpg
-departments:
-  - 教育部
-tags:
-  - 教育
-  - 性平
-  - 法規
-embed:
-  agenda_book:
-    links:
-      - https://issuu.com/pdis.tw/docs/__________________________________________________
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_kvwk6nw=/?moveToViewport=-13110,-3451,12618,3826&embedAutoplay=true
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/__________0115
-  host_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/______________final_
-  live:
-    links:
-      - https://www.youtube.com/watch?v=jdam9IbyN_s
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2020-01-17-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC62%E6%AC%A1%E8%AD%B0%E9%A1%8C%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+  image: https://cm.pdis.tw/images/post/62/1Cxr11fzl2T32zDv6Hyl-VuvboW_t7z7f.jpg

@@ -3,8 +3,8 @@ lang: zh-tw
 publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: /images/post/66/11EF27ihD6hONkIa0dFbp_hJsTf58TBuV.jpg
-title: 「漸進地學習，因理解而開啟更多的對話與可能」
+thumbnail: https://cm.pdis.tw/images/post/66/11EF27ihD6hONkIa0dFbp_hJsTf58TBuV.jpg
+heading: 「漸進地學習，因理解而開啟更多的對話與可能」
 description: 「故宮有精神工作坊」部會自提案
 color: green
 introduction:
@@ -13,32 +13,6 @@ introduction:
 
 
     我們也期待透過這樣的過程，能夠帶給每個議題一個更清楚的輪廓。也希望透過共創討論，開啟人與人之間的對話，即便他們曾經被污名，或是曾經使你懼怕。如同每個會議我們都會提到：「協作會議只是一個開始。」漸進地學習，因理解而開啟更多的對話與可能。
-  image: /images/post/66/1pWBQjDya1-OkMwacqRQwM72fIjGMFt24.jpg
+  image: https://cm.pdis.tw/images/post/66/1pWBQjDya1-OkMwacqRQwM72fIjGMFt24.jpg
 join:
   type: 部
-departments:
-  - 故宮
-tags:
-  - 文化
-  - 共創
-  - 社福
-embed:
-  agenda_book:
-    links:
-      - https://issuu.com/pdis.tw/docs/__________
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_kuGEpO0=/?moveToViewport=-3360,-932,4942,2660&embedAutoplay=true
-  host_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/____________
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2020-07-08-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC66%E6%AC%A1%E8%AD%B0%E9%A1%8C%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
-pictures:
-  - /images/post/66/11FXeZ38XbWwd6oZcLIjm7ZDfbcHrZqOJ.jpg
-  - /images/post/66/1ibf_5peEDDBEBpJbjV5Q95PgPk9k95sb.jpg
-  - /images/post/66/1rmoa1srreWgvxIhJkOiveywbfYRCJ9JK.jpg
-  - /images/post/66/1LnJ2fYTtNRsS9UcGsKAeW7TY8PzrCaU2.jpg
-blogs:
-  - https://pdis.nat.gov.tw/zh-TW/blog/%E6%9C%89%E7%B2%BE%E7%A5%9E-%E7%9A%84%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0/

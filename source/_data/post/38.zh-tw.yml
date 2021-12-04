@@ -3,30 +3,11 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-title: 警消休假可行嗎？協作會議發想相關配套
+heading: 警消休假可行嗎？協作會議發想相關配套
 description: 「修訂紀念日及節日實施辦法於第五條第二項第四款、增列第五款增列警察、消防人員於警察節、消防節放假一天」連署案
 color: red
 join:
   type: 提
   title: 修訂紀念日及節日實施辦法於第五條第二項第四款、增列第五款增列警察、消防人員於警察節、消防節放假一天
   link: https://join.gov.tw/idea/detail/adf22df8-b405-4594-b637-10b5dc341c88
-  image: /images/post/38/1ux0btepvkUfOcBIXTCJcY7FYOmP7Kh_2.jpg
-departments:
-  - 內政部
-embed:
-  agenda_book:
-    links:
-      - https://issuu.com/pdis.tw/docs/____________________________________b738b29c7c129c
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_kzHeaMw=/?moveToViewport=-20,-1387,2907,1249&embedAutoplay=true
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/20180717____________.pptx
-      - https://issuu.com/pdis.tw/docs/20180717____________
-      - https://issuu.com/pdis.tw/docs/20180717_____________0616043f834fb8
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2018-07-17-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
-blogs:
-  - https://pdis.nat.gov.tw/zh-TW/blog/%E8%AD%A6%E6%B6%88%E4%BC%91%E5%81%87%E5%8F%AF%E8%A1%8C%E5%97%8E-%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0%E7%99%BC%E6%83%B3%E7%9B%B8%E9%97%9C%E9%85%8D%E5%A5%97/
+  image: https://cm.pdis.tw/images/post/38/1ux0btepvkUfOcBIXTCJcY7FYOmP7Kh_2.jpg

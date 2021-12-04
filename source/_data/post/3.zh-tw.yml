@@ -3,18 +3,12 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: /images/post/3/1trmRMA4fOlfIz7x2H0aqKEyNGGGYTv33.jpg
-title: 政府專案管理該有一套法律規範嗎？談「計劃管理法」
+thumbnail: https://cm.pdis.tw/images/post/3/1trmRMA4fOlfIz7x2H0aqKEyNGGGYTv33.jpg
+heading: 政府專案管理該有一套法律規範嗎？談「計劃管理法」
 description: 「計畫管理法案臺灣版，不再浪費人民的納稅錢」連署案
 color: Green
 join:
   type: 提
   title: 計畫管理法案臺灣版，不再浪費人民的納稅錢
   link: https://join.gov.tw/idea/detail/97f90728-cf72-443c-8b6c-36d216c953df
-  image: /images/post/3/1bLmIetGAELZcojdXsEY8oYWwsuP9uWUR.jpg
-departments:
-  - 國發會
-embed:
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2017-03-31-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+  image: https://cm.pdis.tw/images/post/3/1bLmIetGAELZcojdXsEY8oYWwsuP9uWUR.jpg

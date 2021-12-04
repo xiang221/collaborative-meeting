@@ -3,8 +3,8 @@ lang: zh-tw
 publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: https://drive.google.com/file/d/1zHtant4zSK5KMFhDYmN4HDBbuzk6hM0q/view?usp=sharing
-title: 你曾聽過《調度司法警察條例》嗎？
+thumbnail: https://cm.pdis.tw/images/post/9/1zHtant4zSK5KMFhDYmN4HDBbuzk6hM0q.jpg
+heading: 你曾聽過《調度司法警察條例》嗎？
 description: 「 廢除《調度司法警察條例》，尊重警察工作之專業，共同營造我國精緻司法的願景」連署案
 color: Red
 introduction:
@@ -14,25 +14,4 @@ join:
   type: 提
   title: 廢除《調度司法警察條例》，尊重警察工作之專業，共同營造我國精緻司法的願景
   link: https://join.gov.tw/idea/detail/fae5f166-47a3-497c-9af6-b9817ab48e70
-  image: /images/post/9/1HoimfZKV2JEWvGmpOdL7YzwoHSWDASjD.jpg
-departments:
-  - 法務部
-embed:
-  agenda_book:
-    links:
-      - "-"
-  mind_map:
-    links:
-      - https://miro.com/app/live-embed/o9J_k0ABUs0=/?moveToViewport=-8563,-1920,5529,4752&embedAutoplay=true
-  ministry_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/1060602_-_.pptx
-  host_slide:
-    links:
-      - https://issuu.com/pdis.tw/docs/_1060531
-  live:
-    links:
-      - "-"
-  transcript:
-    links:
-      - https://sayit.pdis.nat.gov.tw/2017-06-02-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%B9%9D%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+  image: https://cm.pdis.tw/images/post/9/1HoimfZKV2JEWvGmpOdL7YzwoHSWDASjD.jpg
