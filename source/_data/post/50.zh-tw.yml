@@ -24,3 +24,28 @@ join:
   title: "-"
   link: "-"
   image: "-"
+departments:
+  - 故宮
+tags:
+  - 資訊系統
+  - 公私協力
+  - 文化
+embed:
+  agenda_book:
+    links:
+      - https://issuu.com/pdis.tw/docs/________________________3641276d4bf9c5
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_kxDcKUg=/?moveToViewport=-2644,7275,9893,3006&embedAutoplay=true
+  ministry_slide:
+    links:
+      - "-"
+  host_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/_____________1_
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2019-06-10-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC50%E6%AC%A1%E8%AD%B0%E9%A1%8C%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+pictures:
+  - https://cm.pdis.tw/images/post/50/1_PXW0p5vi8RoMARxkctNb8Vkh5GwXJiT.jpg
+  - https://cm.pdis.tw/images/post/50/1HcO0OiZfDIGWuFufAkaoND9244uP8NJ4.jpg

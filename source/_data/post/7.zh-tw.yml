@@ -3,7 +3,7 @@ lang: zh-tw
 publish: "TRUE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: https://cm.pdis.tw/images/post/7/1TeGXznqvSu8aZEGWkjrHmkMXsCu16sc7.jpg
+thumbnail: https://drive.google.com/file/d/1TeGXznqvSu8aZEGWkjrHmkMXsCu16sc7/view?usp=sharing
 heading: 報稅系統難用到爆炸？設計師捲起袖子拒當酸民
 description: 「報稅軟體難用到爆炸」連署案
 color: Blue
@@ -15,3 +15,23 @@ join:
   title: 報稅軟體難用到爆炸
   link: https://join.gov.tw/idea/detail/750df7c4-550f-47ae-84ee-39eba6dabb23/discuss
   image: https://cm.pdis.tw/images/post/7/1vglhYIPwTNYQ2KWJpE-m2QPlfQ43grFo.jpg
+departments:
+  - 內政部
+  - 金管會
+  - 財政部
+tags:
+  - 資訊系統
+  - 財政
+  - 公私協力
+embed:
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_k0Cimjc=/?moveToViewport=-8329,8229,7712,3975&embedAutoplay=true
+  live:
+    links:
+      - https://www.youtube.com/watch?v=PFQm-8cdgAc
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2017-05-19-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%B8%83%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
+blogs:
+  - https://pdis.nat.gov.tw/zh-TW/blog/%E6%96%B0%E7%89%88%E5%A0%B1%E7%A8%85%E7%B6%B2%E7%AB%99%E6%98%AF%E6%80%8E%E9%BA%BC%E7%85%89%E6%88%90%E7%9A%84/

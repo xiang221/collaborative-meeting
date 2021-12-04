@@ -5,3 +5,10 @@ selected: "FALSE"
 selected_blog: "FALSE"
 join:
   image: https://cm.pdis.tw/images/post/21/13vnkpCcGVYoPVGi9eLA_VjGBmkuXMdnK.jpg
+embed:
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_k0Q7rf0=/?moveToViewport=-1689,-50,3004,1567&embedAutoplay=true
+  live:
+    links:
+      - https://www.youtube.com/watch?v=4NeJGrGGjcI

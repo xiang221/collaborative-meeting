@@ -15,3 +15,32 @@ join:
   title: "-"
   link: "-"
   image: "-"
+departments:
+  - 原能會
+tags:
+  - 資訊系統
+  - 開放資料
+embed:
+  agenda_book:
+    links:
+      - "-"
+  mind_map:
+    links:
+      - "-"
+  ministry_slide:
+    links:
+      - "-"
+  host_slide:
+    links:
+      - "-"
+  live:
+    links:
+      - "-"
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2020-08-14-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC78%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0-%E5%B7%A5%E4%BD%9C%E6%9C%83%E8%AD%B0
+      - https://sayit.pdis.nat.gov.tw/2020-09-10-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC78%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B7%A5%E4%BD%9C%E6%9C%83%E8%AD%B0
+      - https://sayit.pdis.nat.gov.tw/2020-10-08-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC78%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0-%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%B7%A5%E4%BD%9C%E6%9C%83%E8%AD%B0
+      - https://sayit.pdis.nat.gov.tw/2020-10-20-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC78%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0-%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%B7%A5%E4%BD%9C%E6%9C%83%E8%AD%B0
+pictures:
+  - "-"

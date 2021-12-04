@@ -3,7 +3,7 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-cover: https://cm.pdis.tw/images/post/68/1sOOdPwP-fL53fJpE1-gmGmifbIMcquBj.jpg
+cover: https://drive.google.com/file/d/1sOOdPwP-fL53fJpE1-gmGmifbIMcquBj/view
 heading: 在本土語言教育深化的歷程中，把在此刻或未來會受到影響的人一起找來討論！
 description: 「高級中等以下學校及幼兒園閩南語師資培育資格及聘用辦法」部會自提案
 color: green
@@ -18,4 +18,26 @@ join:
   type: 眾
   title: 教育部公告：預告「高級中等以下學校及幼兒園閩南語師資培育資格及聘用辦法」草案
   link: https://join.gov.tw/policies/detail/d42fb3ce-46a6-4f43-ac5c-a67cabe76403
-  image: https://cm.pdis.tw/images/post/68/1b105UpIHn-GDM77TnTIVUgA7spmTQkcP.jpg
+  image: https://drive.google.com/file/d/1b105UpIHn-GDM77TnTIVUgA7spmTQkcP/view?usp=drivesdk
+departments:
+  - 教育部
+tags:
+  - 教育
+  - 法規
+  - 人文
+embed:
+  agenda_book:
+    links:
+      - https://issuu.com/pdis.tw/docs/__________________________________________68______
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_ktDC9xk=/?moveToViewport=12909,-959,10340,4165&embedAutoplay=true
+  ministry_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/1090508-_________
+  host_slide:
+    links:
+      - https://issuu.com/pdis.tw/docs/_68-___________________final_
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2020-05-08-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E7%AC%AC68%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0

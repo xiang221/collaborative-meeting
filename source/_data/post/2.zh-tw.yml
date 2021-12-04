@@ -3,7 +3,7 @@ lang: zh-tw
 publish: "FALSE"
 selected: "FALSE"
 selected_blog: "FALSE"
-thumbnail: https://cm.pdis.tw/images/post/2/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV.jpg
+thumbnail: https://drive.google.com/file/d/1HYM4JMGTqHz5oq0gtOruwITHGUPUJuiV/view?usp=sharing
 heading: 我買的車安全嗎？汽車安全測試資料公開的可行性
 description: 「國產車量產時，必需強制公開ARTC撞擊測試結果，並比照國外將結果分級。」連署案
 color: Red
@@ -11,4 +11,13 @@ join:
   type: 提
   title: 國產車上市前，必需強制公開ARTC撞擊測試結果，並比照國外將結果分級。
   link: https://join.gov.tw/idea/detail/51619983-7ab7-4f3a-9821-e659afab9b7e
-  image: https://cm.pdis.tw/images/post/2/1-oRBwZVbNiPGGOKci8h-BzZZ7rA4SSMk.jpg
+  image: https://drive.google.com/file/d/1-oRBwZVbNiPGGOKci8h-BzZZ7rA4SSMk/view?usp=drivesdk
+departments:
+  - 交通部
+embed:
+  mind_map:
+    links:
+      - https://miro.com/app/live-embed/o9J_k052DeM=/?moveToViewport=-2989,-958,6199,3173&embedAutoplay=true
+  transcript:
+    links:
+      - https://sayit.pdis.nat.gov.tw/2017-03-24-%E9%96%8B%E6%94%BE%E6%94%BF%E5%BA%9C%E8%81%AF%E7%B5%A1%E4%BA%BA%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%8D%94%E4%BD%9C%E6%9C%83%E8%AD%B0
