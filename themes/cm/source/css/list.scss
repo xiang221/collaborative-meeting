@@ -50,10 +50,14 @@ main[class="list"] {
     }
 
     .filter-dept {
+      h3 {
+        color: var(--bs-yellow);
+      }
+
       .filter-item {
         line-height: 30px;
         &[data-active="true"] {
-          color: var(--bs-primary);
+          color: var(--bs-yellow);
           font-weight: bold;
         }
       }
