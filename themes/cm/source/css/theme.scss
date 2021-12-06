@@ -102,13 +102,13 @@ header {
   text-decoration: none;
 
   &:hover {
-    filter: contrast(2);
+    filter: contrast(1.5);
     transform: scale(1.1);
     font-weight: bold;
   }
 
   &.badge-dept {
-    background-color: var(--bs-primary);
+    background-color: var(--bs-yellow);
   }
 
   &.badge-tag {

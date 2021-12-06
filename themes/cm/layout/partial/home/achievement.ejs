@@ -4,45 +4,66 @@
   </div>
   <div class="bg">
     <div class="container">
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-inner">
           <% page.achievement.cases.forEach((p, index) => { const post =
           site.pages.filter(a => a.id == p && a.lang == page.lang).data[0]; %>
           <div class="carousel-item <%- index == 0 ? 'active' : '' %>">
             <div class="big-card row">
-              <div class="col-lg-7">
-                <div class="image" style="background: url('<%- post.thumbnail %>')"></div>
+              <div class="col-lg-8">
+                <div
+                  class="image"
+                  style="background: url('<%- post.thumbnail %>')"
+                ></div>
               </div>
-              <div class="col-lg-5 content">
-                <h3><%- post.title %></h3>
-                <p class="mt-4"><%- post.description %></p>
-                <p class="ellipsis"><%- post.introduction.content %></p>
+              <div class="col-lg-4 content d-flex flex-column justify-content-between">
                 <div>
-                  <% array(post.tags).forEach(d => { %>
-                  <a class="badge rounded-pill fw-normal badge-tag" href="/list/?tag=<%- tag(d, 'id') %>"><%- tag(d, "name") %></a>
-                  <% }) %>
-                </div>
-                <div class="mt-3 depts">
-                  <% post.departments.forEach(d => { %>
-                    <div class="dept-image text-center" onclick="location.href='/list/?dept=<%- dept(d, "id") %>'">
-                      <img src="<%- url_for(dept(d, 'image')) %>" class="w-100" />
-                      <span title="<%- dept(d, 'fullname') %>"><%- dept(d, "name") %></span>
-                    </div>
-                  <% }) %>
+                  <h3><%- post.title %></h3>
+                  <p class="mt-4"><%- post.description %></p>
+                  <p class="ellipsis"><%- post.introduction.content %></p>
+                  <div>
+                    <% array(post.tags).forEach(d => { %>
+                    <a
+                      class="badge rounded-pill fw-normal badge-tag"
+                      href="/list/?tag=<%- tag(d, 'id') %>"
+                      ><%- tag(d, "name") %></a
+                    >
+                    <% }) %> <% array(post.departments).forEach(d => { %>
+                    <a
+                      class="badge rounded-pill fw-normal badge-dept"
+                      href="/list/?dept=<%- dept(d, 'id') %>"
+                      ><%- dept(d, "name") %></a
+                    >
+                    <% }) %>
+                  </div>
                 </div>
                 <div class="mt-3 d-flex justify-content-end">
-                  <a class="btn btn-primary" href="<%- post.path %>">看更多</a>
+                  <a class="btn btn-primary px-4 py-2 rounded-pill" href="<%- post.path %>">瀏覽本案</a>
                 </div>
               </div>
             </div>
           </div>
           <% }) %>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>

@@ -7,6 +7,6 @@ items:
     link: /#introduction
   - name: 協作成果
     link: /#achievement
-  - name: 搜尋協作會議
+  - name: 協作會議列表
     link: /list
 ---

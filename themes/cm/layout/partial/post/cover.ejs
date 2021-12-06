@@ -2,13 +2,13 @@
   <div class="container">
     <h1><%- page.title %></h1>
     <p><%- page.description %></p>
-    <% if(page.cover.link != "") { %>
+    <% try { const link = embed_link(page.cover.link, { autoplay: true }); %>
     <div class="embed-iframe">
       <iframe
-        src="<%- embed_link(page.cover.link, { autoplay: true }) %>"
+        src="<%- link %>"
       ></iframe>
     </div>
-    <% } else { %>
+    <%  } catch(e){ %>
     <img src="<%- url_for(page.thumbnail) %>" class="w-100" />
     <% } %>
   </div>

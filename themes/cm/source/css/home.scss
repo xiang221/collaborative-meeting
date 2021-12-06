@@ -173,11 +173,11 @@ main[class="home"] {
         background-size: cover !important;
         background-position: center !important;
         width: 100%;
-        padding-bottom: 100%;
+        padding-bottom: 75%;
       }
 
       .content {
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 2rem 1rem 1rem;
 
         h3 {
           font-weight: bold;
@@ -209,6 +209,8 @@ main[class="home"] {
           color: white;
           width: 7rem;
           margin: 0.5rem;
+          padding-top: 1px;
+          padding-bottom: 1px;
 
           &.active {
             background-color: var(--bs-green);
