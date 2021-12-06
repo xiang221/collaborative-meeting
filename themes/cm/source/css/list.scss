@@ -50,9 +50,17 @@ main[class="list"] {
     }
 
     .filter-dept {
-      .filter-item[data-active="true"] {
-        color: var(--bs-primary);
-        font-weight: bold;
+      .filter-item {
+        line-height: 30px;
+        &[data-active="true"] {
+          color: var(--bs-primary);
+          font-weight: bold;
+        }
+      }
+
+      img {
+        height: 30px;
+        margin-right: 0.5rem;
       }
     }
 
@@ -102,6 +110,7 @@ main[class="list"] {
 
     .sort {
       margin-bottom: 2rem;
+
       select {
         width: auto;
         border: 0;

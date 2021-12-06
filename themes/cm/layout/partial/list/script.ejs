@@ -89,6 +89,8 @@
       const num =
         count[el.dataset.id] == undefined ? 0 : count[el.dataset.id];
       el.innerHTML = `${el.dataset.name} (${num})`;
+      if(el.dataset.img != undefined)
+        el.innerHTML = `<img src="${el.dataset.img}">${el.innerHTML}`;
       el.dataset.count = num;
     });
     getel(`.${name}`)
