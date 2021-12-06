@@ -1,48 +1,49 @@
+<% if(page.more != null ){
+const request = require("request-promise");
+const cheerio = require("cheerio");
+let data = [];
 
-
-<%if(page.more != null ){ %>
-
-    const request = require("request");
-    const cheerio = require("cheerio");
-    const Crawler = () => {
-    request({
-        url: "<%- page.more.link %>",
-        method: "GET"
-    }, (error, res, body) => {
-        if (error || !body) {
-            return;
-        }
-            const data = [];
-            const $ = cheerio.load(body);
-            const list = $(".post-header");
-            
-            const image = $('.post-image').attr('src');
-            const title = list.find('.post-title').text();
-            const subtitle = list.find('p').text();
-            const date = list.find('time').text().replace(/\s/g, "");
-            const authors = list.find('.authors').text().replace(/\s/g, "");
-    
-            data.push({ image, title, subtitle, date, authors });
-        });
-    };
+(async () => { 
+    const arr =[
+        "page.more.link"
+    ];
+    for(const i of arr) {
+        let obj = await req(i);
+        data.push(obj);
+    }%>
 
     <section id="picture">
         <div class="container">
-        <% array(page.more).forEach(data=> { %>
-            Crawler();
-            <div class="row">
-                <div class="col-5">
-                <img src="<%- data[0] %>" class="" />
+            <%for(let i=0; i<data.length; i++){ %>
+                <div class="row">
+                    <div class="col-5">
+                      <div class="image-169" style="background: url('<%- data[i]["image"] %>')"></div>
+                    </div>
+                    <div class="col-7 d-flex align-self-end">
+                      <div>
+                        <h3><%- data[i]["title"] %></h3>
+                        <p><%- data[i]["subtitle"] %></p>
+                        <p><%- data[i]["date"] %> | <%- data[i]["authors"] %></p>
+                      </div>
+                    </div>  
                 </div>
-                <div class="col-7">
-                    <h2><%- data[1] %></h2>
-                    <p><%- data[2] %></p>
-                    <p><%- data[3] %></p>
-                    |
-                    <p><%- data[4] %></p>
-                </div>
-            </div>
-        <% })%>
+            <%}%>    
         </div>
     </section>
-} %>  
+    
+<%})();
+
+async function req(link) {
+    let head = await request(link);
+    const $ = cheerio.load(head);
+
+    let image = $('meta[property="og:image"]').attr('content');
+    let title = $('meta[property="og:title"]').attr('content');
+    let subtitle = $('meta[name="description"]').attr('content');
+    let date = $(".post-header").find('time').text().replace(/\s/g, "");
+    let authors = $('meta[name="author"]').attr('content');
+
+    return {image, title, subtitle, date, authors};
+    }
+
+} %>
