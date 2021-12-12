@@ -2,15 +2,6 @@ hexo.extend.helper.register("page_url", function (path, options) {
   return this.url_for(path, options).replace(/index\.html$/, "");
 });
 
-hexo.extend.filter.register("after_generate", function () {
-  hexo.locals
-    .get("pages")
-    .filter((page) => page.layout == "false")
-    .forEach((page) => {
-      hexo.route.remove(page.path);
-    });
-});
-
 hexo.extend.helper.register("__", function (link) {
   try {
     var lang = this.page.lang;
@@ -28,6 +19,26 @@ hexo.extend.helper.register("__", function (link) {
     });
     if (result == undefined) return null;
 
+    return result;
+  } catch (e) {
+    return null;
+  }
+});
+
+hexo.extend.filter.register("after_generate", function () {
+  // console.log(hexo.locals.get("data")["i18n/post"]);
+});
+
+// 取得i18n文字
+hexo.extend.helper.register("_", function (link) {
+  try {
+    const target = link.split(".");
+    const filename = target.shift();
+    let result = hexo.locals.get("data")[`i18n/${filename}`][this.page.lang];
+    target.forEach((i) => {
+      result = result[i];
+    });
+    if (result == undefined) throw "undefined";
     return result;
   } catch (e) {
     return null;

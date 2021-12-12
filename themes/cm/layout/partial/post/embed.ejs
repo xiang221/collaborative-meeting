@@ -1,11 +1,11 @@
-<% array(page.embed).forEach(data=> { %>
-<section id="<%- data.type %>">
+<% if (page.embed) { Object.keys(page.embed).forEach(key => { %>
+<section id="<%- key %>">
   <div class="container">
     <div class="mb-3">
-      <h2><%- __(`post.embed.${data.type}.title`) %></h2>
-      <span><%- __(`post.embed.${data.type}.content`) %></span>
+      <h2><%- _(`post.embed.${key}.title`) %></h2>
+      <span><%- _(`post.embed.${key}.content`) %></span>
     </div>
-    <% array(data.links).forEach(link=> { %>
+    <% array(page.embed[key].links).forEach(link => { %>
     <div class="mb-3">
       <div class="position-relative border" style="padding-bottom: 56.25%">
         <iframe class="position-absolute w-100 h-100" src="<%- embed_link(link) %>"></iframe>
@@ -14,4 +14,4 @@
     <% }) %>
   </div>
 </section>
-<% }) %>
+<% })} %>
