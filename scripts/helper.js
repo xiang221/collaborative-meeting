@@ -8,9 +8,14 @@ function array(arr) {
 }
 
 function find_tag(key, lang) {
+  
   const find = hexo.locals
     .get("data")
-    .tags.find((p) => Object.values(flat(p)).includes(key));
+    .tags.find((p) => {
+      var n = Object.assign({}, p);
+      delete n["post"];
+      return Object.values(flat(n)).includes(key);
+    });
   if (find == undefined) return null;
   return find[lang];
 }

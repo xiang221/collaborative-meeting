@@ -41,12 +41,12 @@
               <p><%- post.description %></p>
             </div>
             <div>
-              <% array(post.tags).forEach(d => { d=find_tag(d); %>
-              <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d %>"><%- d.name %></a>
-              <% }) %>
-              <% array(post.departments).forEach(d => { d=find_dept(d); %>
-              <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d %>"><%- d.name %></a>
-              <% }) %>
+              <% array(post.tags).forEach(d => { d=find_tag(d); if (d!=null) { %>
+              <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d.id %>"><%- d.name %></a>
+              <% }}) %>
+              <% array(post.departments).forEach(d => { d=find_dept(d); if (d!=null) { %>
+              <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d.id %>"><%- d.name %></a>
+              <% }}) %>
             </div>
           </div>
         </div>
