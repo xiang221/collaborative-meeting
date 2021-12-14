@@ -2,7 +2,7 @@ hexo.extend.helper.register("page_url", function (path, options) {
   return this.url_for(path, options).replace(/index\.html$/, "");
 });
 
-hexo.extend.filter.register("after_generate", function () {
+hexo.extend.filter.register("after_generate", async function () {
   hexo.locals
     .get("pages")
     .filter((page) => page.layout == "false")
@@ -10,6 +10,23 @@ hexo.extend.filter.register("after_generate", function () {
       hexo.route.remove(page.path);
     });
 });
+
+
+const request = require("request-promise");
+const cheerio = require("cheerio");
+async function req(link) {
+  let head = await request(link);
+  const $ = cheerio.load(head);
+
+  let image = $('meta[property="og:image"]').attr('content');
+  let title = $('meta[property="og:title"]').attr('content');
+  let subtitle = $('meta[name="description"]').attr('content');
+  let date = $(".post-header").find('time').text().replace(/\s/g, "");
+  let authors = $('meta[name="author"]').attr('content');
+
+  return { image, title, subtitle, date, authors };
+}
+
 
 hexo.extend.helper.register("__", function (link) {
   try {
@@ -34,13 +51,31 @@ hexo.extend.helper.register("__", function (link) {
   }
 });
 
+
+
 hexo.extend.helper.register("array", function (array) {
   if (Array.isArray(array)) return array;
   else return [];
 });
 
 const path = require("path");
-hexo.extend.filter.register("before_post_render", function (data) {
+hexo.extend.filter.register("before_post_render", async function (data) {
+  if (data.blogs) {
+    let d = [];
+    for(const i of data.blogs) {
+      let obj = await req(i);
+      d.push(obj);
+    }
+
+    data.blogs = d;
+  }
+
+  data = bf_post_render(data);
+
+  return data;
+});
+
+function bf_post_render(data) {
   let html_path = data.path.split("/");
 
   // Set lang
@@ -70,10 +105,8 @@ hexo.extend.filter.register("before_post_render", function (data) {
   }
 
   data.path = html_path.join("/") + "/";
-  console.log(data.path);
-
-  return data;
-});
+  // console.log(data.path);
+}
 
 hexo.extend.helper.register("embed_link", function (link, options = {}) {
   const url = new URL(link);

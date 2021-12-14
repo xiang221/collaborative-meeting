@@ -21,6 +21,7 @@
         "hexo-renderer-marked": "^4.0.0",
         "hexo-renderer-stylus": "^2.0.0",
         "hexo-server": "^2.0.0",
-        "request": "^2.88.2"
+        "request": "^2.88.2",
+        "request-promise": "^4.2.6"
     }
 }

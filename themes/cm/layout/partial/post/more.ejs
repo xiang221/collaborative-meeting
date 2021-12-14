@@ -1,49 +1,22 @@
-<% if(page.more != null ){
-const request = require("request-promise");
-const cheerio = require("cheerio");
-let data = [];
-
-(async () => { 
-    const arr =[
-        "page.more.link"
-    ];
-    for(const i of arr) {
-        let obj = await req(i);
-        data.push(obj);
-    }%>
-
+<% if(page.blogs){%>
     <section id="picture">
-        <div class="container">
-            <%for(let i=0; i<data.length; i++){ %>
-                <div class="row">
-                    <div class="col-5">
-                      <div class="image-169" style="background: url('<%- data[i]["image"] %>')"></div>
-                    </div>
-                    <div class="col-7 d-flex align-self-end">
-                      <div>
-                        <h3><%- data[i]["title"] %></h3>
-                        <p><%- data[i]["subtitle"] %></p>
-                        <p><%- data[i]["date"] %> | <%- data[i]["authors"] %></p>
-                      </div>
-                    </div>  
+        <div class="container">   
+        <%page.blogs.forEach(d => {%>
+            <div class="row">
+                <div class="col-5">
+                    <div class="img-169" style="background: url('<%- d["image"] %>')"></div>
                 </div>
-            <%}%>    
+                <div class="col-7 d-flex justify-content-between flex-column">
+                    <div>
+                        <h3><%- d["title"] %></h3>
+                        <p><%- d["subtitle"] %></p>
+                    </div>
+                    <div>
+                        <p><%- d["date"] %> | <%- d["authors"] %></p>
+                    </div>
+                </div>  
+            </div>
+        <%})%>    
         </div>
     </section>
-    
-<%})();
-
-async function req(link) {
-    let head = await request(link);
-    const $ = cheerio.load(head);
-
-    let image = $('meta[property="og:image"]').attr('content');
-    let title = $('meta[property="og:title"]').attr('content');
-    let subtitle = $('meta[name="description"]').attr('content');
-    let date = $(".post-header").find('time').text().replace(/\s/g, "");
-    let authors = $('meta[name="author"]').attr('content');
-
-    return {image, title, subtitle, date, authors};
-    }
-
-} %>
+<%}%>
