@@ -1,56 +1,73 @@
-hexo.extend.helper.register("page_url", function (path, options) {
-  return this.url_for(path, options).replace(/index\.html$/, "");
-});
+const flat = require("flat");
+const fs = require("fs");
+let metadata = [];
 
-hexo.extend.helper.register("__", function (link) {
-  try {
-    var lang = this.page.lang;
-    var target = link.split(".");
-    var find = hexo.locals.get("pages").filter(function (p) {
-      return p.id == target[0] && p.lang == lang;
-    }).data;
-
-    if (find.length == 0) return null;
-
-    var result = find[0];
-    target.shift();
-    target.forEach((i) => {
-      result = result[i];
-    });
-    if (result == undefined) return null;
-
-    return result;
-  } catch (e) {
-    return null;
-  }
-});
-
-hexo.extend.filter.register("after_generate", function () {
-  // console.log(hexo.locals.get("data")["i18n/post"]);
-});
-
-// 取得i18n文字
-hexo.extend.helper.register("_", function (link) {
-  try {
-    const target = link.split(".");
-    const filename = target.shift();
-    let result = hexo.locals.get("data")[`i18n/${filename}`][this.page.lang];
-    target.forEach((i) => {
-      result = result[i];
-    });
-    if (result == undefined) throw "undefined";
-    return result;
-  } catch (e) {
-    return null;
-  }
-});
-
-hexo.extend.helper.register("array", function (array) {
-  if (Array.isArray(array)) return array;
+function array(arr) {
+  if (Array.isArray(arr)) return arr;
   else return [];
-});
+}
 
-const path = require("path");
+function find_tag(key, lang) {
+  const find = hexo.locals
+    .get("data")
+    .tags.find((p) => Object.values(flat(p)).includes(key));
+  if (find == undefined) return null;
+  return find[lang];
+}
+
+function find_dept(key, lang) {
+  const find = hexo.locals
+    .get("data")
+    .departments.find((p) => Object.values(flat(p)).includes(key));
+  if (find == undefined) return null;
+  return find[lang];
+}
+
+function structured_data() {
+  let db = hexo.locals.get("data");
+  Object.keys(db)
+    .filter((table) => !table.includes("/"))
+    .forEach((table) => {
+      Object.keys(db[table]).forEach((row) => {
+        Object.keys(db[table][row])
+          .filter((col) => !["zh-tw", "en"].includes(col))
+          .forEach((col) => {
+            db[table][row]["zh-tw"][col] = db[table][row][col];
+            db[table][row]["en"][col] = db[table][row][col];
+          });
+      });
+    });
+  hexo.locals.set("data", () => db);
+}
+
+function generate_metadata() {
+  hexo.locals
+    .get("pages")
+    .filter(
+      (p) => p.lang == "zh-tw" && p.layout == "post" && p.publish.toLowerCase() == "true"
+    )
+    .sort("id")
+    .each((post) => {
+      let tags = array(post.tags).map((i) => find_tag(i, "zh-tw")).filter(n => n).map(i => i.id);
+      let depts = array(post.departments).map((i) => find_dept(i, "zh-tw")).filter(n => n).map(i => i.id);
+      metadata.push({
+        id: post.id,
+        title: post.title,
+        description: post.description,
+        content: post.introduction ? post.introduction.content : "",
+        path: post.path,
+        thumbnail: post.thumbnail,
+        tags: tags,
+        depts: depts,
+      });
+    });
+}
+
+function create_json() {
+  fs.mkdirSync("public/json", { recursive: true,});
+  fs.writeFileSync("public/json/cases.json", JSON.stringify(metadata));
+}
+
 hexo.extend.filter.register("before_post_render", function (data) {
   let html_path = data.path.split("/");
 
@@ -84,62 +101,74 @@ hexo.extend.filter.register("before_post_render", function (data) {
   return data;
 });
 
-hexo.extend.helper.register("embed_link", function (link, options = {}) {
-  const url = new URL(link);
-  if (
-    (url.hostname == "www.youtube.com" && url.pathname == "/watch") ||
-    url.hostname == "youtu.be"
-  ) {
-    if (url.hostname == "www.youtube.com") {
-      id = url.searchParams.get("v");
-    } else {
-      id = url.pathname.split("/")[1];
-    }
-    link = `https://www.youtube.com/embed/${id}`;
-    if (options.autoplay) {
-      link += `?autoplay=1&loop=1&mute=1&&playlist=${id}`;
-    }
-  } else if (url.hostname == "issuu.com") {
-    id = url.pathname.split("/")[3];
-    user = url.pathname.split("/")[1];
-    link = `https://e.issuu.com/embed.html?pageLayout=singlePage&hideIssuuLogo=true&u=${user}&d=${id}`;
+hexo.extend.filter.register("before_generate", function () {
+  structured_data();
+  generate_metadata();
+});
+
+hexo.extend.filter.register("before_exit", function () {
+  create_json();
+});
+
+hexo.extend.helper.register("page_url", function (path, options) {
+  return this.url_for(path, options).replace(/index\.html$/, "");
+});
+
+// 取得i18n文字
+hexo.extend.helper.register("_", function (link) {
+  try {
+    const target = link.split(".");
+    const filename = target.shift();
+    let result = hexo.locals.get("data")[`i18n/${filename}`][this.page.lang];
+    target.forEach((i) => {
+      result = result[i];
+    });
+    if (result == undefined) throw "undefined";
+    return result;
+  } catch (e) {
+    return null;
   }
-  return link;
 });
 
-const flat = require("flat");
-hexo.extend.helper.register("dept", function (key, col) {
-  const lang = this.page.lang;
-  const result = hexo.locals
-    .get("data")
-    .departments.find((p) => Object.values(flat(p)).includes(key));
-  if (result == undefined || result[col] == undefined) return null;
-  else if (result[col][lang] == undefined) return result[col];
-  else return result[col][lang];
-});
-hexo.extend.helper.register("tag", function (key, col) {
-  const lang = this.page.lang;
-  const result = hexo.locals.get("data").tags.find((p) => {
-    const i = Object.assign({}, p);
-    delete i.post;
-    return Object.values(flat(i)).includes(key);
-  });
+hexo.extend.helper.register("array", (arr) => array(arr));
 
-  if (result == undefined || result[col] == undefined) return null;
-  else if (result[col][lang] == undefined) return result[col];
-  else return result[col][lang];
+hexo.extend.helper.register("embed_link", function (link, options = {}) {
+  try {
+    const url = new URL(link);
+    if (
+      (url.hostname == "www.youtube.com" && url.pathname == "/watch") ||
+      url.hostname == "youtu.be"
+    ) {
+      if (url.hostname == "www.youtube.com") {
+        id = url.searchParams.get("v");
+      } else {
+        id = url.pathname.split("/")[1];
+      }
+      link = `https://www.youtube.com/embed/${id}`;
+      if (options.autoplay) {
+        link += `?autoplay=1&loop=1&mute=1&&playlist=${id}`;
+      }
+    } else if (url.hostname == "issuu.com") {
+      id = url.pathname.split("/")[3];
+      user = url.pathname.split("/")[1];
+      link = `https://e.issuu.com/embed.html?pageLayout=singlePage&hideIssuuLogo=true&u=${user}&d=${id}`;
+    }
+    return link;
+  } catch (e) {
+    return link;
+  }
 });
 
 hexo.extend.helper.register("find_case", function (tags) {
   tags.forEach((t) => (t.post = []));
-  const tag_name = tags.map((i) => i.name[this.page.lang]);
+  const tag_name = tags.map((i) => i[this.page.lang].name);
   hexo.locals
     .get("pages")
     .filter(
       (page) =>
         page.layout == "post" &&
         page.lang == this.page.lang &&
-        page.publish == "true"
+        page.publish.toString().toLowerCase() == "true"
     )
     .forEach((page) => {
       if (page.tags != null)
@@ -150,4 +179,17 @@ hexo.extend.helper.register("find_case", function (tags) {
         });
     });
   return tags;
+});
+
+hexo.extend.helper.register("find_tag", function (key) {
+  return find_tag(key, this.page.lang);
+});
+
+hexo.extend.helper.register("find_dept", function (key) {
+  return find_dept(key, this.page.lang);
+});
+
+
+hexo.extend.helper.register("get_metadata", function () {
+  return metadata;
 });

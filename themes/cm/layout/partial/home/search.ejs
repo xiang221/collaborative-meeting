@@ -18,7 +18,7 @@
       %>
       <li>
         <button class="btn btn-tag rounded-pill <%- active %>" data-bs-toggle="pill" data-bs-target="#tab-<%- tag.id %>">
-          <%- tag.name[page.lang] %>
+          <%- tag[page.lang].name %>
         </button>
       </li>
       <% }) %>
@@ -41,11 +41,11 @@
               <p><%- post.description %></p>
             </div>
             <div>
-              <% array(post.tags).forEach(d => { %>
-              <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
+              <% array(post.tags).forEach(d => { d=find_tag(d); %>
+              <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d %>"><%- d.name %></a>
               <% }) %>
-              <% array(post.departments).forEach(d => { %>
-              <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
+              <% array(post.departments).forEach(d => { d=find_dept(d); %>
+              <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d %>"><%- d.name %></a>
               <% }) %>
             </div>
           </div>

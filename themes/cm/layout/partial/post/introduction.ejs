@@ -7,17 +7,22 @@
         <p><%- page.introduction.content %></p>
       </div>
       <div class="col-md-5">
-          <% try { if(page.introduction.image!=""){ %><img src="<%- url_for(page.introduction.image) %>" class="w-100 mb-3" /><% }}catch(e){} %>
+        <% if (page.introduction.image!="") { %>
+        <img src="<%- url_for(page.introduction.image) %>" class="w-100 mb-3" />
+        <% } %>
         <div class="depts">
-        <% 
+          <% 
           const depts = array(page.departments);
           depts.push("PDIS");
-          depts.forEach(d => { %>
-          <div class="dept-image text-center" onclick="location.href='/list/?dept=<%- dept(d, "id") %>'">
-            <img src="<%- url_for(dept(d, 'image')) %>" class="w-100" />
-            <span title="<%- dept(d, 'fullname') %>"><%- dept(d, "name") %></span>
+          depts.forEach(d => {
+            const dept = find_dept(d);
+            if (dept) {
+          %>
+          <div class="dept-image text-center" onclick="location.href='/list/?dept=<%- dept.id %>'">
+            <img src="<%- url_for(dept.image) %>" class="w-100" />
+            <span title="<%- dept.fullname %>"><%- dept.name %></span>
           </div>
-        <% }) %>
+          <% }}) %>
         </div>
       </div>
     </div>

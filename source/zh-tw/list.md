@@ -2,7 +2,6 @@
 layout: list
 title: 協作會議列表
 
-thumbnail: butter.png
 description: 開放政府 協作會議
 
 filter:

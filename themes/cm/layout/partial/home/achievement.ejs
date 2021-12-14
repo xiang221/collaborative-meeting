@@ -43,18 +43,25 @@
                   <p class="mt-4"><%- post.description %></p>
                   <p class="ellipsis"><%- post.introduction.content %></p>
                   <div>
-                    <% array(post.tags).forEach(d => { %>
+                    <% 
+                    array(post.tags).forEach(d => { 
+                      d = find_tag(d);
+                      if(!d) return;
+                    %>
                     <a
                       class="badge rounded-pill fw-normal badge-tag"
-                      href="/list/?tag=<%- tag(d, 'id') %>"
-                      ><%- tag(d, "name") %></a
-                    >
-                    <% }) %> <% array(post.departments).forEach(d => { %>
+                      href="/list/?tag=<%- d.id %>"
+                      ><%- d.name %></a>
+                    <% 
+                    });
+                    array(post.departments).forEach(d => { 
+                      d = find_dept(d);
+                      if(!d) return;
+                    %>
                     <a
                       class="badge rounded-pill fw-normal badge-dept"
-                      href="/list/?dept=<%- dept(d, 'id') %>"
-                      ><%- dept(d, "name") %></a
-                    >
+                      href="/list/?dept=<%- d.id %>"
+                      ><%- d.name %></a>
                     <% }) %>
                   </div>
                 </div>
