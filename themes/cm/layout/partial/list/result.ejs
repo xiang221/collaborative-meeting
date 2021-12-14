@@ -14,21 +14,21 @@
 
     <% get_metadata().forEach(post => { %>
     <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
-      <div class="col-4">
-        <div class="image" style="background: url('<%- post.thumbnail %>')">
+      <div class="col-lg-4">
+        <div class="image mb-3" style="background: url('<%- post.thumbnail %>')">
         </div>
       </div>
-      <div class="col-8 d-flex flex-column justify-content-between">
+      <div class="col-lg-8 d-flex flex-column justify-content-between">
         <div>
           <h3><%- post.title %></h3>
           <p><%- post.description %></p>
         </div>
         <div>
           <% array(post.tags).forEach(d => { d = find_tag(d); %>
-          <a class="badge rounded-pill fw-normal badge-tag" href="?tag=<%- d.id %>"><%- d.name %></a>
+          <a class="badge rounded-pill fw-normal badge-tag mt-1" href="?tag=<%- d.id %>"><%- d.name %></a>
           <% }) %>
           <% array(post.depts).forEach(d => { d = find_dept(d); %>
-          <a class="badge rounded-pill fw-normal badge-dept" href="?dept=<%- d.id %>"><%- d.name %></a>
+          <a class="badge rounded-pill fw-normal badge-dept mt-1" href="?dept=<%- d.id %>"><%- d.name %></a>
           <% }) %>
         </div>
       </div>

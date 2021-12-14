@@ -7,7 +7,7 @@
       <iframe src="<%- embed_link(page.cover) %>"></iframe>
     </div>
     <% } else { %>
-      <div class="image-16-9" style="background-image: url('<%- url_for(page.thumbnail) %>')"></div>
+      <div class="image-16-9 shadow-sm" style="background-image: url('<%- url_for(page.thumbnail) %>')"></div>
     <% } %>
   </div>
   <div class="bg bg-<%- (page.color || '').toLowerCase() %>"></div>

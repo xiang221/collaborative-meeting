@@ -80,7 +80,7 @@ header {
     padding-bottom: 56.25%;
     background-size: cover !important;
     background-position: center !important;
-    border: var(--bs-secondary) 1px solid;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
   }
 
   a {
@@ -146,5 +146,4 @@ header {
   background-color: white;
   background-size: cover !important;
   background-position: center !important;
-  border: var(--bs-secondary) 1px solid;
 }

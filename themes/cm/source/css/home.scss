@@ -14,7 +14,7 @@ main[class="home"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 300px;
+    margin-bottom: 20vh;
 
     h1 {
       font-size: 4rem;
@@ -63,55 +63,106 @@ main[class="home"] {
       display: block;
     }
 
+    .row {
+      @media (max-width: 992px) {
+        margin-bottom: 8rem;
+      }
+    }
+
     .part1 {
-      margin-bottom: 200px;
-      height: 700px;
+      @media (max-width: 992px) {
+        .cover {
+          img {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+        }
+      }
 
-      .cover {
-        height: 100%;
-        position: relative;
+      @media (min-width: 992px) {
+        margin-bottom: 200px;
+        height: 700px;
 
-        img {
-          position: absolute;
+        .cover {
           height: 100%;
-          right: 0;
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 100%;
+            right: 0;
+          }
+        }
+        .text {
+          padding: 3rem;
         }
       }
     }
 
     .part2 {
-      margin-bottom: 200px;
-      height: 800px;
+      @media (max-width: 992px) {
+        .cover {
+          img {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+        }
 
-      .cover {
-        height: 100%;
-        position: relative;
-
-        img {
-          position: absolute;
-          height: 100%;
+        .content-image {
+          width: 50vw;
         }
       }
 
-      .content-image {
-        width: 300px;
-        margin-top: 50px;
-        margin-bottom: 50px;
+      @media (min-width: 992px) {
+        margin-bottom: 200px;
+        height: 800px;
+
+        .cover {
+          height: 100%;
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 100%;
+          }
+        }
+
+        .content-image {
+          width: 300px;
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+
+        .text {
+          padding: 3rem;
+          order: -1;
+        }
       }
     }
 
     .part3 {
-      margin-bottom: 200px;
-      height: 700px;
+      @media (max-width: 992px) {
+        .cover {
+          img {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+        }
+      }
 
-      .cover {
-        height: 100%;
-        position: relative;
+      @media (min-width: 992px) {
+        margin-bottom: 200px;
+        height: 700px;
 
-        img {
-          position: absolute;
+        .cover {
           height: 100%;
-          right: 50px;
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 100%;
+            right: 50px;
+          }
         }
       }
     }
