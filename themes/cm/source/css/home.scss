@@ -92,7 +92,21 @@ main[class="home"] {
             height: 100%;
             right: 0;
           }
+
+          .triangle {
+            z-index: 10;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 500px 250px 0 250px;
+            left: -12rem;
+            top: -6rem;
+            opacity: 0.9;
+            border-color: var(--bs-yellow) transparent transparent transparent;
+          }
         }
+
         .text {
           padding: 3rem;
         }
@@ -124,6 +138,18 @@ main[class="home"] {
           img {
             position: absolute;
             height: 100%;
+          }
+
+          .circle {
+            z-index: 10;
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            background-color: var(--bs-green);
+            opacity: 0.9;
+            bottom: -15rem;
+            left: 8rem;
           }
         }
 
@@ -162,6 +188,18 @@ main[class="home"] {
             position: absolute;
             height: 100%;
             right: 50px;
+          }
+
+          .square {
+            z-index: 10;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: var(--bs-blue);
+            opacity: 0.9;
+            bottom: -8rem;
+            right: 12rem;
+            transform: rotate(45deg);
           }
         }
       }

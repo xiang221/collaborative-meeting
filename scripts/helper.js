@@ -8,14 +8,11 @@ function array(arr) {
 }
 
 function find_tag(key, lang) {
-  
-  const find = hexo.locals
-    .get("data")
-    .tags.find((p) => {
-      var n = Object.assign({}, p);
-      delete n["post"];
-      return Object.values(flat(n)).includes(key);
-    });
+  const find = hexo.locals.get("data").tags.find((p) => {
+    var n = Object.assign({}, p);
+    delete n["post"];
+    return Object.values(flat(n)).includes(key);
+  });
   if (find == undefined) return null;
   return find[lang];
 }
@@ -49,12 +46,21 @@ function generate_metadata() {
   hexo.locals
     .get("pages")
     .filter(
-      (p) => p.lang == "zh-tw" && p.layout == "post" && p.publish.toLowerCase() == "true"
+      (p) =>
+        p.lang == "zh-tw" &&
+        p.layout == "post" &&
+        p.publish.toLowerCase() == "true"
     )
     .sort("id")
     .each((post) => {
-      let tags = array(post.tags).map((i) => find_tag(i, "zh-tw")).filter(n => n).map(i => i.id);
-      let depts = array(post.departments).map((i) => find_dept(i, "zh-tw")).filter(n => n).map(i => i.id);
+      let tags = array(post.tags)
+        .map((i) => find_tag(i, "zh-tw"))
+        .filter((n) => n)
+        .map((i) => i.id);
+      let depts = array(post.departments)
+        .map((i) => find_dept(i, "zh-tw"))
+        .filter((n) => n)
+        .map((i) => i.id);
       metadata.push({
         id: post.id,
         title: post.title,
@@ -69,8 +75,20 @@ function generate_metadata() {
 }
 
 function create_json() {
-  fs.mkdirSync("public/json", { recursive: true,});
+  fs.mkdirSync("public/json", { recursive: true });
   fs.writeFileSync("public/json/cases.json", JSON.stringify(metadata));
+}
+
+function update_post() {
+  const ps = hexo.locals.get("pages");
+  ps.forEach((p) => {
+    if (p.lang == "zh-tw" && p.layout == "post" && p.description != undefined) {
+      p.description = `開放政府第${p.id}案協作會議${p.description}`;
+    }
+  });
+  hexo.locals.set("pages", function () {
+    return ps;
+  });
 }
 
 hexo.extend.filter.register("before_post_render", function (data) {
@@ -108,6 +126,7 @@ hexo.extend.filter.register("before_post_render", function (data) {
 
 hexo.extend.filter.register("before_generate", function () {
   structured_data();
+  update_post();
   generate_metadata();
 });
 
@@ -193,7 +212,6 @@ hexo.extend.helper.register("find_tag", function (key) {
 hexo.extend.helper.register("find_dept", function (key) {
   return find_dept(key, this.page.lang);
 });
-
 
 hexo.extend.helper.register("get_metadata", function () {
   return metadata;
