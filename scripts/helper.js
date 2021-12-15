@@ -130,7 +130,7 @@ hexo.extend.filter.register("before_generate", function () {
   generate_metadata();
 });
 
-hexo.extend.filter.register("before_exit", function () {
+hexo.extend.filter.register("after_generate", function () {
   create_json();
 });
 
