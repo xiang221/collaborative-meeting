@@ -42,8 +42,21 @@
     }
   }
 
-  function click_filter(e) {
-    e.dataset.active = !(e.dataset.active === "true");
+  function click_tag(e) {
+    var c = e.dataset.active;
+    getel('.tag').forEach((i) => {
+      i.dataset.active = "false";
+    });
+    e.dataset.active = !(c === "true");
+    reload_list();
+  }
+
+  function click_dept(e) {
+    var c = e.dataset.active;
+    getel('.dept').forEach((i) => {
+      i.dataset.active = "false";
+    });
+    e.dataset.active = !(c === "true");
     reload_list();
   }
 
@@ -54,6 +67,7 @@
     );
 
     count("tag", filter_metadata);
+    
     const tag_active = getel('.tag[data-active="true"]').map(
       (e) => e.dataset.id
     );
@@ -62,6 +76,7 @@
     );
 
     count("dept", filter_metadata);
+    
     const dept_active = getel('.dept[data-active="true"]').map(
       (e) => e.dataset.id
     );
@@ -93,8 +108,8 @@
     // Rewrite URL
     var result = [];
     if (search != "") result.push("search=" + encodeURIComponent(search));
-    if (dept_active.length > 0) result.push("dept=" + dept_active.join(","));
-    if (tag_active.length > 0) result.push("tag=" + tag_active.join(","));
+    if (getel('.dept[data-active="true"]').length > 0) result.push("dept=" + getel('.dept[data-active="true"]')[0].dataset.id );
+    if (getel('.tag[data-active="true"]').length > 0) result.push("tag=" + getel('.tag[data-active="true"]')[0].dataset.id );
     history.replaceState({}, "", "?" + result.join("&"));
   }
 
@@ -111,11 +126,12 @@
         el.innerHTML = `<img src="${el.dataset.img}">${el.innerHTML}`;
       el.dataset.count = num;
     });
+    
     getel(`.${name}`)
       .sort((a, b) =>
         b.dataset.count.localeCompare(a.dataset.count, "en", { numeric: true })
       )
-      .sort((a, b) => b.dataset.active.localeCompare(a.dataset.active))
       .forEach((el) => el.parentNode.appendChild(el));
+      
   }
 </script>

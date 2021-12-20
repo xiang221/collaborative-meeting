@@ -8,8 +8,8 @@
     <div class="row">
       <div class="col-12">
         <div class="search-bar">
-          <input id="search-text" type="text" placeholder="<%- page.filter.search %>" autocomplete="off" onkeyup="reload_list()"/>
-          <div class="search-btn">
+          <input id="search-text" type="text" placeholder="<%- page.filter.search %>" autocomplete="off"/>
+          <div class="search-btn" onclick="location.href='/list/?search='+document.getElementById('search-text').value">
             <i class="fas fa-search"></i>
           </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="collapse" id="collapseTag">
           <div class="filter-items">
             <% site.data.tags.forEach(tag => { %>
-            <div class="filter-item tag" data-id="<%- tag.id %>" data-name="<%- tag[page.lang].name %>" data-active="false" onclick="click_filter(this)"></div>
+            <div class="filter-item tag" data-id="<%- tag.id %>" data-name="<%- tag[page.lang].name %>" data-active="false" onclick="click_tag(this)"></div>
             <% }) %>
           </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="collapse" id="collapseDept">
           <div class="filter-items">
             <% site.data.departments.filter(p => p.id != "PDIS").forEach(dept => { %>
-            <div class="filter-item dept" data-id="<%- dept.id %>" data-name="<%- dept[page.lang].name %>" data-active="false" data-img="<%- url_for(dept.image) %>" onclick="click_filter(this)"></div>
+            <div class="filter-item dept" data-id="<%- dept.id %>" data-name="<%- dept[page.lang].name %>" data-active="false" data-img="<%- url_for(dept.image) %>" onclick="click_dept(this)"></div>
             <% }) %>
           </div>
         </div>

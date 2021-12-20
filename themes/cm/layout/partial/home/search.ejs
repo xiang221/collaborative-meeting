@@ -27,8 +27,8 @@
       active = index == 0 ? "show active" : ""; %>
       <div class="tab-pane fade <%- active %>" id="tab-<%- t.id %>">
         <% t.post.every((post,index) => { %>
-        <div class="card">
-          <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
+        <div class="card case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
+          <div class="row">
             <div class="col-lg-4">
               <div class="image" style="background: url('<%- post.thumbnail %>')"></div>
             </div>
