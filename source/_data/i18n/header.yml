@@ -5,7 +5,7 @@ zh-tw:
     - name: 協作成果
       link: "/#achievement"
     - name: 協作會議清單
-      link: "/list"
+      link: "/list/"
 en:
   items:
     - name: Open Government, Collaborative Meeting
@@ -13,4 +13,4 @@ en:
     - name: Result
       link: "/en/#achievement"
     - name: Collaborative Meeting List
-      link: "/en/list"
+      link: "/en/list/"
