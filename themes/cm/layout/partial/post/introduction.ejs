@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-5">
         <% if (page.introduction.image!="") { %>
-        <img src="<%- url_for(page.introduction.image) %>" class="w-100 mb-3" />
+        <img src="<%- url_for(page.introduction.image) %>" class="w-100 mb-3" onerror="this.style.display='none'"/>
         <% } %>
         <div class="depts">
           <% 
