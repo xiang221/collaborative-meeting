@@ -2,7 +2,8 @@
   <div class="container">
     <div class="title">
       <h2><%- page.result.title %></h2>
-      <span><%- page.result.content %>，篩選出 <span id="result-count">0</span> 案相關協作會議</span>
+      <span><%- page.result.content %>，篩選出
+        <span id="result-count">0</span> 案相關協作會議</span>
     </div>
 
     <div class="sort">
@@ -13,23 +14,34 @@
     </div>
 
     <% get_metadata().forEach(post => { %>
-    <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
-      <div class="col-lg-4">
-        <div class="image mb-3" style="background: url('<%- post.thumbnail %>')">
+    <div class="card case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
+      <div class="row" >
+        <div class="col-lg-4">
+          <div class="image" style="background: url('<%- post.thumbnail %>')"></div>
         </div>
-      </div>
-      <div class="col-lg-8 d-flex flex-column justify-content-between">
-        <div>
-          <h3><%- post.title %></h3>
-          <p><%- post.description %></p>
-        </div>
-        <div>
-          <% array(post.tags).forEach(d => { d = find_tag(d); %>
-          <a class="badge rounded-pill fw-normal badge-tag mt-1" href="?tag=<%- d.id %>"><%- d.name %></a>
-          <% }) %>
-          <% array(post.depts).forEach(d => { d = find_dept(d); %>
-          <a class="badge rounded-pill fw-normal badge-dept mt-1" href="?dept=<%- d.id %>"><%- d.name %></a>
-          <% }) %>
+        <div class="col-lg-8 align-self-center">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h3 class="card-title fs-5"><%- post.title %></h3>
+              <button class="btn text-primary icon-btn">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+            <p class="card-text"><%- post.description %></p>
+
+            <% if (array(post.tags).length != 0 || array(post.departments).length != 0 ) { %>
+            <div>
+              <% array(post.tags).forEach(d => { d=find_tag(d); if (d!=null) {
+              %>
+              <a class="badge bg-secondary-light text-dark mt-1" href="/list/?tag=<%- d.id %>"><%- d.name %></a>
+              <% }}) %> <% array(post.depts).forEach(d => {
+              d=find_dept(d); if (d!=null) { %>
+              <a class="badge bg-primary-light text-dark mt-1" href="/list/?dept=<%- d.id %>"><%- d.name %></a>
+              <% }}) %>
+            </div>
+            <% } %>
+          </div>
         </div>
       </div>
     </div>

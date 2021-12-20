@@ -68,19 +68,29 @@ header {
   }
 }
 
-.case {
-  cursor: pointer;
+.card {
   margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+
+  &:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    transform: scale(1.01);
+  }
+
+  
+}
+
+.case {
+  min-height: 10rem;
+  cursor: pointer;
   text-align: left;
 
   .image {
     width: 100%;
-    padding-bottom: 56.25%;
+    height: 100%;
+    //padding-bottom: 56.25%;
     background-size: cover !important;
     background-position: center !important;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
   }
 
   a {
@@ -89,10 +99,7 @@ header {
   }
 
 
-  &:hover {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    transform: scale(1.01);
-  }
+
 
   &[data-visible="false"] {
     display: none;
@@ -100,6 +107,7 @@ header {
 
 }
 
+/*
 .badge {
   font-size: 0.875rem;
   color: white !important;
@@ -120,7 +128,7 @@ header {
   &.badge-tag {
     background-color: var(--bs-green);
   }
-}
+}*/
 
 .depts {
   display: inline-flex;
