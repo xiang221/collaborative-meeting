@@ -2,9 +2,9 @@ zh-tw:
   items:
     - name: 開放政府協作會議
       link: "/#introduction"
-    - name: 協作成果
+    - name: 精選專案
       link: "/#achievement"
-    - name: 協作會議清單
+    - name: 協作會議列表
       link: "/list/"
 en:
   items:

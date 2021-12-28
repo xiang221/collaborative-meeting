@@ -6,10 +6,12 @@
         <h2 class="mb-3"><%- _("post.introduction.title") %></h2>
         <p><%- page.introduction.content %></p>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 d-flex flex-column justify-content-between align-items-end">
+        <div>
         <% if (page.introduction.image!="") { %>
         <img src="<%- url_for(page.introduction.image) %>" class="w-100 mb-3" onerror="this.style.display='none'"/>
         <% } %>
+        </div>
         <div class="depts">
           <% 
           const depts = array(page.departments);

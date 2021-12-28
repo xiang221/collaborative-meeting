@@ -1,2 +1,21 @@
-<footer>
-</footer>
+<footer class="bg-primary">
+    <div class="container-lg">
+      <div class="row justify-content-between">
+        <div class="col-lg-8">
+          <img src="/images/logo.png" class="mb-4" width="80" height="80" alt="Logo"></img>
+          <% _('footer.contents').forEach(function(value){ %>
+          <p><%- value %></p>
+          <% }) %>
+        </div>
+        <div class="col-lg-2 d-flex align-items-end lh-lg">
+          <ul>
+            <% _('footer.links').forEach(function(value){ %>
+            <li>
+              <a href="<%- value.link %>" target="_blank"><%- value.name %></a>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
