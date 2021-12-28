@@ -249,8 +249,11 @@ main[class="home"] {
     .big-card {
       background: white;
 
-      >div {
-        padding: 1rem 1.5rem;
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
       }
 
       .image {
