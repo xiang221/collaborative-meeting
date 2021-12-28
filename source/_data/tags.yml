@@ -1,0 +1,180 @@
+- id: "1"
+  zh-tw:
+    name: 動物保護
+  en:
+    name: animal protection
+  home: "TRUE"
+- id: "2"
+  zh-tw:
+    name: 消費議題
+  en:
+    name: consumer
+  home: "FALSE"
+- id: "3"
+  zh-tw:
+    name: 教育
+  en:
+    name: education
+  home: "TRUE"
+- id: "4"
+  zh-tw:
+    name: 兒童
+  en:
+    name: child
+  home: "TRUE"
+- id: "5"
+  zh-tw:
+    name: 青少年
+  en:
+    name: teenager
+  home: "FALSE"
+- id: "6"
+  zh-tw:
+    name: 性別平等
+  en:
+    name: gender equality
+  home: "FALSE"
+- id: "7"
+  zh-tw:
+    name: 休閒
+  en:
+    name: leisure
+  home: "FALSE"
+- id: "8"
+  zh-tw:
+    name: 文化
+  en:
+    name: culture
+  home: "FALSE"
+- id: "9"
+  zh-tw:
+    name: 財政
+  en:
+    name: finance
+  home: "FALSE"
+- id: "10"
+  zh-tw:
+    name: 法規
+  en:
+    name: legislation
+  home: "FALSE"
+- id: "11"
+  zh-tw:
+    name: 數位服務
+  en:
+    name: digital service
+  home: "TRUE"
+- id: "12"
+  zh-tw:
+    name: 共創
+  en:
+    name: co-creation
+  home: "FALSE"
+- id: "13"
+  zh-tw:
+    name: 環保
+  en:
+    name: enviromental protection
+  home: "TRUE"
+- id: "14"
+  zh-tw:
+    name: 醫療
+  en:
+    name: medical care
+  home: "FALSE"
+- id: "15"
+  zh-tw:
+    name: 科技
+  en:
+    name: technology
+  home: "FALSE"
+- id: "16"
+  zh-tw:
+    name: 漁業
+  en:
+    name: fishery
+  home: "FALSE"
+- id: "17"
+  zh-tw:
+    name: 健保
+  en:
+    name: health insurance
+  home: "TRUE"
+- id: "18"
+  zh-tw:
+    name: 農業
+  en:
+    name: agriculture
+  home: "FALSE"
+- id: "19"
+  zh-tw:
+    name: 交通
+  en:
+    name: transportation
+  home: "TRUE"
+- id: "20"
+  zh-tw:
+    name: 社會福利
+  en:
+    name: social welfare
+  home: "TRUE"
+- id: "21"
+  zh-tw:
+    name: 健康
+  en:
+    name: health
+  home: "TRUE"
+- id: "22"
+  zh-tw:
+    name: 勞工權益
+  en:
+    name: labor rights
+  home: "FALSE"
+- id: "23"
+  zh-tw:
+    name: 婦女權益
+  en:
+    name: women's rights
+  home: "FALSE"
+- id: "24"
+  zh-tw:
+    name: 公務體制
+  en:
+    name: civil service
+  home: "FALSE"
+- id: "25"
+  zh-tw:
+    name: 商業
+  en:
+    name: commerce
+  home: "FALSE"
+- id: "26"
+  zh-tw:
+    name: 公共政策
+  en:
+    name: public policy
+  home: "FALSE"
+- id: "27"
+  zh-tw:
+    name: 原住民議題
+  en:
+    name: indigenous culture
+  home: "FALSE"
+- id: "28"
+  zh-tw:
+    name: 公共服務
+  en:
+    name: public service
+  home: "FALSE"
+- id: "29"
+  zh-tw:
+    name: 科學
+  en:
+    name: science
+  home: "FALSE"
+- id: "30"
+  zh-tw:
+    name: 公私協力
+  en:
+    name: public-people partnership
+  home: "TRUE"

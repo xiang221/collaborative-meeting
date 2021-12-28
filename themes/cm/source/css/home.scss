@@ -1,6 +1,5 @@
 main[class="home"] {
   h2 {
-    font-size: 3rem;
     font-weight: bold;
   }
 
@@ -15,15 +14,18 @@ main[class="home"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 300px;
+    margin-bottom: 20vh;
+
     h1 {
       font-size: 4rem;
       font-weight: bold;
       margin-bottom: 0;
     }
+
     .title-en {
       font-size: 1.5rem;
     }
+
     p {
       margin-top: 1rem;
       font-size: 2.25rem;
@@ -43,15 +45,14 @@ main[class="home"] {
   }
 
   section[id="introduction"] {
-    h2{
-      color:  var(--bs-primary);
+    h2 {
+      color: var(--bs-primary);
       font-size: 2rem;
       margin-bottom: 1.5rem;
       font-weight: bold;
     }
 
     h3 {
-      font-size: 1.5rem;
       margin-bottom: 1.5rem;
       font-weight: 500;
     }
@@ -62,54 +63,161 @@ main[class="home"] {
       display: block;
     }
 
+    .row {
+      @media (max-width: 992px) {
+        margin-bottom: 8rem;
+      }
+    }
+
     .part1 {
-      margin-bottom: 200px;
-      height: 700px;
-      .cover {
-        height: 100%;
-        position: relative;
-        img{
-          position: absolute;
+      @media (max-width: 992px) {
+        .cover {
+          img {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      @media (min-width: 992px) {
+        margin-bottom: 200px;
+        height: 700px;
+
+        .cover {
           height: 100%;
-          right: 0;
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 100%;
+            right: 0;
+          }
+
+          .triangle {
+            z-index: 10;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 500px 250px 0 250px;
+            left: -12rem;
+            top: -6rem;
+            opacity: 0.9;
+            border-color: var(--bs-yellow) transparent transparent transparent;
+          }
+        }
+
+        .text {
+          padding: 3rem;
         }
       }
     }
 
-    .part2{
-      margin-bottom: 200px;
-      height: 800px;
-      .cover {
-        height: 100%;
-        position: relative;
-        img{
-          position: absolute;
-          height: 100%;
+    .part2 {
+      @media (max-width: 992px) {
+        .cover {
+          img {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+        }
+
+        .content-image {
+          width: 50vw;
         }
       }
-      .content-image {
-        width: 300px;
-        margin-top: 50px;
-        margin-bottom: 50px;
+
+      @media (min-width: 992px) {
+        margin-bottom: 200px;
+        height: 800px;
+
+        .cover {
+          height: 100%;
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 100%;
+          }
+
+          .circle {
+            z-index: 10;
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            background-color: var(--bs-green);
+            opacity: 0.9;
+            bottom: -15rem;
+            left: 8rem;
+          }
+        }
+
+        .content-image {
+          width: 300px;
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+
+        .text {
+          padding: 3rem;
+          order: -1;
+        }
       }
     }
 
     .part3 {
-      margin-bottom: 200px;
-      height: 700px;
-      .cover {
-        height: 100%;
-        position: relative;
-        img{
-          position: absolute;
+      @media (max-width: 992px) {
+        .cover {
+          img {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      @media (min-width: 992px) {
+        margin-bottom: 200px;
+        height: 700px;
+
+        .cover {
           height: 100%;
-          right: 50px;
+          position: relative;
+
+          img {
+            position: absolute;
+            height: 100%;
+            right: 50px;
+          }
+
+          .square {
+            z-index: 10;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: var(--bs-blue);
+            opacity: 0.9;
+            bottom: -8rem;
+            right: 12rem;
+            transform: rotate(45deg);
+          }
         }
       }
     }
   }
 
   section[id="achievement"] {
+
+    .container {
+      @media (min-width: 1200px) {
+        max-width: 1140px;
+      }
+
+      @media (min-width: 1400px) {
+        max-width: 1320px;
+      }
+    }
+
     .bg {
       background: url("/image/achievement_bg.png");
       background-size: cover !important;
@@ -117,20 +225,20 @@ main[class="home"] {
       padding-top: 3rem;
       padding-bottom: 3rem;
     }
+
     .carousel {
+
       .carousel-control-next,
       .carousel-control-prev {
         width: 8%;
         opacity: 0.8;
+        position: unset;
       }
+
       .carousel-control-next-icon,
       .carousel-control-prev-icon {
         width: 100%;
         height: 100%;
-      }
-      .carousel-inner {
-        padding-left: 8%;
-        padding-right: 8%;
       }
 
       .carousel-indicators {
@@ -140,8 +248,12 @@ main[class="home"] {
 
     .big-card {
       background: white;
-      > div {
-        padding: 1rem;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
       }
 
       .image {
@@ -149,13 +261,21 @@ main[class="home"] {
         background-size: cover !important;
         background-position: center !important;
         width: 100%;
-        padding-bottom: 100%;
+        padding-bottom: 75%;
       }
+
       .content {
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 2rem 1rem 1rem;
+
         h3 {
-          font-size: 1.125rem;
           font-weight: bold;
+        }
+
+        .ellipsis {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
         }
       }
     }
@@ -168,50 +288,20 @@ main[class="home"] {
       text-align: center;
       justify-content: center;
       align-items: center;
-      .search-bar {
-        width: 100%;
-        border-radius: 50rem;
-        padding: 1rem 1rem 1rem 4rem;
-        background-color: var(--bs-secondary);
-        display: flex;
-        justify-content: space-between;
-        input {
-          font-size: 2rem;
-          color: white;
-          background-color: transparent;
-          border: unset;
-          cursor: default;
-          &::placeholder {
-            color: white;
-          }
-          &:focus {
-            outline: 0;
-          }
-        }
-        .search-btn {
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          background-color: white;
-          display: flex;  
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          svg {
-            font-size: 1.7rem;
-          }
-        }
-      }
+
       .tags {
-        max-width: 45rem;
+        //max-width: 45rem;
+
         .btn-tag {
           background-color: var(--bs-secondary);
           color: white;
           width: 7rem;
           margin: 0.5rem;
+          padding-top: 1px;
+          padding-bottom: 1px;
 
-          &:focus {
-            background-color: var(--bs-primary);
+          &.active {
+            background-color: var(--bs-green);
           }
         }
       }
@@ -220,6 +310,7 @@ main[class="home"] {
         color: white;
         text-align: left;
         position: relative;
+
         .content {
           position: absolute;
           width: 100%;
@@ -229,15 +320,17 @@ main[class="home"] {
           flex-direction: column;
           justify-content: end;
           z-index: 1;
+
           h3 {
-            font-size: 2rem;
             font-weight: bold;
           }
+
           p {
             font-size: 1.5rem;
             margin: 0;
           }
         }
+
         .bg {
           top: 0;
           width: 100%;
@@ -251,10 +344,10 @@ main[class="home"] {
 
       .more {
         margin-top: 2rem;
+
         a {
-          font-size: 2rem;
-          color: black;
-          font-weight: 500;
+          float: right;
+          color: var(--bs-secondary);
         }
       }
     }

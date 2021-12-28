@@ -1,85 +1,67 @@
 <section id="search">
   <div class="container">
-    <h2 class="text-primary mb-5">
-      <%- page.search.title %>
-    </h2>
+    <h2 class="text-primary mb-5"><%- page.search.title %></h2>
     <div class="search-bar mb-5">
-      <input id="search-text" type="text" placeholder="<%- page.search.placeholder %>" />
+      <input id="search-text" type="text" placeholder="<%- page.search.placeholder %>" autocomplete="off" />
       <div class="search-btn" onclick="location.href='/list/?search='+document.getElementById('search-text').value">
         <i class="fas fa-search"></i>
       </div>
     </div>
 
-    <p class="fs-2 mb-5">
-      <%- page.search.following_tag %>
-    </p>
-    <div class="tags mb-5">
-      <% page.search.tags.forEach(tag=> { %>
-        <button class="btn btn-tag rounded-pill">
-          <%- tag %>
+    <p class="fs-3 mb-5"><%- page.search.following_tag %></p>
+
+    <ul class="tags nav nav-pills mb-5 justify-content-center" role="tablist">
+      <% site.data.tags.filter(tag => tag.home.toString().toLowerCase() ==
+      "true").forEach((tag, index) => { const active = index == 0 ? "active" :
+      ""; %>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link <%- active %>" data-bs-toggle="pill" data-bs-target="#tab-<%- tag.id %>" type="button" role="tab">
+          <%- tag[page.lang].name %>
         </button>
-        <% }) %>
-    </div>
-    <div class="row w-100 gy-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="case-card">
-          <div class="content">
-            <h3>「以共創開創對話的空間」</h3>
-            <p>開放政府第66次協作會議<br />故宮有精神工作坊</p>
+      </li>
+      <% }) %>
+    </ul>
+    <div class="tab-content w-100">
+      <% find_case(site.data.tags.filter(tag =>
+      tag.home.toString().toLowerCase() == "true")).forEach((t, index)=> { const
+      active = index == 0 ? "show active" : ""; %>
+      <div class="tab-pane fade <%- active %>" id="tab-<%- t.id %>">
+        <% t.post.every((post,index) => { %>
+        <div class="card case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="image" style="background: url('<%- post.thumbnail %>')"></div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-baseline">
+                  <h3 class="card-title fs-5"><%- post.title %></h3>
+                  <button class="btn text-primary icon-btn">
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+
+                <p class="card-text"><%- post.description %></p>
+
+                <div>
+                  <% array(post.tags).forEach(d => { d=find_tag(d); if (d!=null)
+                  { %>
+                  <a class="badge bg-secondary-light text-dark mt-1" href="/list/?tag=<%- d.id %>"><%- d.name %></a>
+                  <% }}) %> <% array(post.departments).forEach(d => {
+                  d=find_dept(d); if (d!=null) { %>
+                  <a class="badge bg-primary-light text-dark mt-1" href="/list/?dept=<%- d.id %>"><%- d.name %></a>
+                  <% }}) %>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bg"></div>
+        </div>
+        <% if (index == 2 ) return false; else return true; }) %>
+        <div class="more">
+          <a href="/list/?tag=<%- t.id %>"> <%- page.search.more %> </a>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="case-card">
-          <div class="content">
-            <h3>「以共創開創對話的空間」</h3>
-            <p>開放政府第66次協作會議<br />故宮有精神工作坊</p>
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="case-card">
-          <div class="content">
-            <h3>「以共創開創對話的空間」</h3>
-            <p>開放政府第66次協作會議<br />故宮有精神工作坊</p>
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="case-card">
-          <div class="content">
-            <h3>「以共創開創對話的空間」</h3>
-            <p>開放政府第66次協作會議<br />故宮有精神工作坊</p>
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="case-card">
-          <div class="content">
-            <h3>「以共創開創對話的空間」</h3>
-            <p>開放政府第66次協作會議<br />故宮有精神工作坊</p>
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="case-card">
-          <div class="content">
-            <h3>「以共創開創對話的空間」</h3>
-            <p>開放政府第66次協作會議<br />故宮有精神工作坊</p>
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-    </div>
-    <div class="more">
-      <a href="/list">
-        <%- page.search.more %>
-      </a>
+      <% }) %>
     </div>
   </div>
 </section>

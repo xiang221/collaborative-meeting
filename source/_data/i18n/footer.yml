@@ -1,0 +1,14 @@
+zh-tw:
+  contents: 
+    - 開放政府透過不同的方法來促成公私協力，我們最常使用的方式是辦理「協作會議」。協作會議強調公私部門共同磨合出一個適合討論的核心問題，並導入主持技術與科技工具，確保會議能更「透明、參與、課責、涵容」
+    - 本網站為PDIS所設計及維運。除另有標示外，內容以創用 CC BY 4.0 授權條款釋出
+  links:
+    - name: 聯絡我們 
+      link: https://pdis.nat.gov.tw/zh-TW/contact/
+    - name: PDIS 官網
+      link: https://pdis.nat.gov.tw/zh-TW/
+    - name: 開放政府聯絡人網站
+      link: https://po.pdis.nat.gov.tw/zh-TW/po/
+    - name: 協作會議網站原始碼
+      link: https://github.com/PDIS/collaborative-meeting
+en: 

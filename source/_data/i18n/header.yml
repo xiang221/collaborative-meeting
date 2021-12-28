@@ -1,0 +1,16 @@
+zh-tw:
+  items:
+    - name: 開放政府協作會議
+      link: "/#introduction"
+    - name: 精選專案
+      link: "/#achievement"
+    - name: 協作會議列表
+      link: "/list/"
+en:
+  items:
+    - name: Open Government, Collaborative Meeting
+      link: "/en/#introduction"
+    - name: Result
+      link: "/en/#achievement"
+    - name: Collaborative Meeting List
+      link: "/en/list/"

@@ -1,10 +1,11 @@
 <section id="introduction">
   <div class="container">
     <div class="row part1">
-      <div class="col-6 cover">
+      <div class="col-lg-6 cover">
+        <div class="triangle"></div>
         <img src="<%- page.introduction.part1.image %>" />
       </div>
-      <div class="col-6 d-flex align-items-center p-5">
+      <div class="col-lg-6 d-flex align-items-center text">
         <div>
           <h2><%- page.introduction.title %></h2>
           <h3><%- page.introduction.part1.title %></h3>
@@ -13,7 +14,11 @@
       </div>
     </div>
     <div class="row part2">
-      <div class="col-6 d-flex align-items-center p-5">
+      <div class="col-lg-6 cover">
+        <div class="circle"></div>
+        <img src="<%- page.introduction.part2.image %>" />
+      </div>
+      <div class="col-lg-6 d-flex align-items-center text">
         <div class="text-center">
           <h3><%- page.introduction.part2.title %></h3>
           <img
@@ -23,15 +28,13 @@
           <p class="text-start"><%- page.introduction.part2.content %></p>
         </div>
       </div>
-      <div class="col-6 cover">
-        <img src="<%- page.introduction.part2.image %>" />
-      </div>
     </div>
     <div class="row part3">
-      <div class="col-6 cover">
+      <div class="col-lg-6 cover">
+        <div class="square"></div>
         <img src="<%- page.introduction.part3.image %>" />
       </div>
-      <div class="col-6 d-flex align-items-center">
+      <div class="col-lg-6 d-flex align-items-center">
         <div>
           <h3><%- page.introduction.part3.title %></h3>
           <p><%- page.introduction.part3.content %></p>

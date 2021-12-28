@@ -1,46 +1,47 @@
-<% 
-let metadata = [];
-site.pages.filter(p => p.lang == page.lang && p.layout == "post" && p.publish != "false").sort("id").each(post => {
-  let tags = array(post.tags).map(i => String(tag(i, "id")));
-  let depts = array(post.departments).map(i => dept(i, "id"));
-  metadata.push({
-    id: post.id,
-    title: post.title,
-    description: post.description,
-    content: post.introduction.content,
-    path: post.path,
-    thumbnail: post.thumbnail,
-    tags: tags,
-    depts: depts,
-  });
-});
-%>
-<script type="text/javascript">
-  const metadata = JSON.parse('<%- JSON.stringify(metadata) %>');
-</script>
 <section id="result">
   <div class="container">
     <div class="title">
       <h2><%- page.result.title %></h2>
-      <span><%- page.result.content %></span>
+      <span><%- page.result.content %>，篩選出
+        <span id="result-count">0</span> 案相關協作會議</span>
     </div>
 
-    <% metadata.forEach(post => { %>
-    <div class="row case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
-      <div class="col-3">
-        <div class="image" style="background: url('<%- post.thumbnail %>')">
+    <div class="sort">
+      <select id="select-sort" class="form-select" onchange="reload_list()">
+        <option selected value="asc">由舊到新</option>
+        <option value="desc">由新到舊</option>
+      </select>
+    </div>
+
+    <% get_metadata().forEach(post => { %>
+    <div class="card case" data-id="<%- post.id %>" onclick="location.href='<%- url_for(post.path) %>'">
+      <div class="row" >
+        <div class="col-lg-4">
+          <div class="image" style="background: url('<%- post.thumbnail %>')"></div>
         </div>
-      </div>
-      <div class="col-9 d-flex align-self-end">
-        <div>
-          <% array(post.depts).forEach(d => { %>
-          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?dept=<%- d %>"><%- dept(d, "name") %></a>
-          <% }) %>
-          <% array(post.tags).forEach(d => { %>
-          <a class="btn btn-secondary badge rounded-pill fs-6 fw-normal" href="?tag=<%- d %>"><%- tag(d, "name") %></a>
-          <% }) %>
-          <h3><%- post.title %></h3>
-          <h4><%- post.description %></h3>
+        <div class="col-lg-8 align-self-center">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h3 class="card-title fs-5"><%- post.title %></h3>
+              <button class="btn text-primary icon-btn">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+            <p class="card-text"><%- post.description %></p>
+
+            <% if (array(post.tags).length != 0 || array(post.departments).length != 0 ) { %>
+            <div>
+              <% array(post.tags).forEach(d => { d=find_tag(d); if (d!=null) {
+              %>
+              <a class="badge bg-secondary-light text-dark mt-1" href="/list/?tag=<%- d.id %>"><%- d.name %></a>
+              <% }}) %> <% array(post.depts).forEach(d => {
+              d=find_dept(d); if (d!=null) { %>
+              <a class="badge bg-primary-light text-dark mt-1" href="/list/?dept=<%- d.id %>"><%- d.name %></a>
+              <% }}) %>
+            </div>
+            <% } %>
+          </div>
         </div>
       </div>
     </div>

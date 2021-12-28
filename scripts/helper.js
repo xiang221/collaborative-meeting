@@ -1,81 +1,97 @@
-hexo.extend.helper.register("page_url", function (path, options) {
-  return this.url_for(path, options).replace(/index\.html$/, "");
-});
+const flat = require("flat");
+const fs = require("fs");
+let metadata = [];
 
-hexo.extend.filter.register("after_generate", async function () {
-  hexo.locals
-    .get("pages")
-    .filter((page) => page.layout == "false")
-    .forEach((page) => {
-      hexo.route.remove(page.path);
-    });
-});
-
-
-const request = require("request-promise");
-const cheerio = require("cheerio");
-async function req(link) {
-  let head = await request(link);
-  const $ = cheerio.load(head);
-
-  let image = $('meta[property="og:image"]').attr('content');
-  let title = $('meta[property="og:title"]').attr('content');
-  let subtitle = $('meta[name="description"]').attr('content');
-  let date = $(".post-header").find('time').text().replace(/\s/g, "");
-  let authors = $('meta[name="author"]').attr('content');
-
-  return { image, title, subtitle, date, authors };
+function array(arr) {
+  if (Array.isArray(arr)) return arr;
+  else return [];
 }
 
+function find_tag(key, lang) {
+  const find = hexo.locals.get("data").tags.find((p) => {
+    var n = Object.assign({}, p);
+    delete n["post"];
+    return Object.values(flat(n)).includes(key);
+  });
+  if (find == undefined) return null;
+  return find[lang];
+}
 
-hexo.extend.helper.register("__", function (link) {
-  try {
-    var lang = this.page.lang;
-    var target = link.split(".");
-    var find = hexo.locals.get("pages").filter(function (p) {
-      return p.id == target[0] && p.lang == lang;
-    }).data;
+function find_dept(key, lang) {
+  const find = hexo.locals
+    .get("data")
+    .departments.find((p) => Object.values(flat(p)).includes(key));
+  if (find == undefined) return null;
+  return find[lang];
+}
 
-    if (find.length == 0) return null;
-
-    var result = find[0];
-    target.shift();
-    target.forEach((i) => {
-      result = result[i];
+function structured_data() {
+  let db = hexo.locals.get("data");
+  Object.keys(db)
+    .filter((table) => !table.includes("/"))
+    .forEach((table) => {
+      Object.keys(db[table]).forEach((row) => {
+        Object.keys(db[table][row])
+          .filter((col) => !["zh-tw", "en"].includes(col))
+          .forEach((col) => {
+            db[table][row]["zh-tw"][col] = db[table][row][col];
+            db[table][row]["en"][col] = db[table][row][col];
+          });
+      });
     });
-    if (result == undefined) return null;
+  hexo.locals.set("data", () => db);
+}
 
-    return result;
-  } catch (e) {
-    return null;
-  }
-});
+function generate_metadata() {
+  hexo.locals
+    .get("pages")
+    .filter(
+      (p) =>
+        p.lang == "zh-tw" &&
+        p.layout == "post" &&
+        p.publish.toLowerCase() == "true"
+    )
+    .sort("id")
+    .each((post) => {
+      let tags = array(post.tags)
+        .map((i) => find_tag(i, "zh-tw"))
+        .filter((n) => n)
+        .map((i) => i.id);
+      let depts = array(post.departments)
+        .map((i) => find_dept(i, "zh-tw"))
+        .filter((n) => n)
+        .map((i) => i.id);
+      metadata.push({
+        id: post.id,
+        title: post.title,
+        description: post.description,
+        content: post.introduction ? post.introduction.content : "",
+        path: post.path,
+        thumbnail: post.thumbnail,
+        tags: tags,
+        depts: depts,
+      });
+    });
+}
 
+function create_json() {
+  fs.mkdirSync("public/json", { recursive: true });
+  fs.writeFileSync("public/json/cases.json", JSON.stringify(metadata));
+}
 
-
-hexo.extend.helper.register("array", function (array) {
-  if (Array.isArray(array)) return array;
-  else return [];
-});
-
-const path = require("path");
-hexo.extend.filter.register("before_post_render", async function (data) {
-  if (data.blogs) {
-    let d = [];
-    for(const i of data.blogs) {
-      let obj = await req(i);
-      d.push(obj);
+function update_post() {
+  const ps = hexo.locals.get("pages");
+  ps.forEach((p) => {
+    if (p.lang == "zh-tw" && p.layout == "post" && p.description != undefined) {
+      p.description = `開放政府第${p.id}案協作會議${p.description}`;
     }
+  });
+  hexo.locals.set("pages", function () {
+    return ps;
+  });
+}
 
-    data.blogs = d;
-  }
-
-  data = bf_post_render(data);
-
-  return data;
-});
-
-function bf_post_render(data) {
+hexo.extend.filter.register("before_post_render", function (data) {
   let html_path = data.path.split("/");
 
   // Set lang
@@ -103,72 +119,100 @@ function bf_post_render(data) {
   } else {
     html_path[html_path.length - 1] = filename.replace(/.html$/, "");
   }
-
   data.path = html_path.join("/") + "/";
-  // console.log(data.path);
-}
+
+  return data;
+});
+
+hexo.extend.filter.register("before_generate", function () {
+  structured_data();
+  update_post();
+  generate_metadata();
+});
+
+hexo.extend.filter.register("after_generate", function () {
+  create_json();
+});
+
+hexo.extend.helper.register("page_url", function (path, options) {
+  return this.url_for(path, options).replace(/index\.html$/, "");
+});
+
+// 取得i18n文字
+hexo.extend.helper.register("_", function (link) {
+  try {
+    const target = link.split(".");
+    const filename = target.shift();
+    let result = hexo.locals.get("data")[`i18n/${filename}`][this.page.lang];
+    target.forEach((i) => {
+      result = result[i];
+    });
+    if (result == undefined) throw "undefined";
+    return result;
+  } catch (e) {
+    return null;
+  }
+});
+
+hexo.extend.helper.register("array", (arr) => array(arr));
 
 hexo.extend.helper.register("embed_link", function (link, options = {}) {
-  const url = new URL(link);
-  if (
-    (url.hostname == "www.youtube.com" && url.pathname == "/watch") ||
-    url.hostname == "youtu.be"
-  ) {
-    if (url.hostname == "www.youtube.com") {
-      id = url.searchParams.get("v");
-    } else {
-      id = url.pathname.split("/")[1];
+  try {
+    const url = new URL(link);
+    if (
+      (url.hostname == "www.youtube.com" && url.pathname == "/watch") ||
+      url.hostname == "youtu.be"
+    ) {
+      if (url.hostname == "www.youtube.com") {
+        id = url.searchParams.get("v");
+      } else {
+        id = url.pathname.split("/")[1];
+      }
+      link = `https://www.youtube.com/embed/${id}`;
+      if (options.autoplay) {
+        link += `?autoplay=1&loop=1&mute=1&&playlist=${id}`;
+      }
+    } else if (url.hostname == "issuu.com") {
+      id = url.pathname.split("/")[3];
+      user = url.pathname.split("/")[1];
+      link = `https://e.issuu.com/embed.html?pageLayout=singlePage&hideIssuuLogo=true&u=${user}&d=${id}`;
     }
-    link = `https://www.youtube.com/embed/${id}`;
-    if (options.autoplay) {
-      link += `?autoplay=1&loop=1&mute=1&&playlist=${id}`;
-    }
-  } else if (url.hostname == "issuu.com") {
-    id = url.pathname.split("/")[3];
-    user = url.pathname.split("/")[1];
-    link = `https://e.issuu.com/embed.html?pageLayout=singlePage&hideIssuuLogo=true&u=${user}&d=${id}`;
+    return link;
+  } catch (e) {
+    return link;
   }
-  return link;
 });
 
-hexo.extend.helper.register("dept", function (key, col) {
-  var find = hexo.locals.get("pages").filter(function (p) {
-    return p.id == "department";
-  }).data;
-
-  if (find.length == 0) return null;
-
-  var data = find[0];
-  var lang = this.page.lang;
-
-  var result = data.items.find(function (p) {
-    return (
-      p["zh-tw"]["name"] == key ||
-      p["zh-tw"]["fullname"] == key ||
-      p["en"]["name"] == key ||
-      p["en"]["fullname"] == key
-    );
-  });
-  if (result == undefined) return "NULL";
-
-  if (col == "id") return result["id"];
-  else return result[lang][col];
+hexo.extend.helper.register("find_case", function (tags) {
+  tags.forEach((t) => (t.post = []));
+  const tag_name = tags.map((i) => i[this.page.lang].name);
+  hexo.locals
+    .get("pages")
+    .filter(
+      (page) =>
+        page.layout == "post" &&
+        page.lang == this.page.lang &&
+        page.publish.toString().toLowerCase() == "true"
+    )
+    .forEach((page) => {
+      if (page.tags != null)
+        page.tags.forEach((t) => {
+          if (tag_name.includes(t)) {
+            tags[tag_name.indexOf(t)].post.push(page);
+          }
+        });
+    });
+  return tags;
 });
 
-hexo.extend.helper.register("tag", function (key, col) {
-  var find = hexo.locals.get("pages").filter(function (p) {
-    return p.id == "tag";
-  }).data;
+hexo.extend.helper.register("find_tag", function (key) {
+  return find_tag(key, this.page.lang);
+});
 
-  if (find.length == 0) return null;
+hexo.extend.helper.register("find_dept", function (key) {
+  return find_dept(key, this.page.lang);
+});
 
-  var data = find[0];
-  var lang = this.page.lang;
-
-  var result = data.items.find(
-    (p) => p["id"] == key || p["name"]["zh-tw"] == key || p["name"]["en"] == key
-  );
-  if (result == undefined) return null;
-
-  return result[col][lang] == undefined ? result[col] : result[col][lang];
+hexo.extend.helper.register("get_metadata", function () {
+  return metadata;
 });

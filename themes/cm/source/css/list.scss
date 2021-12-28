@@ -2,93 +2,126 @@ header .navbar .nav-link {
   color: black !important;
 }
 
+
 main[class="list"] {
   .title {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+
     h2 {
-      font-size: 2rem;
       display: inline;
-      font-weight: bold;
       color: var(--bs-primary);
+      font-weight: bold;
       margin-right: 1rem;
     }
   }
 
   section[id="filter"] {
-    margin-top: 10rem;
+    margin-top: 5rem;
 
     hr {
-      margin: 2rem 0;
+      margin: 1rem 0;
     }
 
     h3 {
-      margin-top: 1rem;
-      font-size: 2rem;
+      margin-top: 0.8rem;
       font-weight: bold;
       color: var(--bs-primary);
+      font-weight: bold;
+    }
+
+    .row {
+      margin-bottom: 1rem;
+    }
+
+    .collapse {
+      &:not(.show) {
+        display: block;
+        height: 6.8rem;
+        overflow: hidden;
+      }
+
+      &.show {
+        height: unset;
+      }
+    }
+
+    .collapsing {
+      height: 6.8rem;
+    }
+
+    .filter-dept {
+      h3 {
+        color: var(--bs-yellow);
+      }
+
+      .filter-item {
+        line-height: 30px;
+        &[data-active="true"] {
+          color: var(--bs-yellow);
+          font-weight: bold;
+        }
+      }
+
+      img {
+        height: 30px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .filter-tag {
+      h3 {
+        color: var(--bs-green);
+      }
+
+      .filter-item[data-active="true"] {
+        color: var(--bs-green);
+        font-weight: bold;
+      }
     }
 
     .filter-items {
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
+
       .filter-item {
         border-right: 1px solid;
         border-color: #c4c4c4;
-        font-size: 1.5rem;
-        padding: 0 2rem;
-        margin: 1rem 0;
+        font-size: 1.2rem;
+        padding: 0 1.2rem;
+        margin: 0.8rem 0;
         color: gray;
         cursor: pointer;
-        &:hover {
-          color: DimGray;
-          font-weight: bold;
-        }
 
-        &[data-active="true"] {
-          color: var(--bs-primary);
+        &:hover {
           font-weight: bold;
         }
       }
     }
 
-    .search-bar {
-      margin: 1rem 0;
-      padding: 0 2rem;
+    .more {
+      float: right;
+      color: var(--bs-secondary);
     }
   }
 
   section[id="result"] {
     margin-top: 5rem;
-    div[data-visible="false"] {
-      display: none;
-    }
-
-    .case {
-      cursor: pointer;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
-    .row {
-      margin-bottom: 2rem;
-    }
-
-    .image {
-      width: 100%;
-      padding-bottom: 56.25%;
-      background-size: cover !important;
-      background-position: center !important;
-    }
 
     h3 {
-      font-size: 2.25rem;
+      font-weight: bold;
     }
 
-    h4 {
-      font-size: 1.5rem;
+    .sort {
+      margin-bottom: 2rem;
+
+      select {
+        width: auto;
+        border: 0;
+        outline: 0;
+        font-size: 1.2rem;
+        padding-left: 0;
+      }
     }
   }
 }

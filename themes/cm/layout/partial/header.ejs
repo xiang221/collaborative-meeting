@@ -10,21 +10,11 @@
       
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-          <% __('navbar.items').forEach(function(value){ %>
+          <% _('header.items').forEach(function(value){ %>
           <li class="nav-item">
             <a class="nav-link" href="<%- value.link %>"><%- value.name %></a>
           </li>
           <% }) %>
-
-          <% if (page.lang == "en") { %>
-          <li class="nav-item">
-            <a class="nav-link" href="<%- page_url(page.path.replace(/^\//, '').replace(/^en/, '')) %>">中文</a>
-          </li>
-          <% } else { %>
-          <li class="nav-item">
-            <a class="nav-link" href="<%- page_url('en/' + page.path) %>">EN</a>
-          </li>
-          <% } %>
         </ul>
       </div>
     </div>

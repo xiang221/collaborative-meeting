@@ -2,15 +2,13 @@
   <div class="container">
     <h1><%- page.title %></h1>
     <p><%- page.description %></p>
-    <% if(page.cover.link != "") { %>
+    <% if (page.cover) { %>
     <div class="embed-iframe">
-      <iframe
-        src="<%- embed_link(page.cover.link, { autoplay: true }) %>"
-      ></iframe>
+      <iframe src="<%- embed_link(page.cover) %>"></iframe>
     </div>
     <% } else { %>
-    <img src="<%- url_for(page.thumbnail) %>" class="w-100" />
+      <div class="image-16-9 shadow-sm" style="background-image: url('<%- url_for(page.thumbnail) %>')"></div>
     <% } %>
   </div>
-  <div class="bg bg-<%- page.color %>"></div>
+  <div class="bg bg-<%- (page.color || '').toLowerCase() %>"></div>
 </section>
