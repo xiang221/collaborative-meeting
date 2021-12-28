@@ -343,9 +343,8 @@ main[class="home"] {
         margin-top: 2rem;
 
         a {
-          font-size: 2rem;
-          color: black;
-          font-weight: 500;
+          float: right;
+          color: var(--bs-secondary);
         }
       }
     }
